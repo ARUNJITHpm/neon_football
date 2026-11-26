@@ -1,0 +1,1939 @@
+{
+  "actual_touch_detection": false,
+  "api_workflow": {
+    "actual_touch_detection": false,
+    "automatic_scoring_enabled": false,
+    "browser_render_verified": false,
+    "commands": 18,
+    "contact_sessions": 4,
+    "corrections": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "duplicate_requests": 1,
+    "event_count": 18,
+    "evidence": "synthetic",
+    "field_qualified": false,
+    "fixture": "contact-analytics-api-v1",
+    "official_statistics": {
+      "players": [
+        {
+          "assists": 0,
+          "bib": 7,
+          "goals": 0,
+          "id": "green-7",
+          "name": "Green Seven",
+          "own_goals": 0,
+          "team": "green"
+        },
+        {
+          "assists": 0,
+          "bib": 11,
+          "goals": 1,
+          "id": "green-11",
+          "name": "Green Eleven",
+          "own_goals": 0,
+          "team": "green"
+        },
+        {
+          "assists": 0,
+          "bib": 9,
+          "goals": 0,
+          "id": "orange-9",
+          "name": "Orange Nine",
+          "own_goals": 0,
+          "team": "orange"
+        },
+        {
+          "assists": 0,
+          "bib": 13,
+          "goals": 0,
+          "id": "orange-13",
+          "name": "Orange Thirteen",
+          "own_goals": 0,
+          "team": "orange"
+        },
+        {
+          "assists": 0,
+          "bib": 15,
+          "goals": 0,
+          "id": "green-15",
+          "name": "Green Fifteen",
+          "own_goals": 0,
+          "team": "green"
+        }
+      ],
+      "scope": "active_goals_and_operator_approved_attribution",
+      "teams": {
+        "green": {
+          "attributed_goals": 1,
+          "goals": 1,
+          "unknown_scorer_goals": 0
+        },
+        "orange": {
+          "attributed_goals": 0,
+          "goals": 1,
+          "unknown_scorer_goals": 1
+        }
+      }
+    },
+    "outputs": {
+      "export.json": "8b73d1d63c09b75d6103fe15ad7de51f6da5789e9faa92644fbbf38235dc1193",
+      "report.json": "6d0fa185dfbdc969e2ffbf611420d4e5e1cc1b2a1e752f7c00291598303869d5",
+      "report.txt": "84f41fe84e9ee129a01a180142806685a5e02e5a1d54a70d74fc485ecde6cfb0"
+    },
+    "schema_version": 1,
+    "score": {
+      "green": 1,
+      "orange": 1
+    },
+    "source_sha256": {
+      "app/__init__.py": "0652526c969c1ae3ba47626905059c06ba23312bbc69af2467a5e0302478389d",
+      "app/__main__.py": "5e220fe4e3e3bcf1243a47d6d8c17cfdbec98be4ac76b3d442f1c59000bbcd92",
+      "app/analytics.py": "b0a386626936f83bc71f8bea392005dd3e3603068df95c2a1534ca93dc78b27f",
+      "app/attribution.py": "95045b64ccbdb665b49ecee0ad013e4945333692734144d00fc235741de73726",
+      "app/display.py": "fae5ae03c325a79d4e95a51e445e1aa11fd1275f759e7f794f7be24dcb58e0a3",
+      "app/main.py": "64c74558dc77d8ea8cd4f8cfcff2d984cfbbe27623b8bdae51b265b875fdc2b6",
+      "app/operations.py": "dd085e35ef8d08cc83b2194c12dcf6e1dcd01b4b8fd6164e518b78af9212a684",
+      "app/reports.py": "3ba94efd7d8e2926516db5aace0262aed314d9001f6805961df5cfba832dc40a",
+      "app/review.py": "a601d937eacb286173d0cbc09a00838261dab3451db85da992c470f5a27b5f32",
+      "app/settings.py": "87f47ecf275640643202cbfe2fb36da8181c4e09a0b4b73ba3b67172276d43ea",
+      "core/__init__.py": "5859fa61158ed4c1d6f8eb9e71ba627305d155ac3e28a5d4cba50bdf92710e2a",
+      "core/analytics.py": "d5edbdd9d4f3dd40a70d7de3fbac03a16591525a132e64218a1bd453ffacbbab",
+      "core/attribution.py": "2f2ec75190a14c641ffb744ddb73d64b36ff9e9b7f22d0728979e83cf5c3f723",
+      "core/bus.py": "0773360b907d3df168e5e4bb1c766122d67fd9d940d2adbb355978cad8426af9",
+      "core/capture.py": "56b1b6deb6e3a8b4ffa3206832dfec03881b4645ac5d890e476c52317e55322b",
+      "core/clock.py": "89e365bf6fd10d63e91be9c8dfa79b4177c7d023d4bcd899eb48801ab43fe7ab",
+      "core/dataset.py": "15b0097eaa39c48ee14da0955daab1261fd122aa2bc5b595a007071b2f3cb778",
+      "core/fusion.py": "6dd5f14f98af36dc56e3cd710a3721da7e8de2a197f75d4f2bef54102a1f9967",
+      "core/operations.py": "850430bef93e5fb36f2433c0f394b0a8b9d6a4bf0cdbdcb6b5daf24bd0e1675b",
+      "core/ports.py": "644ff3eba1769e303d45ae8e0e24f294c081834d74457f3682e8b2fc99d04554",
+      "core/review.py": "6d99c4d34f2e91b96690c529cb369daab6caaed24adf1a68552711178ee80ad0",
+      "core/schemas.py": "53d10da177a9afb0b244c5e41b8c33aa466061a0cd427e06c0300eb07cb2fabe",
+      "core/sensors.py": "d209e329667bc2bed79229b980ce904915e5202e0108e5b7f5ed58e9e0cfecfc",
+      "core/vision.py": "27efc66172052acb19a47d414a4823f5fc5f6dfb2bedb223be4c9c35d9e7b7a0",
+      "modules/__init__.py": "9a619b99c28950355ab3a65dbe04d1504b55a8eef72f504d27989b45f4c73319",
+      "modules/api/__init__.py": "60686593659491af6a4386a44b7a5e0b0c93b321000b94525ad6c1a0c1222ac7",
+      "modules/api/routes.py": "d72a676ddac49a226207ffcce211bbbe265874e174eb2da47f87411a879fc6df",
+      "modules/capture/__init__.py": "bb9dec1eb3e8facdaf8d896682024805f7776568edde045849b60d59489583fe",
+      "modules/capture/backend.py": "a65c0b7fa40078ddf4a8606ca3a143f87e9061c99f9287a293e6ec9f00df520b",
+      "modules/capture/buffers.py": "00d96705d6899e7321cb722e92d35a80c7d4b9b63df54c7deaae33e999226c17",
+      "modules/capture/clips.py": "16417bcbf8b87a689fc45ee73b4738254d740b15bd2025ad3ab9c5800dfb3ec3",
+      "modules/capture/manager.py": "8a4816128509fa6b4f8ec9d570c1ec535e839705cb9ae08aebb4b43493c060a1",
+      "modules/capture/recording.py": "ec918d52d77ccb7c1218e6247cfcffff5a239bb248b327ce2e1ec78bdeebf32d",
+      "modules/capture/retention.py": "a810eea4ad61ef596c0a53ab69b6bae1262903cc76b5a07ba51441944d1d43a2",
+      "modules/goal_engine/__init__.py": "7882d1ecc53b7d3b108c8a730cb58ee99dc34b6c439c22d4cc4a44ec14a219ed",
+      "modules/goal_engine/engine.py": "1acb51612017153072ebe601b07962115bee99b616d0d09f921e1165936e4ab6",
+      "modules/replay/__init__.py": "787fe6eb46c4400248b2b7357a23ebd6583fd89f95151a5d4c9635943af337f6",
+      "modules/replay/dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+      "modules/replay/evaluator.py": "9d0366b075a329bf996e7b7b32684d4b3b9014ad12cb3c4f8aa58f1524c4f78c",
+      "modules/replay/matching.py": "d28cb9b611acc81793f940e439dd8f3369cde35233aca6facd97e388dea8292d",
+      "modules/replay/runner.py": "e5fa80c71b86e61b343179a34c63beb5a981b8cf3123f81f255d756fb24f9d49",
+      "modules/replay/statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+      "modules/sensors/__init__.py": "4144357fb4bc309b5bf3e983d3dfd632976afa3784195b5b4c511003d7222294",
+      "modules/sensors/host.py": "53d8c60f644a9ab64382070f0dff1f522b2627cfb8e2aa6067df19b74f48bc81",
+      "modules/sensors/impact.py": "616037846d9f25c6d8cab0310b9b80a461119c1d503cfb06b502261ca996e22d",
+      "modules/sensors/protocol.py": "3c7cea5c030b657aa409dc67a4fb86aeaeabfe6e9ff48538ec1c2004a73fc236",
+      "modules/sensors/reader.py": "a19652e84ef15bab8d4f45a1f76b5f2aa76bdeba50d2ad85d4d7b4949860af18",
+      "modules/stats/__init__.py": "622cc18a609961bf9f4a2fea7abe0028a68c09923fa77c407c0833c404152b90",
+      "modules/stats/analytics.py": "e07564a3a4e46eac3d91234b8e2dbd38690964a697b18632220384b3e98aba07",
+      "modules/stats/attribution.py": "2fa15f4252400b0475cb3163c5c8e4be3d8a73c3b112c091b1ff2a6e67139fc4",
+      "modules/stats/identity.py": "437c2a38f24fe616b5dbe28a751bf0446da13af34487929d3a921b6c6c07fe6b",
+      "modules/storage/__init__.py": "65291f68158d6d10fd269d4f91bc620889bcffe6f21702c2d62a5edba068ef3d",
+      "modules/storage/maintenance.py": "1653a4f37ee702d1ae6f04b7ef40a18d6c407f4e5d44d94a0248f8118d7b186d",
+      "modules/storage/report.py": "4dad51ffd7216588cdfa88bb5cedf828b8121d9c988329f6187409aee8a85324",
+      "modules/storage/store.py": "5a72609cdf421339e1d2b8824851ecacc525cb192c4c0b0d0ae940cbabe793bc",
+      "modules/vision/__init__.py": "d72394cc80cd5d4e3f41d09e428a7ca329e4b04216d779cb262309ea9e82a0de",
+      "modules/vision/detector.py": "1370b63eb2271d3925efcf2ab5b9001c62d943fee80bcb538f02b0e7b000ff26",
+      "modules/vision/engine.py": "a8763c2abf08e21f276ffeb8bbcfa26050ee8be12a74b467fd487b65084a67b2",
+      "modules/vision/geometry.py": "d3c90679038970c2b1c0e7f160cd591edf6e663604392ac44131ac98654b94d0",
+      "modules/vision/motion.py": "eba177ec6fd6841cfcd5f65947d3c97e659347b9bb3c8dbb14a0688d23ed673b",
+      "modules/vision/tracking.py": "ef879170f022edfde89f09832502020663429f491bbc3a808239a79d1fc9205c",
+      "tools/analytics_fixture.py": "4e5bbc3c08d4fdca1b3b3482c350fc73152ea410f413da9a37cc44a62b125fa8",
+      "tools/analytics_replay.py": "2623103b8e6801eaffa488f92e0e99751f836be0cf999d7e6b87ecca8150d341",
+      "tools/build_analytics_fixture.py": "5074002c8473f5999c070431e7bb5541ff133c7ff9d16f9d2bb277774b3f951b",
+      "tools/build_attribution_fixture.py": "9ac2502cecd0f1bf1e85fb6dcab0aa53b8762764ec561c7d6d22fa6040377400"
+    }
+  },
+  "browser_render_verified": false,
+  "evidence": "synthetic",
+  "field_qualified": false,
+  "final_report_followup_tests_passed": 9,
+  "module_files_checked": 37,
+  "node_tests_passed": 5,
+  "offline": {
+    "automatic_scoring_enabled": false,
+    "contacts": 62,
+    "dataset_id": "dummy-contact-analytics-v1",
+    "event_totals": {
+      "interception": {
+        "false": 0,
+        "matched": 4,
+        "missed": 0
+      },
+      "pass": {
+        "false": 0,
+        "matched": 7,
+        "missed": 0
+      }
+    },
+    "evidence": "synthetic",
+    "field_gates": [
+      {
+        "metric": "pass",
+        "precision_min": 0.95,
+        "recall_min": 0.9,
+        "reference_events_min": 200,
+        "state": "pending"
+      },
+      {
+        "metric": "interception",
+        "precision_min": 0.95,
+        "recall_min": 0.9,
+        "reference_events_min": 100,
+        "state": "pending"
+      },
+      {
+        "known_possession_time_coverage_min": 0.9,
+        "metric": "possession",
+        "reference_minutes_min": 60,
+        "state": "pending",
+        "team_share_error_percentage_points_max": 5
+      }
+    ],
+    "field_qualified": false,
+    "implementation_sha256": {
+      "app/analytics.py": "b0a386626936f83bc71f8bea392005dd3e3603068df95c2a1534ca93dc78b27f",
+      "core/analytics.py": "d5edbdd9d4f3dd40a70d7de3fbac03a16591525a132e64218a1bd453ffacbbab",
+      "core/attribution.py": "2f2ec75190a14c641ffb744ddb73d64b36ff9e9b7f22d0728979e83cf5c3f723",
+      "core/schemas.py": "53d10da177a9afb0b244c5e41b8c33aa466061a0cd427e06c0300eb07cb2fabe",
+      "modules/stats/analytics.py": "e07564a3a4e46eac3d91234b8e2dbd38690964a697b18632220384b3e98aba07",
+      "tools/analytics_replay.py": "2623103b8e6801eaffa488f92e0e99751f836be0cf999d7e6b87ecca8150d341",
+      "tools/build_analytics_fixture.py": "5074002c8473f5999c070431e7bb5541ff133c7ff9d16f9d2bb277774b3f951b"
+    },
+    "limitations": [
+      "Generated numeric contacts/time references are not real match accuracy",
+      "Proposed field gates require venue agreement and independent held-out labels",
+      "Condition tags do not measure real lighting/overlap",
+      "Distance/heatmaps/shots remain unavailable"
+    ],
+    "manifest_sha256": "8e38734395d4e5570ac23f40c236b7a542f6f382d0b1f82386a16629b6c9e62e",
+    "possession_mean_absolute_error_seconds": {
+      "green": 0.0,
+      "orange": 0.0,
+      "unknown": 0.0
+    },
+    "runner": "contact-analytics-replay-v1",
+    "schema_version": 1,
+    "score_database_opened": false,
+    "sessions": [
+      {
+        "conditions": [
+          "generated_numeric",
+          "pauses",
+          "overlap",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 2,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            },
+            {
+              "from_player_id": "orange-9",
+              "kind": "pass",
+              "previous_touch_id": "touch-6",
+              "team": "orange",
+              "to_player_id": "orange-13",
+              "touch_id": "touch-7"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "previous_touch_id": "touch-4",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-5"
+            }
+          ],
+          "interceptions": 1,
+          "passes": 2,
+          "possession_seconds": {
+            "green": 11.0,
+            "orange": 5.0,
+            "unknown": 3.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "occurred_seconds": 3.0,
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "occurred_seconds": 18.0,
+              "previous_touch_id": "touch-4",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-5"
+            },
+            {
+              "from_player_id": "orange-9",
+              "kind": "pass",
+              "occurred_seconds": 24.0,
+              "previous_touch_id": "touch-6",
+              "team": "orange",
+              "to_player_id": "orange-13",
+              "touch_id": "touch-7"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-pauses",
+          "metric_status": "available",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 5.0,
+              "received_passes": 1
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 6.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 1
+            },
+            "orange-9": {
+              "interceptions": 1,
+              "passes": 1,
+              "possession_seconds": 4.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-pauses",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 57.89473684210526,
+              "possession_seconds": 11.0
+            },
+            "orange": {
+              "interceptions": 1,
+              "passes": 1,
+              "possession_percent_of_in_play": 26.31578947368421,
+              "possession_seconds": 5.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 19.0,
+            "dead_ball_seconds": 2.0,
+            "in_play_seconds": 19.0,
+            "paused_seconds": 4.0,
+            "unknown_possession_percent_of_in_play": 15.789473684210526,
+            "unknown_possession_seconds": 3.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-6"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-7"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-pauses"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "gaps",
+          "clear_view",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            }
+          ],
+          "interceptions": 0,
+          "passes": 1,
+          "possession_seconds": {
+            "green": 4.0,
+            "orange": 2.0,
+            "unknown": 6.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "occurred_seconds": 3.0,
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-gaps",
+          "metric_status": "partial",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 1
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 3.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-gaps",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 33.333333333333336,
+              "possession_seconds": 4.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 16.666666666666668,
+              "possession_seconds": 2.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 8.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 50.0,
+            "unknown_possession_seconds": 6.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-gaps"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "uncertain",
+          "overlap",
+          "low_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            }
+          ],
+          "interceptions": 0,
+          "passes": 1,
+          "possession_seconds": {
+            "green": 6.0,
+            "orange": 1.0,
+            "unknown": 5.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "occurred_seconds": 7.0,
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-uncertain",
+          "metric_status": "partial",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 4.0,
+              "received_passes": 1
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-uncertain",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 50.0,
+              "possession_seconds": 6.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 8.333333333333334,
+              "possession_seconds": 1.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 41.666666666666664,
+            "unknown_possession_seconds": 5.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Uncertain/incidental contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Uncertain/incidental contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-uncertain"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "unknown_identity",
+          "clear_view",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "interceptions": 1,
+          "passes": 1,
+          "possession_seconds": {
+            "green": 6.0,
+            "orange": 3.0,
+            "unknown": 3.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "occurred_seconds": 7.0,
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "occurred_seconds": 9.0,
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-unknown_identity",
+          "metric_status": "partial",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 4.0,
+              "received_passes": 1
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-unknown_identity",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 50.0,
+              "possession_seconds": 6.0
+            },
+            "orange": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_percent_of_in_play": 25.0,
+              "possession_seconds": 3.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 25.0,
+            "unknown_possession_seconds": 3.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Unknown/inactive player identity",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-unknown_identity"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "proximity_only",
+          "overlap",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [],
+          "interceptions": 0,
+          "passes": 0,
+          "possession_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 12.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-proximity_only",
+          "metric_status": "available",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-proximity_only",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 0.0,
+              "possession_seconds": 0.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 0.0,
+              "possession_seconds": 0.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 100.0,
+            "unknown_possession_seconds": 12.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Proximity is not observed contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-proximity_only"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "same_player",
+          "clear_view",
+          "low_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [],
+          "interceptions": 0,
+          "passes": 0,
+          "possession_seconds": {
+            "green": 11.0,
+            "orange": 0.0,
+            "unknown": 1.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-same_player",
+          "metric_status": "available",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 11.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-same_player",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 91.66666666666667,
+              "possession_seconds": 11.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 0.0,
+              "possession_seconds": 0.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 8.333333333333334,
+            "unknown_possession_seconds": 1.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-same_player"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "ambiguous_order",
+          "clear_view",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "interceptions": 1,
+          "passes": 1,
+          "possession_seconds": {
+            "green": 4.0,
+            "orange": 3.0,
+            "unknown": 5.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-11",
+              "kind": "pass",
+              "occurred_seconds": 7.0,
+              "previous_touch_id": "touch-2",
+              "team": "green",
+              "to_player_id": "green-7",
+              "touch_id": "touch-3"
+            },
+            {
+              "from_player_id": "green-7",
+              "kind": "interception",
+              "occurred_seconds": 9.0,
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-ambiguous_order",
+          "metric_status": "partial",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 1
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-ambiguous_order",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 33.333333333333336,
+              "possession_seconds": 4.0
+            },
+            "orange": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_percent_of_in_play": 25.0,
+              "possession_seconds": 3.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 41.666666666666664,
+            "unknown_possession_seconds": 5.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Overlapping contact order",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Overlapping contact order",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-ambiguous_order"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "roster_change",
+          "overlap",
+          "low_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 1,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            },
+            {
+              "from_player_id": "green-15",
+              "kind": "interception",
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "interceptions": 1,
+          "passes": 1,
+          "possession_seconds": {
+            "green": 7.0,
+            "orange": 3.0,
+            "unknown": 2.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [
+            {
+              "from_player_id": "green-7",
+              "kind": "pass",
+              "occurred_seconds": 3.0,
+              "previous_touch_id": "touch-0",
+              "team": "green",
+              "to_player_id": "green-11",
+              "touch_id": "touch-1"
+            },
+            {
+              "from_player_id": "green-15",
+              "kind": "interception",
+              "occurred_seconds": 9.0,
+              "previous_touch_id": "touch-3",
+              "team": "orange",
+              "to_player_id": "orange-9",
+              "touch_id": "touch-4"
+            }
+          ],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-roster_change",
+          "metric_status": "available",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 3.0,
+              "received_passes": 1
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 1.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_seconds": 2.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-roster_change",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 1,
+              "possession_percent_of_in_play": 58.333333333333336,
+              "possession_seconds": 7.0
+            },
+            "orange": {
+              "interceptions": 1,
+              "passes": 0,
+              "possession_percent_of_in_play": 25.0,
+              "possession_seconds": 3.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 12.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 16.666666666666668,
+            "unknown_possession_seconds": 2.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Certain controlled contact",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-roster_change"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "no_play",
+          "clear_view",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [],
+          "interceptions": 0,
+          "passes": 0,
+          "possession_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-no_play",
+          "metric_status": "unavailable",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-no_play",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": null,
+              "possession_seconds": 0.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": null,
+              "possession_seconds": 0.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 0.0,
+            "dead_ball_seconds": 4.0,
+            "in_play_seconds": 0.0,
+            "paused_seconds": 4.0,
+            "unknown_possession_percent_of_in_play": null,
+            "unknown_possession_seconds": 0.0,
+            "unknown_state_seconds": 4.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Excluded during paused",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Excluded during paused",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Excluded during dead_ball",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Excluded during dead_ball",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Excluded during unknown",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Excluded during unknown",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-no_play"
+      },
+      {
+        "conditions": [
+          "generated_numeric",
+          "unknown_clock",
+          "overlap",
+          "normal_light"
+        ],
+        "errors": {
+          "interception": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "pass": {
+            "false": 0,
+            "matched": 0,
+            "missed": 0
+          },
+          "possession_absolute_error_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 0.0
+          }
+        },
+        "reference": {
+          "adjudication": "generated_reference",
+          "events": [],
+          "interceptions": 0,
+          "passes": 0,
+          "possession_seconds": {
+            "green": 0.0,
+            "orange": 0.0,
+            "unknown": 12.0
+          }
+        },
+        "result": {
+          "automatic_write_allowed": false,
+          "events": [],
+          "evidence": "synthetic",
+          "field_qualified": false,
+          "limitations": [
+            "Normalized contacts are supplied, not detected from pixels",
+            "Possession is a bounded last-control estimate with unknown time",
+            "No full-pitch or cross-camera identity tracking is established",
+            "Field metric gates remain pending"
+          ],
+          "match_id": "match-unknown_clock",
+          "metric_status": "unavailable",
+          "players": {
+            "green-11": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-15": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "green-7": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-13": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            },
+            "orange-9": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_seconds": 0.0,
+              "received_passes": 0
+            }
+          },
+          "schema_version": 1,
+          "scope": "generated_example_window",
+          "session_id": "session-unknown_clock",
+          "settings": {
+            "automatic_write_allowed": false,
+            "maximum_chain_gap_seconds": 3.0,
+            "maximum_uncertainty_seconds": 0.02,
+            "possession_hold_seconds": 3.0,
+            "rule_version": "contact-analytics-v1",
+            "schema_version": 1
+          },
+          "teams": {
+            "green": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 0.0,
+              "possession_seconds": 0.0
+            },
+            "orange": {
+              "interceptions": 0,
+              "passes": 0,
+              "possession_percent_of_in_play": 0.0,
+              "possession_seconds": 0.0
+            }
+          },
+          "time_accounting": {
+            "covered_in_play_seconds": 0.0,
+            "dead_ball_seconds": 0.0,
+            "in_play_seconds": 12.0,
+            "paused_seconds": 0.0,
+            "unknown_possession_percent_of_in_play": 100.0,
+            "unknown_possession_seconds": 12.0,
+            "unknown_state_seconds": 0.0
+          },
+          "touch_decisions": [
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-0"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-1"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-2"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-3"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-4"
+            },
+            {
+              "reason": "Coverage/timing unverified",
+              "touch_id": "touch-5"
+            }
+          ],
+          "unavailable_metrics": [
+            "distance",
+            "heatmaps",
+            "shots",
+            "shots_on_target"
+          ]
+        },
+        "session_id": "session-unknown_clock"
+      }
+    ],
+    "split": "validation",
+    "windows": 10
+  },
+  "overhead_tracking_verified": false,
+  "part": "10",
+  "python_new_tests": 43,
+  "python_tests_passed": 282,
+  "replay_sha256": "5681e297976f51120b0cadf93252fed05e99fb6debbb1e7d2533c3d2a1e742c2",
+  "schema_version": 1
+}

@@ -1,0 +1,266 @@
+{
+  "$defs": {
+    "AnalyticsAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/$defs/AnalyticsReference"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "source_group_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Group Id",
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "train",
+            "validation",
+            "blind_test"
+          ],
+          "title": "Split",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "match_id",
+        "source_group_id",
+        "split",
+        "path",
+        "sha256",
+        "reference"
+      ],
+      "title": "AnalyticsAsset",
+      "type": "object"
+    },
+    "AnalyticsEventReference": {
+      "additionalProperties": false,
+      "properties": {
+        "from_player_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "From Player Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "pass",
+            "interception"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "previous_touch_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Previous Touch Id",
+          "type": "string"
+        },
+        "team": {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "title": "Team",
+          "type": "string"
+        },
+        "to_player_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "To Player Id",
+          "type": "string"
+        },
+        "touch_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Touch Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "previous_touch_id",
+        "touch_id",
+        "team",
+        "from_player_id",
+        "to_player_id"
+      ],
+      "title": "AnalyticsEventReference",
+      "type": "object"
+    },
+    "AnalyticsReference": {
+      "additionalProperties": false,
+      "properties": {
+        "adjudication": {
+          "enum": [
+            "generated_reference",
+            "independent_review"
+          ],
+          "title": "Adjudication",
+          "type": "string"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/AnalyticsEventReference"
+          },
+          "maxItems": 10000,
+          "title": "Events",
+          "type": "array"
+        },
+        "interceptions": {
+          "minimum": 0,
+          "title": "Interceptions",
+          "type": "integer"
+        },
+        "passes": {
+          "minimum": 0,
+          "title": "Passes",
+          "type": "integer"
+        },
+        "possession_seconds": {
+          "additionalProperties": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "orange",
+              "green",
+              "unknown"
+            ]
+          },
+          "title": "Possession Seconds",
+          "type": "object"
+        }
+      },
+      "required": [
+        "passes",
+        "interceptions",
+        "possession_seconds",
+        "adjudication"
+      ],
+      "title": "AnalyticsReference",
+      "type": "object"
+    },
+    "AnalyticsSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_write_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Write Allowed",
+          "type": "boolean"
+        },
+        "maximum_chain_gap_seconds": {
+          "default": 3,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "title": "Maximum Chain Gap Seconds",
+          "type": "number"
+        },
+        "maximum_uncertainty_seconds": {
+          "default": 0.02,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Maximum Uncertainty Seconds",
+          "type": "number"
+        },
+        "possession_hold_seconds": {
+          "default": 3,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "title": "Possession Hold Seconds",
+          "type": "number"
+        },
+        "rule_version": {
+          "default": "contact-analytics-v1",
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Rule Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        }
+      },
+      "title": "AnalyticsSettings",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "dataset_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sessions": {
+      "items": {
+        "$ref": "#/$defs/AnalyticsAsset"
+      },
+      "maxItems": 1000,
+      "minItems": 1,
+      "title": "Sessions",
+      "type": "array"
+    },
+    "settings": {
+      "$ref": "#/$defs/AnalyticsSettings"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "evidence",
+    "sessions"
+  ],
+  "title": "AnalyticsDataset",
+  "type": "object"
+}

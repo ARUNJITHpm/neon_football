@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Neon Score · Scoreboard</title><link rel="stylesheet" href="/static/style.css"><script src="/static/scoreboard.js" type="module"></script></head>
+<body class="spectator">
+  <header class="topbar"><span class="brand" id="venue">Neon Football</span><span id="connection" class="connection" role="status">Connecting</span></header>
+  <main class="display">
+    <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section id="waiting" class="waiting"><h1>The next match starts here.</h1><p>Waiting for the operator to set up a match.</p></section>
+    <section id="match" class="display-match" aria-label="Match scoreboard" hidden><div class="display-status"><span id="match-status" class="state">Ready</span><span>Manual scoring</span></div><div class="score-strip"><div class="team orange"><h1 id="orange-label">Orange</h1><strong id="orange-score" class="score">0</strong></div><div class="clock-block"><span id="clock" class="clock" aria-label="Elapsed match time">00:00</span><p id="clock-description">20-minute match</p></div><div class="team green"><h1 id="green-label">Green</h1><strong id="green-score" class="score">0</strong></div></div><p id="match-message" class="display-message">Waiting for kick-off</p></section>
+  </main><footer><span>Neon Score</span><span>Operator-confirmed team scores</span></footer>
+</body></html>

@@ -1,0 +1,118 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "boot_id": {
+      "maximum": 18446744073709551615,
+      "minimum": 1,
+      "title": "Boot Id",
+      "type": "integer"
+    },
+    "device_id": {
+      "maximum": 4294967295,
+      "minimum": 1,
+      "title": "Device Id",
+      "type": "integer"
+    },
+    "first_device_us": {
+      "maximum": 18446744073709551615,
+      "minimum": 0,
+      "title": "First Device Us",
+      "type": "integer"
+    },
+    "first_sample_sequence": {
+      "maximum": 18446744073709551615,
+      "minimum": 0,
+      "title": "First Sample Sequence",
+      "type": "integer"
+    },
+    "flags": {
+      "default": 0,
+      "maximum": 127,
+      "minimum": 0,
+      "title": "Flags",
+      "type": "integer"
+    },
+    "goal_end": {
+      "enum": [
+        "goal_a",
+        "goal_b"
+      ],
+      "title": "Goal End",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "samples",
+        "health"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "packet_sequence": {
+      "maximum": 4294967295,
+      "minimum": 0,
+      "title": "Packet Sequence",
+      "type": "integer"
+    },
+    "protocol_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Protocol Version",
+      "type": "integer"
+    },
+    "rate_hz": {
+      "const": 800,
+      "default": 800,
+      "title": "Rate Hz",
+      "type": "integer"
+    },
+    "role": {
+      "enum": [
+        "net",
+        "frame"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "samples": {
+      "items": {
+        "maxItems": 3,
+        "minItems": 3,
+        "prefixItems": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "integer"
+          }
+        ],
+        "type": "array"
+      },
+      "maxItems": 32,
+      "title": "Samples",
+      "type": "array"
+    },
+    "timestamp_uncertainty_us": {
+      "default": 1250,
+      "maximum": 1000000,
+      "minimum": 0,
+      "title": "Timestamp Uncertainty Us",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "kind",
+    "goal_end",
+    "role",
+    "device_id",
+    "boot_id",
+    "packet_sequence",
+    "first_sample_sequence",
+    "first_device_us"
+  ],
+  "title": "SensorPacket",
+  "type": "object"
+}

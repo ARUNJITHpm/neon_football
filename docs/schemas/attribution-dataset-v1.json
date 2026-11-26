@@ -1,0 +1,252 @@
+{
+  "$defs": {
+    "AttributionAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/AttributionLabel"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "source_group_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Group Id",
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "train",
+            "validation",
+            "blind_test"
+          ],
+          "title": "Split",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "source_group_id",
+        "match_id",
+        "split",
+        "path",
+        "sha256",
+        "label"
+      ],
+      "title": "AttributionAsset",
+      "type": "object"
+    },
+    "AttributionLabel": {
+      "additionalProperties": false,
+      "properties": {
+        "adjudication": {
+          "enum": [
+            "generated_reference",
+            "independent_review"
+          ],
+          "title": "Adjudication",
+          "type": "string"
+        },
+        "assist_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Assist Id"
+        },
+        "assist_known": {
+          "default": true,
+          "title": "Assist Known",
+          "type": "boolean"
+        },
+        "goal_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Goal Id",
+          "type": "string"
+        },
+        "own_goal": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Own Goal"
+        },
+        "own_goal_known": {
+          "default": true,
+          "title": "Own Goal Known",
+          "type": "boolean"
+        },
+        "scorer_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scorer Id"
+        },
+        "scorer_known": {
+          "default": true,
+          "title": "Scorer Known",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "goal_id",
+        "scorer_id",
+        "assist_id",
+        "own_goal",
+        "adjudication"
+      ],
+      "title": "AttributionLabel",
+      "type": "object"
+    },
+    "AttributionSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_write_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Write Allowed",
+          "type": "boolean"
+        },
+        "identity_window_seconds": {
+          "default": 1.5,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "title": "Identity Window Seconds",
+          "type": "number"
+        },
+        "max_uncertainty_seconds": {
+          "default": 0.02,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Max Uncertainty Seconds",
+          "type": "number"
+        },
+        "minimum_identity_reads": {
+          "default": 3,
+          "maximum": 10,
+          "minimum": 2,
+          "title": "Minimum Identity Reads",
+          "type": "integer"
+        },
+        "rule_version": {
+          "default": "conservative-attribution-v1",
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Rule Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "touch_lookback_seconds": {
+          "default": 10,
+          "exclusiveMinimum": 0,
+          "maximum": 30,
+          "title": "Touch Lookback Seconds",
+          "type": "number"
+        }
+      },
+      "title": "AttributionSettings",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "annotation_policy": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Annotation Policy",
+      "type": "string"
+    },
+    "dataset_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sessions": {
+      "items": {
+        "$ref": "#/$defs/AttributionAsset"
+      },
+      "maxItems": 10000,
+      "minItems": 1,
+      "title": "Sessions",
+      "type": "array"
+    },
+    "settings": {
+      "$ref": "#/$defs/AttributionSettings"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "annotation_policy",
+    "evidence",
+    "settings",
+    "sessions"
+  ],
+  "title": "AttributionDataset",
+  "type": "object"
+}

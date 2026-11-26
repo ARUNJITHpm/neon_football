@@ -1,0 +1,17 @@
+{
+  "evidence": "synthetic",
+  "firmware_compiled": false,
+  "limitations": [
+    "Single short offline file run including hashes, decoding, conversion, classification and metrics",
+    "No actual UART/SPI/USB devices, live queue pressure, acquisition contention or sustained resource measurement"
+  ],
+  "live_serial_capacity_verified": false,
+  "nominal_combined_source_samples_per_second": 3200,
+  "packet_count": 998,
+  "packets_per_second": 618.9979911056924,
+  "runner": "sensor-evidence-v1",
+  "sample_count": 31936,
+  "samples_per_second": 19807.93571538216,
+  "schema_version": 1,
+  "wall_seconds": 1.612283100010245
+}

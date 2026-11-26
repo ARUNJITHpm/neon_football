@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark"><title>Neon Score · Operator</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/operator.js" type="module"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/operator">Neon Score<span>Match console</span></a><div class="header-actions"><span id="connection" class="connection" role="status">Connecting</span><a href="/scoreboard" target="_blank" rel="noopener">Open scoreboard</a></div></header>
+  <main class="console">
+    <p id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div id="notice" class="notice" role="alert" hidden></div>
+    <div id="retry-panel" class="notice" hidden><span>The result of your last action is unknown. Retry it before recording another change.</span><button id="retry" type="button">Retry last action</button></div>
+    <section id="access" class="access" aria-labelledby="access-title">
+      <div><h1 id="access-title">Ready at the touchline.</h1><p>Unlock the console to manage a match. The scoreboard is available to everyone on this server.</p></div>
+      <form id="login"><label for="operator-name">Operator name</label><input id="operator-name" maxlength="60" value="Operator" required autocomplete="nickname"><label for="operator-key">Operator key</label><input id="operator-key" type="password" required autocomplete="current-password"><button class="primary" type="submit">Unlock console</button><p class="muted">Use the local key file created when the server starts. Your key stays in this browser tab.</p></form>
+    </section>
+    <section id="setup" aria-labelledby="setup-title" hidden>
+      <div class="section-heading"><h1 id="setup-title">Set the next match.</h1><p>Manual scoring · one cage · your call on every goal.</p></div>
+      <form id="create-match">
+        <div class="setup-grid">
+          <fieldset class="orange"><legend>Orange team</legend><label for="orange-name">Team name</label><input id="orange-name" value="Orange" required maxlength="60"><label for="orange-roster">Players <span class="muted">optional</span></label><textarea id="orange-roster" rows="4" placeholder="9, Player name&#10;10, Player name" aria-describedby="roster-help"></textarea></fieldset>
+          <fieldset class="green"><legend>Green team</legend><label for="green-name">Team name</label><input id="green-name" value="Green" required maxlength="60"><label for="green-roster">Players <span class="muted">optional</span></label><textarea id="green-roster" rows="4" placeholder="7, Player name&#10;11, Player name" aria-describedby="roster-help"></textarea></fieldset>
+        </div>
+        <p id="roster-help" class="muted">One player per line: bib number, name. Add , bench after the name for a substitute. Bibs must be unique within each team.</p>
+        <div class="setup-options"><div><label for="duration">Duration in minutes</label><input id="duration" type="number" min="1" max="240" value="20" required></div><div><label for="goal-a">Team defending Goal A</label><select id="goal-a"><option value="orange">Orange team</option><option value="green">Green team</option></select></div><button class="primary" type="submit">Create match</button></div>
+      </form>
+    </section>
+    <section id="match" aria-label="Current match" hidden>
+      <div class="match-heading"><div><h1>Match control</h1><p>Manual scoring <span id="match-reference"></span></p></div><div><span id="match-status" class="state">Ready</span><button id="lock" class="quiet" type="button">Lock console</button></div></div>
+      <section class="review-settings" aria-label="Scoring and input status">
+        <div><label for="review-mode">Incident review</label><select id="review-mode"><option value="manual">Manual scoring</option><option value="demo_review">Dummy evidence review</option></select><button id="apply-mode" type="button">Apply review mode</button></div>
+        <div class="input-status"><p id="review-mode-status">Operator confirmation required for every goal.</p><p id="capture-status" class="muted" role="status">Checking camera status…</p><p id="sensor-status" class="muted">Sensors: not connected</p><p id="display-status" class="muted" role="status">Checking scoreboard connection…</p></div>
+      </section>
+      <div class="score-strip">
+        <div class="team orange"><h2 id="orange-label">Orange</h2><strong id="orange-score" class="score">0</strong><button id="orange-goal" class="goal-button" type="button">Record Orange goal</button></div>
+        <div class="clock-block"><span id="clock" class="clock" aria-label="Elapsed match time">00:00</span><p id="clock-description">20-minute match</p><span id="duration-warning" hidden>Duration reached · end when ready</span></div>
+        <div class="team green"><h2 id="green-label">Green</h2><strong id="green-score" class="score">0</strong><button id="green-goal" class="goal-button" type="button">Record Green goal</button></div>
+      </div>
+      <div id="recovery" class="recovery" hidden><h2>Reconcile the interrupted clock</h2><p>The score is saved. Confirm elapsed time before resuming play.</p><form id="reconcile"><label for="reconcile-time">Elapsed time in minutes:seconds</label><div class="inline-form"><input id="reconcile-time" pattern="[0-9]{1,4}:[0-5][0-9]" placeholder="05:30" required><button class="primary" type="submit">Save elapsed time</button></div></form></div>
+      <div class="match-actions"><button id="start" class="primary" type="button">Start match</button><button id="pause" type="button" hidden>Pause clock</button><button id="resume" class="primary" type="button" hidden>Resume match</button><button id="restart-play" type="button" hidden>Restart play</button><button id="swap" type="button">Change ends</button><button id="end" class="danger" type="button">End match</button><button id="export" class="quiet" type="button">Export match</button><button id="report" class="quiet" type="button">Download report</button><button id="next-match" class="primary" type="button" hidden>Set next match</button></div>
+      <p id="restart-help" class="restart-help" role="status" hidden>Goal saved. Restart play when the next kick-off begins. Later incidents remain unresolved.</p>
+      <p id="end-mapping" class="muted"></p>
+      <section id="dummy-evidence" class="dummy-evidence" hidden aria-labelledby="dummy-title"><h2 id="dummy-title">Try an incident</h2><p>Generated evidence for testing the review workflow. This does not detect a real goal.</p><form id="demo-incident"><div><label for="demo-end">Goal end</label><select id="demo-end"><option value="goal_a">Goal A</option><option value="goal_b">Goal B</option></select></div><div><label for="demo-scenario">Example</label><select id="demo-scenario"><option value="observed">Observed crossing and impact</option><option value="partial">Uncertain partial crossing</option><option value="net_contact">Player contact with net</option><option value="missing_clip">Clip missing</option><option value="pending_clip">Clip encoding</option><option value="failed_clip">Clip failed</option></select></div><button id="add-demo" type="submit">Add dummy incident</button></form></section>
+      <section id="review" class="review" hidden aria-labelledby="review-title"><h2 id="review-title">Incident review</h2><p>Confirm or reject each incident. Unanswered dummy reviews expire without scoring.</p><div class="manual-link"><label for="manual-candidate">Link the team goal buttons to an incident</label><select id="manual-candidate"><option value="">New manual goal, no incident link</option></select></div><div id="candidate-list"></div></section>
+      <section class="roster-section" aria-labelledby="roster-title"><h2 id="roster-title">Players on the pitch</h2><p id="active-roster" class="muted"></p><form id="substitution" class="attribution-form"><div><label for="outgoing-player">Player coming off</label><select id="outgoing-player"></select></div><div><label for="incoming-player">Player coming on</label><select id="incoming-player"></select></div><button id="substitute" type="submit">Record substitution</button></form><p id="substitution-help" class="muted">Substitutions preserve the roster captured for earlier goals.</p></section>
+      <section class="record" aria-labelledby="record-title"><div class="section-heading"><h2 id="record-title">Match record</h2><p id="record-count">No goals recorded</p></div><div id="goal-list"><p class="empty">Goals will appear here once play starts.</p></div></section>
+    </section>
+  </main>
+  <footer><span id="venue">Neon Football</span><span>Local manual-scoring prototype</span></footer>
+</body>
+</html>

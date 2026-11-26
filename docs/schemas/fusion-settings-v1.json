@@ -1,0 +1,176 @@
+{
+  "$defs": {
+    "FusionCamera": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Calibration Version",
+          "type": "string"
+        },
+        "configuration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Configuration Version",
+          "type": "string"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "model_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Model Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "goal_end",
+        "calibration_version",
+        "model_version",
+        "configuration_version"
+      ],
+      "title": "FusionCamera",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "automatic_score_mutation_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Score Mutation Allowed",
+      "type": "boolean"
+    },
+    "cameras": {
+      "patternProperties": {
+        "^[a-zA-Z0-9_.:-]+$": {
+          "$ref": "#/$defs/FusionCamera"
+        }
+      },
+      "propertyNames": {
+        "maxLength": 128,
+        "minLength": 1
+      },
+      "title": "Cameras",
+      "type": "object"
+    },
+    "collection_seconds": {
+      "default": 0.3,
+      "exclusiveMinimum": 0,
+      "maximum": 2,
+      "title": "Collection Seconds",
+      "type": "number"
+    },
+    "correlation_seconds": {
+      "default": 0.2,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Correlation Seconds",
+      "type": "number"
+    },
+    "devices": {
+      "additionalProperties": {
+        "enum": [
+          "goal_a",
+          "goal_b"
+        ],
+        "type": "string"
+      },
+      "title": "Devices",
+      "type": "object"
+    },
+    "max_candidates": {
+      "default": 10000,
+      "maximum": 100000,
+      "minimum": 1,
+      "title": "Max Candidates",
+      "type": "integer"
+    },
+    "max_events": {
+      "default": 250000,
+      "maximum": 3000000,
+      "minimum": 20,
+      "title": "Max Events",
+      "type": "integer"
+    },
+    "max_inputs": {
+      "default": 100000,
+      "maximum": 1000000,
+      "minimum": 1,
+      "title": "Max Inputs",
+      "type": "integer"
+    },
+    "maximum_evidence_age_seconds": {
+      "default": 0.5,
+      "exclusiveMinimum": 0,
+      "maximum": 5,
+      "title": "Maximum Evidence Age Seconds",
+      "type": "number"
+    },
+    "maximum_uncertainty_seconds": {
+      "default": 0.02,
+      "exclusiveMinimum": 0,
+      "maximum": 0.1,
+      "title": "Maximum Uncertainty Seconds",
+      "type": "number"
+    },
+    "mode": {
+      "const": "shadow",
+      "default": "shadow",
+      "title": "Mode",
+      "type": "string"
+    },
+    "repeat_seconds": {
+      "default": 0.6,
+      "exclusiveMinimum": 0,
+      "maximum": 2,
+      "title": "Repeat Seconds",
+      "type": "number"
+    },
+    "review_seconds": {
+      "default": 15,
+      "exclusiveMinimum": 0,
+      "maximum": 300,
+      "title": "Review Seconds",
+      "type": "number"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sensor_configuration_version": {
+      "default": "impact-rules-v1",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Sensor Configuration Version",
+      "type": "string"
+    },
+    "version": {
+      "default": "fusion-rules-v1",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "cameras",
+    "devices"
+  ],
+  "title": "FusionSettings",
+  "type": "object"
+}

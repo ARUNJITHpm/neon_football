@@ -1,0 +1,70 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "start",
+        "pause",
+        "resume",
+        "end",
+        "swap_ends",
+        "restart",
+        "confirm",
+        "reject",
+        "undo"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "actor": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Actor",
+      "type": "string"
+    },
+    "candidate_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Candidate Id"
+    },
+    "command_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Command Id",
+      "type": "string"
+    },
+    "expected_revision": {
+      "minimum": 0,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "command_id",
+    "match_id",
+    "expected_revision",
+    "action",
+    "actor"
+  ],
+  "title": "FusionCommand",
+  "type": "object"
+}

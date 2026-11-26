@@ -1,0 +1,201 @@
+{
+  "$defs": {
+    "IdentityDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "player_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Id"
+        },
+        "reading_ids": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 10000,
+          "title": "Reading Ids",
+          "type": "array"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reason"
+      ],
+      "title": "IdentityDecision",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assist_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Assist Id"
+    },
+    "assist_status": {
+      "default": "unknown",
+      "enum": [
+        "suggested",
+        "none",
+        "unknown"
+      ],
+      "title": "Assist Status",
+      "type": "string"
+    },
+    "automatic_write_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Write Allowed",
+      "type": "boolean"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "goal_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Goal Id",
+      "type": "string"
+    },
+    "identities": {
+      "maxProperties": 1000,
+      "patternProperties": {
+        "^[a-zA-Z0-9_.:-]+$": {
+          "$ref": "#/$defs/IdentityDecision"
+        }
+      },
+      "propertyNames": {
+        "maxLength": 128,
+        "minLength": 1
+      },
+      "title": "Identities",
+      "type": "object"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    },
+    "operator_review_required": {
+      "const": true,
+      "default": true,
+      "title": "Operator Review Required",
+      "type": "boolean"
+    },
+    "own_goal": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Own Goal"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Reasons",
+      "type": "array"
+    },
+    "roster_revision": {
+      "minimum": 0,
+      "title": "Roster Revision",
+      "type": "integer"
+    },
+    "rule_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "scorer_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Scorer Id"
+    },
+    "scoring_team": {
+      "enum": [
+        "orange",
+        "green"
+      ],
+      "title": "Scoring Team",
+      "type": "string"
+    },
+    "suggestion_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Suggestion Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "suggestion_id",
+    "goal_id",
+    "match_id",
+    "roster_revision",
+    "scoring_team",
+    "reasons",
+    "evidence",
+    "rule_version"
+  ],
+  "title": "AttributionSuggestion",
+  "type": "object"
+}

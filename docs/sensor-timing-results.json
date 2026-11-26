@@ -1,0 +1,63 @@
+{
+  "alignments": [
+    {
+      "boot_id": 101,
+      "device_id": 1,
+      "evidence": "synthetic",
+      "host_clock_domain": "dummy-host",
+      "host_origin_seconds": 0.5,
+      "scale": 1.0,
+      "source_origin_seconds": 0.5,
+      "uncertainty_seconds": 0.001,
+      "valid_from_device_seconds": 0.0,
+      "valid_to_device_seconds": 9.998,
+      "version": "dummy-alignment-validation-v1"
+    },
+    {
+      "boot_id": 101,
+      "device_id": 2,
+      "evidence": "synthetic",
+      "host_clock_domain": "dummy-host",
+      "host_origin_seconds": 0.50005,
+      "scale": 1.0001,
+      "source_origin_seconds": 0.5,
+      "uncertainty_seconds": 0.001,
+      "valid_from_device_seconds": 0.0,
+      "valid_to_device_seconds": 9.998,
+      "version": "dummy-alignment-validation-v1"
+    }
+  ],
+  "evidence": "synthetic",
+  "field_verified": false,
+  "groups": [
+    {
+      "boot_id": 101,
+      "device_id": 1,
+      "drift_ppm": 0.0,
+      "fit_markers": 3,
+      "maximum_validation_bound_ms": 1.0,
+      "valid_span": [
+        0,
+        9.998
+      ],
+      "validation_markers": 3,
+      "within_20ms": true
+    },
+    {
+      "boot_id": 101,
+      "device_id": 2,
+      "drift_ppm": 99.99999999998899,
+      "fit_markers": 3,
+      "maximum_validation_bound_ms": 1.0,
+      "valid_span": [
+        0,
+        9.998
+      ],
+      "validation_markers": 3,
+      "within_20ms": true
+    }
+  ],
+  "physical_markers_supplied": false,
+  "schema_version": 1,
+  "timing_target_met": true
+}

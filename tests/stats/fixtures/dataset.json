@@ -1,0 +1,467 @@
+{
+  "annotation_policy": "explicit-generated-touch-references-v1",
+  "dataset_id": "dummy-attribution-v1",
+  "evidence": "synthetic",
+  "schema_version": 1,
+  "sessions": [
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-direct",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-direct",
+      "path": "direct.json",
+      "session_id": "session-direct",
+      "sha256": "c8e886edf4d524fd0dc92286acabe55073212f4af3d90dd63feec41fa11dde5b",
+      "source_group_id": "dummy-group-direct",
+      "split": "train"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": "green-11",
+        "assist_known": true,
+        "goal_id": "goal-assist",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-assist",
+      "path": "assist.json",
+      "session_id": "session-assist",
+      "sha256": "2ce82fe13fe31152a36d563337963eb8971626c96e893e72872f92d8bc4b790c",
+      "source_group_id": "dummy-group-assist",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-own_goal",
+        "own_goal": true,
+        "own_goal_known": true,
+        "scorer_id": "orange-9",
+        "scorer_known": true
+      },
+      "match_id": "match-own_goal",
+      "path": "own_goal.json",
+      "session_id": "session-own_goal",
+      "sha256": "88b307e10cccfa4dc3631b3aad955e36fca21177a81a581ede33baf01e149d83",
+      "source_group_id": "dummy-group-own_goal",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-deflection",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-deflection",
+      "path": "deflection.json",
+      "session_id": "session-deflection",
+      "sha256": "570e21bda3ff933decceb528c377ff43a5702df39e32fb9d3008ace25975dd56",
+      "source_group_id": "dummy-group-deflection",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-uncertain",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-uncertain",
+      "path": "uncertain.json",
+      "session_id": "session-uncertain",
+      "sha256": "24ba6df3e52d2872993fcc956b5efd3c90cfb745e4135c8d72a0afade70b15ab",
+      "source_group_id": "dummy-group-uncertain",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-identity_switch",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-identity_switch",
+      "path": "identity_switch.json",
+      "session_id": "session-identity_switch",
+      "sha256": "156c23155664eaf5fa401c68867fd4a598017edfe7c91ae7909bd02f443285be",
+      "source_group_id": "dummy-group-identity_switch",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-partial_coverage",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-partial_coverage",
+      "path": "partial_coverage.json",
+      "session_id": "session-partial_coverage",
+      "sha256": "edf8f8875109da1fcd0653975a53beb1276bd0eb6ef87d25290dec4e9921e3c4",
+      "source_group_id": "dummy-group-partial_coverage",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-occluded",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-occluded",
+      "path": "occluded.json",
+      "session_id": "session-occluded",
+      "sha256": "9b91a798f66d15c3810d946c3b02f4e7090cbbb260fa0f8d577ae6f1699b9869",
+      "source_group_id": "dummy-group-occluded",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-few_reads",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-few_reads",
+      "path": "few_reads.json",
+      "session_id": "session-few_reads",
+      "sha256": "e13fd5b21453074547765a3bb788a8b9f8594ef3f2be8d693d81dd95e760a683",
+      "source_group_id": "dummy-group-few_reads",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-stale_reads",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-stale_reads",
+      "path": "stale_reads.json",
+      "session_id": "session-stale_reads",
+      "sha256": "23265906aafb7f3471cd650a8931e6083d11b15ae4542e2cdb74a2b2c4f542f1",
+      "source_group_id": "dummy-group-stale_reads",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-proximity_only",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-proximity_only",
+      "path": "proximity_only.json",
+      "session_id": "session-proximity_only",
+      "sha256": "65f30c5c0665c75d6c7efc398d91a336ef156d92579c58151193f2529b96e07b",
+      "source_group_id": "dummy-group-proximity_only",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-opponent_breaks_assist",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-opponent_breaks_assist",
+      "path": "opponent_breaks_assist.json",
+      "session_id": "session-opponent_breaks_assist",
+      "sha256": "65e394050a2d76292190e7ee7ab0aa0e47bab452848587d8df3bbd4753f234eb",
+      "source_group_id": "dummy-group-opponent_breaks_assist",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": "green-11",
+        "assist_known": true,
+        "goal_id": "goal-same_player_dribble",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-same_player_dribble",
+      "path": "same_player_dribble.json",
+      "session_id": "session-same_player_dribble",
+      "sha256": "081f62f3d9eb0ed1f8928c57a0e19f46cbf49f013d04d13a97c84ef1af45e641",
+      "source_group_id": "dummy-group-same_player_dribble",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-no_contact",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-no_contact",
+      "path": "no_contact.json",
+      "session_id": "session-no_contact",
+      "sha256": "f9526f3bbd6f2ecc3b3bc1d15a731ea48e18d2a23da12f1d0462e4f6c7c31489",
+      "source_group_id": "dummy-group-no_contact",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": "green-11",
+        "assist_known": true,
+        "goal_id": "goal-ambiguous_order",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-ambiguous_order",
+      "path": "ambiguous_order.json",
+      "session_id": "session-ambiguous_order",
+      "sha256": "cb20b3a57aba84558caa3aad00ef1e155c29e1bc285a733558f65a78f2c04cf0",
+      "source_group_id": "dummy-group-ambiguous_order",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-clock_unknown",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-clock_unknown",
+      "path": "clock_unknown.json",
+      "session_id": "session-clock_unknown",
+      "sha256": "99c961396dbb93498abce3d7290932f1df093ecfc519d637535649a6ce827a2f",
+      "source_group_id": "dummy-group-clock_unknown",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-future_reads",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-future_reads",
+      "path": "future_reads.json",
+      "session_id": "session-future_reads",
+      "sha256": "3e37a333f882351f2a60cf98ad5f1aa392254c22bb7f8b0f23bdb22e5660f994",
+      "source_group_id": "dummy-group-future_reads",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-inactive_bib",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-15",
+        "scorer_known": true
+      },
+      "match_id": "match-inactive_bib",
+      "path": "inactive_bib.json",
+      "session_id": "session-inactive_bib",
+      "sha256": "87f5cac663a05746106a3e1ad5e7de28078b87b34d2df4d53d3ae83613732ce7",
+      "source_group_id": "dummy-group-inactive_bib",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-unknown_bib",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-unknown_bib",
+      "path": "unknown_bib.json",
+      "session_id": "session-unknown_bib",
+      "sha256": "e3e80f09202edd3a0003e714c8a3edbce7ca1d36a44b43f207e228df5226aa6b",
+      "source_group_id": "dummy-group-unknown_bib",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-touch_uncertainty",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-touch_uncertainty",
+      "path": "touch_uncertainty.json",
+      "session_id": "session-touch_uncertainty",
+      "sha256": "63ccf2dd23e0ef613bcc25a7a48228d9cf1fb8faaac3c06f2781fdb41140aeae",
+      "source_group_id": "dummy-group-touch_uncertainty",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-frame_rebound",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-frame_rebound",
+      "path": "frame_rebound.json",
+      "session_id": "session-frame_rebound",
+      "sha256": "5a3e7763e0918a193322e6b471097aa05b342ecc0d023e9b7658fdd74bdc7848",
+      "source_group_id": "dummy-group-frame_rebound",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-source_reset",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-source_reset",
+      "path": "source_reset.json",
+      "session_id": "session-source_reset",
+      "sha256": "c5d0fffc61f6fc4e5a7bca5a30f95cab1780712f61f7c3333671061c6277a503",
+      "source_group_id": "dummy-group-source_reset",
+      "split": "blind_test"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-orange_goal",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "orange-9",
+        "scorer_known": true
+      },
+      "match_id": "match-orange_goal",
+      "path": "orange_goal.json",
+      "session_id": "session-orange_goal",
+      "sha256": "21a8d60a910730b653fbcfca4e6e6b7df25e432de599f397bce2b522a7db80d8",
+      "source_group_id": "dummy-group-orange_goal",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": "green-11",
+        "assist_known": true,
+        "goal_id": "goal-unclear_assist",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-7",
+        "scorer_known": true
+      },
+      "match_id": "match-unclear_assist",
+      "path": "unclear_assist.json",
+      "session_id": "session-unclear_assist",
+      "sha256": "b3b17d6b4f8f9c1d62151a81988c4646a3d9576fa303fba89c5ff3b2bff04b96",
+      "source_group_id": "dummy-group-unclear_assist",
+      "split": "validation"
+    },
+    {
+      "label": {
+        "adjudication": "generated_reference",
+        "assist_id": null,
+        "assist_known": true,
+        "goal_id": "goal-substituted_roster",
+        "own_goal": false,
+        "own_goal_known": true,
+        "scorer_id": "green-15",
+        "scorer_known": true
+      },
+      "match_id": "match-substituted_roster",
+      "path": "substituted_roster.json",
+      "session_id": "session-substituted_roster",
+      "sha256": "43f9962c76307f23343f823f9d2da4de82d0267460aecb04f489e0b7294c167a",
+      "source_group_id": "dummy-group-substituted_roster",
+      "split": "validation"
+    }
+  ],
+  "settings": {
+    "automatic_write_allowed": false,
+    "identity_window_seconds": 1.5,
+    "max_uncertainty_seconds": 0.02,
+    "minimum_identity_reads": 3,
+    "rule_version": "conservative-attribution-v1",
+    "schema_version": 1,
+    "touch_lookback_seconds": 10.0
+  }
+}

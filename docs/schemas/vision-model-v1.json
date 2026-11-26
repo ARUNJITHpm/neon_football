@@ -1,0 +1,145 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "class_count": {
+      "maximum": 1000,
+      "minimum": 1,
+      "title": "Class Count",
+      "type": "integer"
+    },
+    "classes": {
+      "additionalProperties": {
+        "enum": [
+          "ball",
+          "player"
+        ],
+        "type": "string"
+      },
+      "title": "Classes",
+      "type": "object"
+    },
+    "input_height": {
+      "maximum": 2048,
+      "minimum": 32,
+      "title": "Input Height",
+      "type": "integer"
+    },
+    "input_width": {
+      "maximum": 2048,
+      "minimum": 32,
+      "title": "Input Width",
+      "type": "integer"
+    },
+    "licence": {
+      "minLength": 1,
+      "title": "Licence",
+      "type": "string"
+    },
+    "licence_decision": {
+      "enum": [
+        "not_reviewed",
+        "approved_for_offline_use",
+        "synthetic_fixture"
+      ],
+      "title": "Licence Decision",
+      "type": "string"
+    },
+    "max_detections": {
+      "default": 100,
+      "maximum": 100,
+      "minimum": 1,
+      "title": "Max Detections",
+      "type": "integer"
+    },
+    "min_score": {
+      "default": 0.25,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Min Score",
+      "type": "number"
+    },
+    "nms_iou": {
+      "default": 0.45,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Nms Iou",
+      "type": "number"
+    },
+    "output_layout": {
+      "const": "raw_channels_first",
+      "default": "raw_channels_first",
+      "title": "Output Layout",
+      "type": "string"
+    },
+    "path": {
+      "title": "Path",
+      "type": "string"
+    },
+    "pre_nms_limit": {
+      "default": 1000,
+      "maximum": 5000,
+      "minimum": 1,
+      "title": "Pre Nms Limit",
+      "type": "integer"
+    },
+    "precision": {
+      "const": "float32",
+      "default": "float32",
+      "title": "Precision",
+      "type": "string"
+    },
+    "provider": {
+      "const": "CPUExecutionProvider",
+      "default": "CPUExecutionProvider",
+      "title": "Provider",
+      "type": "string"
+    },
+    "purpose": {
+      "enum": [
+        "pretrained",
+        "adapted",
+        "synthetic_adapter_test"
+      ],
+      "title": "Purpose",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Sha256",
+      "type": "string"
+    },
+    "source": {
+      "minLength": 1,
+      "title": "Source",
+      "type": "string"
+    },
+    "version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "path",
+    "sha256",
+    "source",
+    "licence",
+    "licence_decision",
+    "purpose",
+    "input_width",
+    "input_height",
+    "class_count",
+    "classes"
+  ],
+  "title": "ModelDescriptor",
+  "type": "object"
+}

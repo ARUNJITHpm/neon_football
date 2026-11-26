@@ -1,0 +1,47 @@
+{
+  "annotation_policy_version": "annotation-policy-v1",
+  "dataset_id": "vision-numerical-fixture-v1",
+  "schema_version": 1,
+  "sessions": [
+    {
+      "assets": [
+        {
+          "kind": "vision_observations",
+          "path": "observations.jsonl",
+          "sha256": "d1ba390fb11d2d98d6d314ec04b3f17f189e3ad6d36c57c9877e93687ca5fee4"
+        },
+        {
+          "kind": "replay_events",
+          "path": "events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "calibration_versions": {
+        "goal-a": "synthetic-geometry-v1",
+        "goal-b": "synthetic-geometry-v1"
+      },
+      "conditions": [
+        "numerical-test-not-football"
+      ],
+      "configuration_version": "synthetic-vision-v1",
+      "duration_seconds": 15.0,
+      "evidence": "synthetic",
+      "host_clock_domain": "fixture-clock",
+      "matches": [
+        {
+          "active_auto_windows": [],
+          "end_seconds": 15.0,
+          "match_id": "vision-match",
+          "start_seconds": 0.0
+        }
+      ],
+      "model_version": "injected-trajectories-no-detector-v1",
+      "physical_alignment_verified": false,
+      "session_id": "vision-validation",
+      "source_group_id": "synthetic-trajectories",
+      "split": "validation"
+    }
+  ],
+  "split_assignment_version": "synthetic-validation-v1",
+  "split_frozen_at": "2026-10-11T00:00:00Z"
+}

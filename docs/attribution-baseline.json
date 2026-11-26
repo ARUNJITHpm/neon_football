@@ -1,0 +1,3978 @@
+{
+  "actual_image_recognition": false,
+  "api_workflow": {
+    "actual_image_recognition": false,
+    "automatic_attribution_enabled": false,
+    "automatic_scoring_enabled": false,
+    "browser_render_verified": false,
+    "commands": 16,
+    "event_count": 16,
+    "evidence": "synthetic",
+    "field_accuracy_measured": false,
+    "fixture": "attribution-api-v1",
+    "goals": 2,
+    "outputs": {
+      "export.json": "0b1079ac7631ac35c0067f4aa283c833a1548c206f2d6e4035823634cdf4f718",
+      "report.json": "3c42e546e7c1a79e0df3cde93bfdbee5ac5529ab6fa518d21ab317d6c1408677",
+      "report.txt": "224450a3210688f69bf33ec986237e2c38894661fea4b5fc17d167d79b0af78e"
+    },
+    "roster_revision": 1,
+    "schema_version": 1,
+    "score": {
+      "green": 1,
+      "orange": 0
+    },
+    "source_sha256": {
+      "app/__init__.py": "0652526c969c1ae3ba47626905059c06ba23312bbc69af2467a5e0302478389d",
+      "app/__main__.py": "5e220fe4e3e3bcf1243a47d6d8c17cfdbec98be4ac76b3d442f1c59000bbcd92",
+      "app/attribution.py": "95045b64ccbdb665b49ecee0ad013e4945333692734144d00fc235741de73726",
+      "app/display.py": "fae5ae03c325a79d4e95a51e445e1aa11fd1275f759e7f794f7be24dcb58e0a3",
+      "app/main.py": "969cd5aae0467ed346c19211602943097fbd44c5e9bc0059912a746d8c07574b",
+      "app/operations.py": "dd085e35ef8d08cc83b2194c12dcf6e1dcd01b4b8fd6164e518b78af9212a684",
+      "app/review.py": "a601d937eacb286173d0cbc09a00838261dab3451db85da992c470f5a27b5f32",
+      "app/settings.py": "87f47ecf275640643202cbfe2fb36da8181c4e09a0b4b73ba3b67172276d43ea",
+      "core/__init__.py": "5859fa61158ed4c1d6f8eb9e71ba627305d155ac3e28a5d4cba50bdf92710e2a",
+      "core/attribution.py": "2f2ec75190a14c641ffb744ddb73d64b36ff9e9b7f22d0728979e83cf5c3f723",
+      "core/bus.py": "0773360b907d3df168e5e4bb1c766122d67fd9d940d2adbb355978cad8426af9",
+      "core/capture.py": "56b1b6deb6e3a8b4ffa3206832dfec03881b4645ac5d890e476c52317e55322b",
+      "core/clock.py": "89e365bf6fd10d63e91be9c8dfa79b4177c7d023d4bcd899eb48801ab43fe7ab",
+      "core/dataset.py": "15b0097eaa39c48ee14da0955daab1261fd122aa2bc5b595a007071b2f3cb778",
+      "core/fusion.py": "6dd5f14f98af36dc56e3cd710a3721da7e8de2a197f75d4f2bef54102a1f9967",
+      "core/operations.py": "850430bef93e5fb36f2433c0f394b0a8b9d6a4bf0cdbdcb6b5daf24bd0e1675b",
+      "core/ports.py": "7b66c85e02be9d30f6abb63bcf07395d8bb446e6ae956856b91c3a34a1e838b7",
+      "core/review.py": "6d99c4d34f2e91b96690c529cb369daab6caaed24adf1a68552711178ee80ad0",
+      "core/schemas.py": "5ea7aefd897426f8a3d4b63a22f6e7dfa35b60b3a2d3f9c81024d3c4212cea7f",
+      "core/sensors.py": "d209e329667bc2bed79229b980ce904915e5202e0108e5b7f5ed58e9e0cfecfc",
+      "core/vision.py": "27efc66172052acb19a47d414a4823f5fc5f6dfb2bedb223be4c9c35d9e7b7a0",
+      "modules/__init__.py": "9a619b99c28950355ab3a65dbe04d1504b55a8eef72f504d27989b45f4c73319",
+      "modules/api/__init__.py": "60686593659491af6a4386a44b7a5e0b0c93b321000b94525ad6c1a0c1222ac7",
+      "modules/api/routes.py": "dcb39dc984644e6e0cc4b3a35eaad4f5ff3620a7039cdcc8a29159dead165878",
+      "modules/api/static/common.js": "486911b348de0c21199f8801a69931817a9b704991b8a8d87d43a5590bec67f7",
+      "modules/api/static/operator.html": "dda2e9dffaeea78d5fa0a3b0bd96553c35d00bacf6d26c8b3138697d3229d5fe",
+      "modules/api/static/operator.js": "d3a9c7d48f55df8dcf2662ce9ea1510972191debdf0d00836bbdeb6a311cd86e",
+      "modules/api/static/scoreboard.html": "f9f410103d5220fb967a6320c369098bb15ed7dfcdc241eaf9fdcf95e24f8a00",
+      "modules/api/static/scoreboard.js": "2ec1713e15fbeb3e50253b5054e697606ee18de803a7d750447e30752f3498db",
+      "modules/api/static/style.css": "3d001db376e015c2d0471b1755f8ea9fe44387a609ebcab5469013dfb5f7d307",
+      "modules/capture/__init__.py": "bb9dec1eb3e8facdaf8d896682024805f7776568edde045849b60d59489583fe",
+      "modules/capture/backend.py": "a65c0b7fa40078ddf4a8606ca3a143f87e9061c99f9287a293e6ec9f00df520b",
+      "modules/capture/buffers.py": "00d96705d6899e7321cb722e92d35a80c7d4b9b63df54c7deaae33e999226c17",
+      "modules/capture/clips.py": "16417bcbf8b87a689fc45ee73b4738254d740b15bd2025ad3ab9c5800dfb3ec3",
+      "modules/capture/manager.py": "8a4816128509fa6b4f8ec9d570c1ec535e839705cb9ae08aebb4b43493c060a1",
+      "modules/capture/recording.py": "ec918d52d77ccb7c1218e6247cfcffff5a239bb248b327ce2e1ec78bdeebf32d",
+      "modules/capture/retention.py": "a810eea4ad61ef596c0a53ab69b6bae1262903cc76b5a07ba51441944d1d43a2",
+      "modules/goal_engine/__init__.py": "7882d1ecc53b7d3b108c8a730cb58ee99dc34b6c439c22d4cc4a44ec14a219ed",
+      "modules/goal_engine/engine.py": "1acb51612017153072ebe601b07962115bee99b616d0d09f921e1165936e4ab6",
+      "modules/replay/__init__.py": "787fe6eb46c4400248b2b7357a23ebd6583fd89f95151a5d4c9635943af337f6",
+      "modules/replay/dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+      "modules/replay/evaluator.py": "9d0366b075a329bf996e7b7b32684d4b3b9014ad12cb3c4f8aa58f1524c4f78c",
+      "modules/replay/matching.py": "d28cb9b611acc81793f940e439dd8f3369cde35233aca6facd97e388dea8292d",
+      "modules/replay/runner.py": "e5fa80c71b86e61b343179a34c63beb5a981b8cf3123f81f255d756fb24f9d49",
+      "modules/replay/statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+      "modules/sensors/__init__.py": "4144357fb4bc309b5bf3e983d3dfd632976afa3784195b5b4c511003d7222294",
+      "modules/sensors/host.py": "53d8c60f644a9ab64382070f0dff1f522b2627cfb8e2aa6067df19b74f48bc81",
+      "modules/sensors/impact.py": "616037846d9f25c6d8cab0310b9b80a461119c1d503cfb06b502261ca996e22d",
+      "modules/sensors/protocol.py": "3c7cea5c030b657aa409dc67a4fb86aeaeabfe6e9ff48538ec1c2004a73fc236",
+      "modules/sensors/reader.py": "a19652e84ef15bab8d4f45a1f76b5f2aa76bdeba50d2ad85d4d7b4949860af18",
+      "modules/stats/__init__.py": "622cc18a609961bf9f4a2fea7abe0028a68c09923fa77c407c0833c404152b90",
+      "modules/stats/attribution.py": "2fa15f4252400b0475cb3163c5c8e4be3d8a73c3b112c091b1ff2a6e67139fc4",
+      "modules/stats/identity.py": "437c2a38f24fe616b5dbe28a751bf0446da13af34487929d3a921b6c6c07fe6b",
+      "modules/storage/__init__.py": "65291f68158d6d10fd269d4f91bc620889bcffe6f21702c2d62a5edba068ef3d",
+      "modules/storage/maintenance.py": "c4f75abdc20d52ad6d8aea4787d927d814d38b47f9e443fbe13576e008428c46",
+      "modules/storage/report.py": "7e4f1778891b5c5145eb2136cfb5e4eb91a43d588a3a28e2d53dfd70789ccdfe",
+      "modules/storage/store.py": "d0c1e485247a4c3f6e7ded3bfd5001d1c4538e77eb0b2e7f93ba53ebb6b58f2e",
+      "modules/vision/__init__.py": "d72394cc80cd5d4e3f41d09e428a7ca329e4b04216d779cb262309ea9e82a0de",
+      "modules/vision/detector.py": "1370b63eb2271d3925efcf2ab5b9001c62d943fee80bcb538f02b0e7b000ff26",
+      "modules/vision/engine.py": "a8763c2abf08e21f276ffeb8bbcfa26050ee8be12a74b467fd487b65084a67b2",
+      "modules/vision/geometry.py": "d3c90679038970c2b1c0e7f160cd591edf6e663604392ac44131ac98654b94d0",
+      "modules/vision/motion.py": "eba177ec6fd6841cfcd5f65947d3c97e659347b9bb3c8dbb14a0688d23ed673b",
+      "modules/vision/tracking.py": "ef879170f022edfde89f09832502020663429f491bbc3a808239a79d1fc9205c",
+      "tools/attribution_fixture.py": "debc9438b7257a8e0556fe15523c20968656f3ea57195ec09b714e06e67b4121",
+      "tools/attribution_replay.py": "1fa5772881f23d7650d2c90d3271cac8fb1247c090c1dad7fc97806519399a41",
+      "tools/build_attribution_fixture.py": "9ac2502cecd0f1bf1e85fb6dcab0aa53b8762764ec561c7d6d22fa6040377400"
+    },
+    "suggestion_statuses": [
+      "accepted",
+      "rejected",
+      "accepted"
+    ]
+  },
+  "browser_render_verified": false,
+  "evidence": "synthetic",
+  "field_qualified": false,
+  "module_files_checked": 36,
+  "node_tests_passed": 5,
+  "offline": {
+    "automatic_attribution_enabled": false,
+    "dataset_id": "dummy-attribution-v1",
+    "evidence": "synthetic",
+    "field_accuracy_measured": false,
+    "fields": {
+      "assist": {
+        "abstentions": 15,
+        "accuracy": {
+          "ci95": [
+            0.6755924351161198,
+            1
+          ],
+          "denominator": 8,
+          "interval_method": "wilson",
+          "numerator": 8,
+          "value": 1.0
+        },
+        "coverage": {
+          "ci95": [
+            0.1881127593879773,
+            0.55109664622737
+          ],
+          "denominator": 23,
+          "interval_method": "wilson",
+          "numerator": 8,
+          "value": 0.34782608695652173
+        },
+        "errors": 0,
+        "evaluated": 8,
+        "goals": 23,
+        "reference_known": 23,
+        "suggested": 8,
+        "unadjudicated_suggestions": 0
+      },
+      "own_goal": {
+        "abstentions": 14,
+        "accuracy": {
+          "ci95": [
+            0.7008549515804559,
+            1
+          ],
+          "denominator": 9,
+          "interval_method": "wilson",
+          "numerator": 9,
+          "value": 1.0
+        },
+        "coverage": {
+          "ci95": [
+            0.22157622792477952,
+            0.592144776086183
+          ],
+          "denominator": 23,
+          "interval_method": "wilson",
+          "numerator": 9,
+          "value": 0.391304347826087
+        },
+        "errors": 0,
+        "evaluated": 9,
+        "goals": 23,
+        "reference_known": 23,
+        "suggested": 9,
+        "unadjudicated_suggestions": 0
+      },
+      "scorer": {
+        "abstentions": 14,
+        "accuracy": {
+          "ci95": [
+            0.7008549515804559,
+            1
+          ],
+          "denominator": 9,
+          "interval_method": "wilson",
+          "numerator": 9,
+          "value": 1.0
+        },
+        "coverage": {
+          "ci95": [
+            0.22157622792477952,
+            0.592144776086183
+          ],
+          "denominator": 23,
+          "interval_method": "wilson",
+          "numerator": 9,
+          "value": 0.391304347826087
+        },
+        "errors": 0,
+        "evaluated": 9,
+        "goals": 23,
+        "reference_known": 23,
+        "suggested": 9,
+        "unadjudicated_suggestions": 0
+      }
+    },
+    "gate": {
+      "required_accuracy": 0.98,
+      "required_coverage": 0.9,
+      "required_heldout_goals": 100,
+      "state": "pending"
+    },
+    "goals": 23,
+    "grouped_fields": {
+      "condition:ambiguous_order": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:assist": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:clear_view": {
+        "assist": {
+          "abstentions": 12,
+          "accuracy": {
+            "ci95": [
+              0.5655175352168251,
+              1
+            ],
+            "denominator": 5,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.1327998961029523,
+              0.5313311006653985
+            ],
+            "denominator": 17,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 0.29411764705882354
+          },
+          "errors": 0,
+          "evaluated": 5,
+          "goals": 17,
+          "reference_known": 17,
+          "suggested": 5,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 11,
+          "accuracy": {
+            "ci95": [
+              0.6096657120978346,
+              1
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.17309720397243744,
+              0.5869963651478132
+            ],
+            "denominator": 17,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 0.35294117647058826
+          },
+          "errors": 0,
+          "evaluated": 6,
+          "goals": 17,
+          "reference_known": 17,
+          "suggested": 6,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 11,
+          "accuracy": {
+            "ci95": [
+              0.6096657120978346,
+              1
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.17309720397243744,
+              0.5869963651478132
+            ],
+            "denominator": 17,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 0.35294117647058826
+          },
+          "errors": 0,
+          "evaluated": 6,
+          "goals": 17,
+          "reference_known": 17,
+          "suggested": 6,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:clock_unknown": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:deflection": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:few_reads": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:frame_rebound": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:future_reads": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:generated_numeric": {
+        "assist": {
+          "abstentions": 15,
+          "accuracy": {
+            "ci95": [
+              0.6755924351161198,
+              1
+            ],
+            "denominator": 8,
+            "interval_method": "wilson",
+            "numerator": 8,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.1881127593879773,
+              0.55109664622737
+            ],
+            "denominator": 23,
+            "interval_method": "wilson",
+            "numerator": 8,
+            "value": 0.34782608695652173
+          },
+          "errors": 0,
+          "evaluated": 8,
+          "goals": 23,
+          "reference_known": 23,
+          "suggested": 8,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 14,
+          "accuracy": {
+            "ci95": [
+              0.7008549515804559,
+              1
+            ],
+            "denominator": 9,
+            "interval_method": "wilson",
+            "numerator": 9,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.22157622792477952,
+              0.592144776086183
+            ],
+            "denominator": 23,
+            "interval_method": "wilson",
+            "numerator": 9,
+            "value": 0.391304347826087
+          },
+          "errors": 0,
+          "evaluated": 9,
+          "goals": 23,
+          "reference_known": 23,
+          "suggested": 9,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 14,
+          "accuracy": {
+            "ci95": [
+              0.7008549515804559,
+              1
+            ],
+            "denominator": 9,
+            "interval_method": "wilson",
+            "numerator": 9,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.22157622792477952,
+              0.592144776086183
+            ],
+            "denominator": 23,
+            "interval_method": "wilson",
+            "numerator": 9,
+            "value": 0.391304347826087
+          },
+          "errors": 0,
+          "evaluated": 9,
+          "goals": 23,
+          "reference_known": 23,
+          "suggested": 9,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:identity_switch": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:inactive_bib": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:low_light": {
+        "assist": {
+          "abstentions": 4,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ],
+            "denominator": 7,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.42857142857142855
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 7,
+          "reference_known": 7,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 4,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ],
+            "denominator": 7,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.42857142857142855
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 7,
+          "reference_known": 7,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 4,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ],
+            "denominator": 7,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.42857142857142855
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 7,
+          "reference_known": 7,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:no_contact": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:normal_light": {
+        "assist": {
+          "abstentions": 11,
+          "accuracy": {
+            "ci95": [
+              0.5655175352168251,
+              1
+            ],
+            "denominator": 5,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ],
+            "denominator": 16,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 0.3125
+          },
+          "errors": 0,
+          "evaluated": 5,
+          "goals": 16,
+          "reference_known": 16,
+          "suggested": 5,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 10,
+          "accuracy": {
+            "ci95": [
+              0.6096657120978346,
+              1
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.18481232558863633,
+              0.6135895945449727
+            ],
+            "denominator": 16,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 0.375
+          },
+          "errors": 0,
+          "evaluated": 6,
+          "goals": 16,
+          "reference_known": 16,
+          "suggested": 6,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 10,
+          "accuracy": {
+            "ci95": [
+              0.6096657120978346,
+              1
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.18481232558863633,
+              0.6135895945449727
+            ],
+            "denominator": 16,
+            "interval_method": "wilson",
+            "numerator": 6,
+            "value": 0.375
+          },
+          "errors": 0,
+          "evaluated": 6,
+          "goals": 16,
+          "reference_known": 16,
+          "suggested": 6,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:occluded": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:opponent_breaks_assist": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:orange_goal": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:overlap": {
+        "assist": {
+          "abstentions": 3,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.1876163064826506,
+              0.8123836935173494
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.5
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 6,
+          "reference_known": 6,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 3,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.1876163064826506,
+              0.8123836935173494
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.5
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 6,
+          "reference_known": 6,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 3,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.1876163064826506,
+              0.8123836935173494
+            ],
+            "denominator": 6,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.5
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 6,
+          "reference_known": 6,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:own_goal": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:partial_coverage": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:proximity_only": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:same_player_dribble": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:stale_reads": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:substituted_roster": {
+        "assist": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:touch_uncertainty": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:uncertain": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:unclear_assist": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 0,
+          "accuracy": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.20654931437723745,
+              1
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 1,
+            "value": 1.0
+          },
+          "errors": 0,
+          "evaluated": 1,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 1,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "condition:unknown_bib": {
+        "assist": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 1,
+          "accuracy": {
+            "ci95": null,
+            "denominator": 0,
+            "numerator": 0,
+            "value": null
+          },
+          "coverage": {
+            "ci95": [
+              0,
+              0.7934506856227626
+            ],
+            "denominator": 1,
+            "interval_method": "wilson",
+            "numerator": 0,
+            "value": 0.0
+          },
+          "errors": 0,
+          "evaluated": 0,
+          "goals": 1,
+          "reference_known": 1,
+          "suggested": 0,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "end:goal_a": {
+        "assist": {
+          "abstentions": 7,
+          "accuracy": {
+            "ci95": [
+              0.5655175352168251,
+              1
+            ],
+            "denominator": 5,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.19326031365875665,
+              0.6804886874504503
+            ],
+            "denominator": 12,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 0.4166666666666667
+          },
+          "errors": 0,
+          "evaluated": 5,
+          "goals": 12,
+          "reference_known": 12,
+          "suggested": 5,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 7,
+          "accuracy": {
+            "ci95": [
+              0.5655175352168251,
+              1
+            ],
+            "denominator": 5,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.19326031365875665,
+              0.6804886874504503
+            ],
+            "denominator": 12,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 0.4166666666666667
+          },
+          "errors": 0,
+          "evaluated": 5,
+          "goals": 12,
+          "reference_known": 12,
+          "suggested": 5,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 7,
+          "accuracy": {
+            "ci95": [
+              0.5655175352168251,
+              1
+            ],
+            "denominator": 5,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.19326031365875665,
+              0.6804886874504503
+            ],
+            "denominator": 12,
+            "interval_method": "wilson",
+            "numerator": 5,
+            "value": 0.4166666666666667
+          },
+          "errors": 0,
+          "evaluated": 5,
+          "goals": 12,
+          "reference_known": 12,
+          "suggested": 5,
+          "unadjudicated_suggestions": 0
+        }
+      },
+      "end:goal_b": {
+        "assist": {
+          "abstentions": 8,
+          "accuracy": {
+            "ci95": [
+              0.4385029682449546,
+              1
+            ],
+            "denominator": 3,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.09746059290024889,
+              0.5656453011761291
+            ],
+            "denominator": 11,
+            "interval_method": "wilson",
+            "numerator": 3,
+            "value": 0.2727272727272727
+          },
+          "errors": 0,
+          "evaluated": 3,
+          "goals": 11,
+          "reference_known": 11,
+          "suggested": 3,
+          "unadjudicated_suggestions": 0
+        },
+        "own_goal": {
+          "abstentions": 7,
+          "accuracy": {
+            "ci95": [
+              0.5101091635454027,
+              1
+            ],
+            "denominator": 4,
+            "interval_method": "wilson",
+            "numerator": 4,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.15166471095367573,
+              0.6461988254921511
+            ],
+            "denominator": 11,
+            "interval_method": "wilson",
+            "numerator": 4,
+            "value": 0.36363636363636365
+          },
+          "errors": 0,
+          "evaluated": 4,
+          "goals": 11,
+          "reference_known": 11,
+          "suggested": 4,
+          "unadjudicated_suggestions": 0
+        },
+        "scorer": {
+          "abstentions": 7,
+          "accuracy": {
+            "ci95": [
+              0.5101091635454027,
+              1
+            ],
+            "denominator": 4,
+            "interval_method": "wilson",
+            "numerator": 4,
+            "value": 1.0
+          },
+          "coverage": {
+            "ci95": [
+              0.15166471095367573,
+              0.6461988254921511
+            ],
+            "denominator": 11,
+            "interval_method": "wilson",
+            "numerator": 4,
+            "value": 0.36363636363636365
+          },
+          "errors": 0,
+          "evaluated": 4,
+          "goals": 11,
+          "reference_known": 11,
+          "suggested": 4,
+          "unadjudicated_suggestions": 0
+        }
+      }
+    },
+    "implementation_sha256": {
+      "core/attribution.py": "2f2ec75190a14c641ffb744ddb73d64b36ff9e9b7f22d0728979e83cf5c3f723",
+      "core/schemas.py": "5ea7aefd897426f8a3d4b63a22f6e7dfa35b60b3a2d3f9c81024d3c4212cea7f",
+      "modules/replay/dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+      "modules/replay/statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+      "modules/stats/__init__.py": "622cc18a609961bf9f4a2fea7abe0028a68c09923fa77c407c0833c404152b90",
+      "modules/stats/attribution.py": "2fa15f4252400b0475cb3163c5c8e4be3d8a73c3b112c091b1ff2a6e67139fc4",
+      "modules/stats/identity.py": "437c2a38f24fe616b5dbe28a751bf0446da13af34487929d3a921b6c6c07fe6b",
+      "tools/attribution_replay.py": "1fa5772881f23d7650d2c90d3271cac8fb1247c090c1dad7fc97806519399a41"
+    },
+    "limitations": [
+      "Injected identities and generated references do not test pixel recognition or physical touch detection",
+      "No measured full-pitch/overhead coverage or real identity handoff is available",
+      "Temporal windows and uncertainty limits are unmeasured prototype defaults",
+      "Suggestions need operator approval; independent attribution/release gates remain pending",
+      "Intervals are descriptive Wilson intervals without match-clustering adjustment"
+    ],
+    "manifest_sha256": "fa560285b9784468b5eda66f4bb1b019349c5bc7944270aa1ffe49f9696cb40e",
+    "model": "injected-team-bib-readings-no-ocr-v1",
+    "observations": 123,
+    "official_score_mutated": false,
+    "release_qualified": false,
+    "runner": "attribution-replay-v1",
+    "schema_version": 1,
+    "sessions": [
+      {
+        "asset_sha256": "2ce82fe13fe31152a36d563337963eb8971626c96e893e72872f92d8bc4b790c",
+        "conditions": [
+          "generated_numeric",
+          "assist",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": "green-11",
+          "assist_known": true,
+          "goal_id": "goal-assist",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-assist",
+        "session_id": "session-assist",
+        "suggestion": {
+          "assist_id": "green-11",
+          "assist_status": "suggested",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-assist",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-11",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-1": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-1-0",
+                "identity-track-1-1",
+                "identity-track-1-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-assist",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion",
+            "Preceding controlled teammate contact supplies possible assist"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:fa46df51275b2491e1d527efe4d7ca8bdb82dedd92c19e4b638cd1bfc68d16e1"
+        }
+      },
+      {
+        "asset_sha256": "88b307e10cccfa4dc3631b3aad955e36fca21177a81a581ede33baf01e149d83",
+        "conditions": [
+          "generated_numeric",
+          "own_goal",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-own_goal",
+          "own_goal": true,
+          "own_goal_known": true,
+          "scorer_id": "orange-9",
+          "scorer_known": true
+        },
+        "match_id": "match-own_goal",
+        "session_id": "session-own_goal",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-own_goal",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "orange-9",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-own_goal",
+          "operator_review_required": true,
+          "own_goal": true,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Certain opposing intentional last touch: possible own goal; no assist"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "orange-9",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:806175aa30396d66de6017ebda133b6ce403d7fbce745810f7f078324554fe95"
+        }
+      },
+      {
+        "asset_sha256": "570e21bda3ff933decceb528c377ff43a5702df39e32fb9d3008ace25975dd56",
+        "conditions": [
+          "generated_numeric",
+          "deflection",
+          "low_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-deflection",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-deflection",
+        "session_id": "session-deflection",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-deflection",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-1": {
+              "player_id": "orange-9",
+              "reading_ids": [
+                "identity-track-1-0",
+                "identity-track-1-1",
+                "identity-track-1-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-deflection",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Certain incidental deflection/rebound preserves prior intentional touch",
+            "Last certain scoring-team contact supplies the scorer suggestion"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:a8957ab52f8d4400bdb7ffbac26a901b9193a3356e0d52961599284cfacdd50b"
+        }
+      },
+      {
+        "asset_sha256": "24ba6df3e52d2872993fcc956b5efd3c90cfb745e4135c8d72a0afade70b15ab",
+        "conditions": [
+          "generated_numeric",
+          "uncertain",
+          "normal_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-uncertain",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-uncertain",
+        "session_id": "session-uncertain",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-uncertain",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-uncertain",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No certain intentional last contact"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:cc855ef8f4817df4bdcac45b13ce6918f726a5863900698c21da28cfe84d5e5e"
+        }
+      },
+      {
+        "asset_sha256": "156c23155664eaf5fa401c68867fd4a598017edfe7c91ae7909bd02f443285be",
+        "conditions": [
+          "generated_numeric",
+          "identity_switch",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-identity_switch",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-identity_switch",
+        "session_id": "session-identity_switch",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-identity_switch",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Identity switch/conflicting observations"
+            }
+          },
+          "match_id": "match-identity_switch",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Identity switch/conflicting observations"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:597fe3055ca987c9f7394319786d1bc7abcdae7097cdd94a164f72d8acb0df43"
+        }
+      },
+      {
+        "asset_sha256": "edf8f8875109da1fcd0653975a53beb1276bd0eb6ef87d25290dec4e9921e3c4",
+        "conditions": [
+          "generated_numeric",
+          "partial_coverage",
+          "low_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-partial_coverage",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-partial_coverage",
+        "session_id": "session-partial_coverage",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-partial_coverage",
+          "identities": {},
+          "match_id": "match-partial_coverage",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Touch coverage is partial or unknown; no full-pitch assumption"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:d2d6c39208f44bc2e6f8594da1d079ac42a8374187bbfe530fc1ed6464b014c9"
+        }
+      },
+      {
+        "asset_sha256": "9b91a798f66d15c3810d946c3b02f4e7090cbbb260fa0f8d577ae6f1699b9869",
+        "conditions": [
+          "generated_numeric",
+          "occluded",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-occluded",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-occluded",
+        "session_id": "session-occluded",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-occluded",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Latest identity is uncertain or occluded"
+            }
+          },
+          "match_id": "match-occluded",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Latest identity is uncertain or occluded"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:8cf91a7e0160f042be0a1e669e19a531c8d90c2cf50d502657de95e08a22a99c"
+        }
+      },
+      {
+        "asset_sha256": "e13fd5b21453074547765a3bb788a8b9f8594ef3f2be8d693d81dd95e760a683",
+        "conditions": [
+          "generated_numeric",
+          "few_reads",
+          "normal_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-few_reads",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-few_reads",
+        "session_id": "session-few_reads",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-few_reads",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1"
+              ],
+              "reason": "Insufficient distinct observed frames"
+            }
+          },
+          "match_id": "match-few_reads",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Insufficient distinct observed frames"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:3aa167c6143cab83360ea5489038b9b8e84c099dfab787b8af91c4dabf70878e"
+        }
+      },
+      {
+        "asset_sha256": "23265906aafb7f3471cd650a8931e6083d11b15ae4542e2cdb74a2b2c4f542f1",
+        "conditions": [
+          "generated_numeric",
+          "stale_reads",
+          "low_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-stale_reads",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-stale_reads",
+        "session_id": "session-stale_reads",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-stale_reads",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [],
+              "reason": "No fresh identity observations"
+            }
+          },
+          "match_id": "match-stale_reads",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No fresh identity observations"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:663d62e064de98f334c299be064a7c18cb8faa61e6a42422b23a1663ec5df553"
+        }
+      },
+      {
+        "asset_sha256": "65f30c5c0665c75d6c7efc398d91a336ef156d92579c58151193f2529b96e07b",
+        "conditions": [
+          "generated_numeric",
+          "proximity_only",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-proximity_only",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-proximity_only",
+        "session_id": "session-proximity_only",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-proximity_only",
+          "identities": {},
+          "match_id": "match-proximity_only",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No observed contact; proximity cannot identify a scorer"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:ef2317033ffec26a92b18ff8d8234210c095e4515a44fdd590d4dbe946754ae6"
+        }
+      },
+      {
+        "asset_sha256": "65e394050a2d76292190e7ee7ab0aa0e47bab452848587d8df3bbd4753f234eb",
+        "conditions": [
+          "generated_numeric",
+          "opponent_breaks_assist",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-opponent_breaks_assist",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-opponent_breaks_assist",
+        "session_id": "session-opponent_breaks_assist",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-opponent_breaks_assist",
+          "identities": {
+            "added-2-touch": {
+              "player_id": "orange-9",
+              "reading_ids": [
+                "added-2-read-0",
+                "added-2-read-1",
+                "added-2-read-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-0": {
+              "player_id": "green-11",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-1": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-1-0",
+                "identity-track-1-1",
+                "identity-track-1-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-opponent_breaks_assist",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion",
+            "Opponent controlled contact breaks the assist chain"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:78740ded995416e3387b914e3a545d5220bf72aa239d282861f2ca2d28ebc671"
+        }
+      },
+      {
+        "asset_sha256": "081f62f3d9eb0ed1f8928c57a0e19f46cbf49f013d04d13a97c84ef1af45e641",
+        "conditions": [
+          "generated_numeric",
+          "same_player_dribble",
+          "low_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": "green-11",
+          "assist_known": true,
+          "goal_id": "goal-same_player_dribble",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-same_player_dribble",
+        "session_id": "session-same_player_dribble",
+        "suggestion": {
+          "assist_id": "green-11",
+          "assist_status": "suggested",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-same_player_dribble",
+          "identities": {
+            "added-2-touch": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "added-2-read-0",
+                "added-2-read-1",
+                "added-2-read-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-0": {
+              "player_id": "green-11",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            },
+            "touch-track-1": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-1-0",
+                "identity-track-1-1",
+                "identity-track-1-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-same_player_dribble",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion",
+            "Preceding controlled teammate contact supplies possible assist"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:3fea5afea06a9023e785c91bc07a7177068530d7bab256a6e2ca795c038392f1"
+        }
+      },
+      {
+        "asset_sha256": "f9526f3bbd6f2ecc3b3bc1d15a731ea48e18d2a23da12f1d0462e4f6c7c31489",
+        "conditions": [
+          "generated_numeric",
+          "no_contact",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-no_contact",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-no_contact",
+        "session_id": "session-no_contact",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-no_contact",
+          "identities": {},
+          "match_id": "match-no_contact",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No observed contact; proximity cannot identify a scorer"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:0b37d62b521631fb46be339d6925d1b1fcc9e16717dc1a217481306a6cf7739c"
+        }
+      },
+      {
+        "asset_sha256": "cb20b3a57aba84558caa3aad00ef1e155c29e1bc285a733558f65a78f2c04cf0",
+        "conditions": [
+          "generated_numeric",
+          "ambiguous_order",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": "green-11",
+          "assist_known": true,
+          "goal_id": "goal-ambiguous_order",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-ambiguous_order",
+        "session_id": "session-ambiguous_order",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-ambiguous_order",
+          "identities": {},
+          "match_id": "match-ambiguous_order",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Contact order is temporally ambiguous"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:4a5973c6609583008a409ac3de002358bdde568a94f45955e12f1a844458f3f3"
+        }
+      },
+      {
+        "asset_sha256": "99c961396dbb93498abce3d7290932f1df093ecfc519d637535649a6ce827a2f",
+        "conditions": [
+          "generated_numeric",
+          "clock_unknown",
+          "low_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-clock_unknown",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-clock_unknown",
+        "session_id": "session-clock_unknown",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-clock_unknown",
+          "identities": {},
+          "match_id": "match-clock_unknown",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Goal timing is unverified or too uncertain"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:716cd88c6623eb22f1f7804668b59aaf17abe342b611b15e6d000beda26c4b77"
+        }
+      },
+      {
+        "asset_sha256": "3e37a333f882351f2a60cf98ad5f1aa392254c22bb7f8b0f23bdb22e5660f994",
+        "conditions": [
+          "generated_numeric",
+          "future_reads",
+          "normal_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-future_reads",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-future_reads",
+        "session_id": "session-future_reads",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-future_reads",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [],
+              "reason": "No fresh identity observations"
+            }
+          },
+          "match_id": "match-future_reads",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No fresh identity observations"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:fa91c3317b9e979f30e891b996630ead65ee667f162c860eeed2d9a4739b9346"
+        }
+      },
+      {
+        "asset_sha256": "87f5cac663a05746106a3e1ad5e7de28078b87b34d2df4d53d3ae83613732ce7",
+        "conditions": [
+          "generated_numeric",
+          "inactive_bib",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-inactive_bib",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-15",
+          "scorer_known": true
+        },
+        "match_id": "match-inactive_bib",
+        "session_id": "session-inactive_bib",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-inactive_bib",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Observed team/bib is not active in this roster"
+            }
+          },
+          "match_id": "match-inactive_bib",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Observed team/bib is not active in this roster"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:713504f8879d63a4f76aa9c8ba261d759b2f9cedc9d1f7b249ebae34a20cd611"
+        }
+      },
+      {
+        "asset_sha256": "e3e80f09202edd3a0003e714c8a3edbce7ca1d36a44b43f207e228df5226aa6b",
+        "conditions": [
+          "generated_numeric",
+          "unknown_bib",
+          "low_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-unknown_bib",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-unknown_bib",
+        "session_id": "session-unknown_bib",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-unknown_bib",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Latest identity is uncertain or occluded"
+            }
+          },
+          "match_id": "match-unknown_bib",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Latest identity is uncertain or occluded"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:e817a7fde9157ccaac0edfd7bb2d336f25520cbffcda2a97abbe16e3d9f62d20"
+        }
+      },
+      {
+        "asset_sha256": "63ccf2dd23e0ef613bcc25a7a48228d9cf1fb8faaac3c06f2781fdb41140aeae",
+        "conditions": [
+          "generated_numeric",
+          "touch_uncertainty",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-touch_uncertainty",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-touch_uncertainty",
+        "session_id": "session-touch_uncertainty",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-touch_uncertainty",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-touch_uncertainty",
+          "operator_review_required": true,
+          "own_goal": null,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "No certain intentional last contact"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": null,
+          "scoring_team": "green",
+          "suggestion_id": "attribution:efd6d43f8a392d6c32de1c2f94c5adadb891751c6bb7c23228f95f8aafe269ca"
+        }
+      },
+      {
+        "asset_sha256": "5a3e7763e0918a193322e6b471097aa05b342ecc0d023e9b7658fdd74bdc7848",
+        "conditions": [
+          "generated_numeric",
+          "frame_rebound",
+          "normal_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-frame_rebound",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-frame_rebound",
+        "session_id": "session-frame_rebound",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-frame_rebound",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-frame_rebound",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Certain incidental deflection/rebound preserves prior intentional touch",
+            "Last certain scoring-team contact supplies the scorer suggestion"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:b6e4cbc515ec973b58f3836607fab63bec6f44f930cdac0c2a0c248ca40c1a3e"
+        }
+      },
+      {
+        "asset_sha256": "21a8d60a910730b653fbcfca4e6e6b7df25e432de599f397bce2b522a7db80d8",
+        "conditions": [
+          "generated_numeric",
+          "orange_goal",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-orange_goal",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "orange-9",
+          "scorer_known": true
+        },
+        "match_id": "match-orange_goal",
+        "session_id": "session-orange_goal",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-orange_goal",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "orange-9",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-orange_goal",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "orange-9",
+          "scoring_team": "orange",
+          "suggestion_id": "attribution:381902a1ca097ba30b81fceb7351137be53764516103b156a2dfd5d7e9e1d932"
+        }
+      },
+      {
+        "asset_sha256": "b3b17d6b4f8f9c1d62151a81988c4646a3d9576fa303fba89c5ff3b2bff04b96",
+        "conditions": [
+          "generated_numeric",
+          "unclear_assist",
+          "normal_light",
+          "clear_view"
+        ],
+        "goal_end": "goal_b",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": "green-11",
+          "assist_known": true,
+          "goal_id": "goal-unclear_assist",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-7",
+          "scorer_known": true
+        },
+        "match_id": "match-unclear_assist",
+        "session_id": "session-unclear_assist",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "unknown",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-unclear_assist",
+          "identities": {
+            "touch-track-0": {
+              "player_id": null,
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Latest identity is uncertain or occluded"
+            },
+            "touch-track-1": {
+              "player_id": "green-7",
+              "reading_ids": [
+                "identity-track-1-0",
+                "identity-track-1-1",
+                "identity-track-1-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-unclear_assist",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion",
+            "Preceding player's identity is unknown"
+          ],
+          "roster_revision": 0,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-7",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:473348afe524e58139c5d8279f90ff31c534b09d3e358f1a0e1c9ce2fe4d7e41"
+        }
+      },
+      {
+        "asset_sha256": "43f9962c76307f23343f823f9d2da4de82d0267460aecb04f489e0b7294c167a",
+        "conditions": [
+          "generated_numeric",
+          "substituted_roster",
+          "low_light",
+          "overlap"
+        ],
+        "goal_end": "goal_a",
+        "label": {
+          "adjudication": "generated_reference",
+          "assist_id": null,
+          "assist_known": true,
+          "goal_id": "goal-substituted_roster",
+          "own_goal": false,
+          "own_goal_known": true,
+          "scorer_id": "green-15",
+          "scorer_known": true
+        },
+        "match_id": "match-substituted_roster",
+        "session_id": "session-substituted_roster",
+        "suggestion": {
+          "assist_id": null,
+          "assist_status": "none",
+          "automatic_write_allowed": false,
+          "evidence": "synthetic",
+          "goal_id": "goal-substituted_roster",
+          "identities": {
+            "touch-track-0": {
+              "player_id": "green-15",
+              "reading_ids": [
+                "identity-track-0-0",
+                "identity-track-0-1",
+                "identity-track-0-2"
+              ],
+              "reason": "Consistent observed team/bib support"
+            }
+          },
+          "match_id": "match-substituted_roster",
+          "operator_review_required": true,
+          "own_goal": false,
+          "reasons": [
+            "Conservative prototype; operator approval required",
+            "Last certain scoring-team contact supplies the scorer suggestion"
+          ],
+          "roster_revision": 1,
+          "rule_version": "conservative-attribution-v1",
+          "schema_version": 1,
+          "scorer_id": "green-15",
+          "scoring_team": "green",
+          "suggestion_id": "attribution:4d7da205903671b276742c69225e2f9983531181aa509000e188fd043ec4f8c3"
+        }
+      }
+    ],
+    "settings": {
+      "automatic_write_allowed": false,
+      "identity_window_seconds": 1.5,
+      "max_uncertainty_seconds": 0.02,
+      "minimum_identity_reads": 3,
+      "rule_version": "conservative-attribution-v1",
+      "schema_version": 1,
+      "touch_lookback_seconds": 10.0
+    },
+    "split": "validation"
+  },
+  "part": "09",
+  "python_distinct_tests_passed": 239,
+  "python_followup_added_tests": 2,
+  "python_followup_tests_passed": 58,
+  "python_full_suite_passed": 237,
+  "replay_sha256": "eb5aa309118c2f671366c1bc93917ccfef234d63a396aab5533b2bc2915d5b3c",
+  "schema_version": 1
+}

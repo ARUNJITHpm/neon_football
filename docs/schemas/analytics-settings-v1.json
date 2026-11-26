@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "automatic_write_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Write Allowed",
+      "type": "boolean"
+    },
+    "maximum_chain_gap_seconds": {
+      "default": 3,
+      "exclusiveMinimum": 0,
+      "maximum": 10,
+      "title": "Maximum Chain Gap Seconds",
+      "type": "number"
+    },
+    "maximum_uncertainty_seconds": {
+      "default": 0.02,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Maximum Uncertainty Seconds",
+      "type": "number"
+    },
+    "possession_hold_seconds": {
+      "default": 3,
+      "exclusiveMinimum": 0,
+      "maximum": 10,
+      "title": "Possession Hold Seconds",
+      "type": "number"
+    },
+    "rule_version": {
+      "default": "contact-analytics-v1",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "title": "AnalyticsSettings",
+  "type": "object"
+}

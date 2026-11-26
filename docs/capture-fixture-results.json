@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "evidence": "synthetic",
+  "recorded_date": "2026-10-11",
+  "note": "Short Windows development runs, before delivery-lag instrumentation; no field qualification.",
+  "runs": [
+    {
+      "session_id": "22a2ad5857e64d59b710ddeb37348b04",
+      "backend_version": "ffmpeg version N-118471-ga50d36b5fd-20250215 Copyright (c) 2000-2025 the FFmpeg developers",
+      "expected_frames_per_camera": 75,
+      "source_sequences_complete": true,
+      "segment_and_index_checksums_verified": true,
+      "peak_sampled_working_set_bytes": null,
+      "cameras": [
+        {
+          "camera_id": "goal-a",
+          "health": "stopped",
+          "frames": 75,
+          "frame_age_seconds": 0.5939999999973224,
+          "receipt_fps": 16.97637072724371,
+          "source_fps": 15.001013581998784,
+          "encoded_bytes": 749187,
+          "encoded_mbps": 1.3749704060574632,
+          "write_seconds": 0.09282940003322437,
+          "encoded_write_mbps": 8.070578930078833,
+          "live_dropped_frames": 73,
+          "buffer_bytes": 749187,
+          "peak_buffer_bytes": 749187,
+          "byte_evictions": 0,
+          "gaps": 2,
+          "clock_resets": 0,
+          "reconnects": 0,
+          "recording": "idle",
+          "calibration_valid": false,
+          "calibration_error": "No calibration record configured",
+          "timestamp_quality": "media_pts",
+          "alignment_verified": false
+        },
+        {
+          "camera_id": "goal-b",
+          "health": "stopped",
+          "frames": 75,
+          "frame_age_seconds": 0.5469999999913853,
+          "receipt_fps": 16.852653154166493,
+          "source_fps": 15.001013581998784,
+          "encoded_bytes": 640374,
+          "encoded_mbps": 1.1667028011833744,
+          "write_seconds": 0.5329456999024842,
+          "encoded_write_mbps": 1.2015745696365925,
+          "live_dropped_frames": 73,
+          "buffer_bytes": 640374,
+          "peak_buffer_bytes": 640374,
+          "byte_evictions": 0,
+          "gaps": 3,
+          "clock_resets": 0,
+          "reconnects": 0,
+          "recording": "idle",
+          "calibration_valid": false,
+          "calibration_error": "No calibration record configured",
+          "timestamp_quality": "media_pts",
+          "alignment_verified": false
+        }
+      ],
+      "clips": [
+        {
+          "camera_id": "goal-a",
+          "status": "ready",
+          "coverage": "complete",
+          "frames": 31
+        },
+        {
+          "camera_id": "goal-b",
+          "status": "ready",
+          "coverage": "complete",
+          "frames": 30
+        }
+      ]
+    },
+    {
+      "session_id": "879a56b3a74c4a65a80066178047871c",
+      "backend_version": "ffmpeg version N-118471-ga50d36b5fd-20250215 Copyright (c) 2000-2025 the FFmpeg developers",
+      "expected_frames_per_camera": 360,
+      "source_sequences_complete": true,
+      "segment_and_index_checksums_verified": true,
+      "peak_sampled_working_set_bytes": 237809664,
+      "cameras": [
+        {
+          "camera_id": "goal-a",
+          "health": "stopped",
+          "frames": 360,
+          "frame_age_seconds": 0.7969999999913853,
+          "receipt_fps": 20.69880073799321,
+          "source_fps": 60.00334280461308,
+          "encoded_bytes": 21731949,
+          "encoded_mbps": 10.023961715860295,
+          "write_seconds": 1.0040348000620725,
+          "encoded_write_mbps": 21.644617296787388,
+          "live_dropped_frames": 358,
+          "buffer_bytes": 10120129,
+          "peak_buffer_bytes": 10120400,
+          "byte_evictions": 0,
+          "gaps": 112,
+          "clock_resets": 0,
+          "reconnects": 0,
+          "recording": "idle",
+          "calibration_valid": false,
+          "calibration_error": "No calibration record configured",
+          "timestamp_quality": "media_pts",
+          "alignment_verified": false
+        },
+        {
+          "camera_id": "goal-b",
+          "health": "stopped",
+          "frames": 360,
+          "frame_age_seconds": 0.7660000000032596,
+          "receipt_fps": 20.793512887345038,
+          "source_fps": 60.00334280461308,
+          "encoded_bytes": 14854330,
+          "encoded_mbps": 6.882979438169939,
+          "write_seconds": 1.1356493999628583,
+          "encoded_write_mbps": 13.08003156650795,
+          "live_dropped_frames": 358,
+          "buffer_bytes": 8155228,
+          "peak_buffer_bytes": 8155228,
+          "byte_evictions": 0,
+          "gaps": 114,
+          "clock_resets": 0,
+          "reconnects": 0,
+          "recording": "idle",
+          "calibration_valid": false,
+          "calibration_error": "No calibration record configured",
+          "timestamp_quality": "media_pts",
+          "alignment_verified": false
+        }
+      ],
+      "clips": [
+        {
+          "camera_id": "goal-a",
+          "status": "ready",
+          "coverage": "partial",
+          "frames": 20
+        },
+        {
+          "camera_id": "goal-b",
+          "status": "ready",
+          "coverage": "partial",
+          "frames": 9
+        }
+      ]
+    }
+  ]
+}

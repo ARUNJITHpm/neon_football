@@ -1,0 +1,379 @@
+{
+  "dataset_id": "dummy-contact-analytics-v1",
+  "evidence": "synthetic",
+  "schema_version": 1,
+  "sessions": [
+    {
+      "match_id": "match-passing",
+      "path": "passing.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-7",
+            "kind": "pass",
+            "previous_touch_id": "touch-0",
+            "team": "green",
+            "to_player_id": "green-11",
+            "touch_id": "touch-1"
+          },
+          {
+            "from_player_id": "green-11",
+            "kind": "pass",
+            "previous_touch_id": "touch-2",
+            "team": "green",
+            "to_player_id": "green-7",
+            "touch_id": "touch-3"
+          },
+          {
+            "from_player_id": "green-7",
+            "kind": "interception",
+            "previous_touch_id": "touch-3",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-4"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 2,
+        "possession_seconds": {
+          "green": 8.0,
+          "orange": 3.0,
+          "unknown": 1.0
+        }
+      },
+      "session_id": "session-passing",
+      "sha256": "799818e60efff18173ee1d5d19965db9be29f484b94ece247ae50f373d3dc5e3",
+      "source_group_id": "group-passing",
+      "split": "train"
+    },
+    {
+      "match_id": "match-pauses",
+      "path": "pauses.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-7",
+            "kind": "pass",
+            "previous_touch_id": "touch-0",
+            "team": "green",
+            "to_player_id": "green-11",
+            "touch_id": "touch-1"
+          },
+          {
+            "from_player_id": "orange-9",
+            "kind": "pass",
+            "previous_touch_id": "touch-6",
+            "team": "orange",
+            "to_player_id": "orange-13",
+            "touch_id": "touch-7"
+          },
+          {
+            "from_player_id": "green-7",
+            "kind": "interception",
+            "previous_touch_id": "touch-4",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-5"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 2,
+        "possession_seconds": {
+          "green": 11.0,
+          "orange": 5.0,
+          "unknown": 3.0
+        }
+      },
+      "session_id": "session-pauses",
+      "sha256": "b4254d41b48ede26319c32cedd937c4133dad301ef1c01612b2cf947a4d4bf7d",
+      "source_group_id": "group-pauses",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-gaps",
+      "path": "gaps.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-7",
+            "kind": "pass",
+            "previous_touch_id": "touch-0",
+            "team": "green",
+            "to_player_id": "green-11",
+            "touch_id": "touch-1"
+          }
+        ],
+        "interceptions": 0,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 4.0,
+          "orange": 2.0,
+          "unknown": 6.0
+        }
+      },
+      "session_id": "session-gaps",
+      "sha256": "2c37b14212bc8786b63ee672fb6107633b4aea42b109f23f5e45ed4181371390",
+      "source_group_id": "group-gaps",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-uncertain",
+      "path": "uncertain.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-11",
+            "kind": "pass",
+            "previous_touch_id": "touch-2",
+            "team": "green",
+            "to_player_id": "green-7",
+            "touch_id": "touch-3"
+          }
+        ],
+        "interceptions": 0,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 6.0,
+          "orange": 1.0,
+          "unknown": 5.0
+        }
+      },
+      "session_id": "session-uncertain",
+      "sha256": "3ae490f3f1406eb1bea9c4ab39828d936c3fe649c85253103b0d67c302d1c173",
+      "source_group_id": "group-uncertain",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-unknown_identity",
+      "path": "unknown_identity.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-11",
+            "kind": "pass",
+            "previous_touch_id": "touch-2",
+            "team": "green",
+            "to_player_id": "green-7",
+            "touch_id": "touch-3"
+          },
+          {
+            "from_player_id": "green-7",
+            "kind": "interception",
+            "previous_touch_id": "touch-3",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-4"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 6.0,
+          "orange": 3.0,
+          "unknown": 3.0
+        }
+      },
+      "session_id": "session-unknown_identity",
+      "sha256": "7fc5f2cd9a13a0fb9961d536d6d503fa808dc504da90f0053f6f1f6011349b6c",
+      "source_group_id": "group-unknown_identity",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-proximity_only",
+      "path": "proximity_only.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [],
+        "interceptions": 0,
+        "passes": 0,
+        "possession_seconds": {
+          "green": 0.0,
+          "orange": 0.0,
+          "unknown": 12.0
+        }
+      },
+      "session_id": "session-proximity_only",
+      "sha256": "9b889aa3f8f7846fea1fa0dc59d368b4944d2c377d1c4d764a9dcacb8e7fc209",
+      "source_group_id": "group-proximity_only",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-same_player",
+      "path": "same_player.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [],
+        "interceptions": 0,
+        "passes": 0,
+        "possession_seconds": {
+          "green": 11.0,
+          "orange": 0.0,
+          "unknown": 1.0
+        }
+      },
+      "session_id": "session-same_player",
+      "sha256": "525136fc6092f37261a7ec8e42e82a0fef6e31ae38bf11680d1083b9a1645671",
+      "source_group_id": "group-same_player",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-source_reset",
+      "path": "source_reset.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-7",
+            "kind": "pass",
+            "previous_touch_id": "touch-0",
+            "team": "green",
+            "to_player_id": "green-11",
+            "touch_id": "touch-1"
+          },
+          {
+            "from_player_id": "green-7",
+            "kind": "interception",
+            "previous_touch_id": "touch-3",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-4"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 8.0,
+          "orange": 3.0,
+          "unknown": 1.0
+        }
+      },
+      "session_id": "session-source_reset",
+      "sha256": "f69a810a5d097b6dad5e882e08a55d4505eafd7c82885ac2f4d90dc1c3e5ea7f",
+      "source_group_id": "group-source_reset",
+      "split": "blind_test"
+    },
+    {
+      "match_id": "match-ambiguous_order",
+      "path": "ambiguous_order.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-11",
+            "kind": "pass",
+            "previous_touch_id": "touch-2",
+            "team": "green",
+            "to_player_id": "green-7",
+            "touch_id": "touch-3"
+          },
+          {
+            "from_player_id": "green-7",
+            "kind": "interception",
+            "previous_touch_id": "touch-3",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-4"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 4.0,
+          "orange": 3.0,
+          "unknown": 5.0
+        }
+      },
+      "session_id": "session-ambiguous_order",
+      "sha256": "7bb158cd0a0fd87dcf215dfeebfecfd01166c9b01c33659dfad2e1ffa83e7764",
+      "source_group_id": "group-ambiguous_order",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-roster_change",
+      "path": "roster_change.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [
+          {
+            "from_player_id": "green-7",
+            "kind": "pass",
+            "previous_touch_id": "touch-0",
+            "team": "green",
+            "to_player_id": "green-11",
+            "touch_id": "touch-1"
+          },
+          {
+            "from_player_id": "green-15",
+            "kind": "interception",
+            "previous_touch_id": "touch-3",
+            "team": "orange",
+            "to_player_id": "orange-9",
+            "touch_id": "touch-4"
+          }
+        ],
+        "interceptions": 1,
+        "passes": 1,
+        "possession_seconds": {
+          "green": 7.0,
+          "orange": 3.0,
+          "unknown": 2.0
+        }
+      },
+      "session_id": "session-roster_change",
+      "sha256": "17581b41773c02c93db4cc842aa98b3ad1bdd57b45b338907de77cb15b101d76",
+      "source_group_id": "group-roster_change",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-no_play",
+      "path": "no_play.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [],
+        "interceptions": 0,
+        "passes": 0,
+        "possession_seconds": {
+          "green": 0.0,
+          "orange": 0.0,
+          "unknown": 0.0
+        }
+      },
+      "session_id": "session-no_play",
+      "sha256": "62ecd2b8351fcfd9de6b55aa7d8825895bce75ae5fae68b362e84b7b08a52325",
+      "source_group_id": "group-no_play",
+      "split": "validation"
+    },
+    {
+      "match_id": "match-unknown_clock",
+      "path": "unknown_clock.json",
+      "reference": {
+        "adjudication": "generated_reference",
+        "events": [],
+        "interceptions": 0,
+        "passes": 0,
+        "possession_seconds": {
+          "green": 0.0,
+          "orange": 0.0,
+          "unknown": 12.0
+        }
+      },
+      "session_id": "session-unknown_clock",
+      "sha256": "7dce155921089bf98ce68670579690dfe9f6165999623d6b9c908b55af26fa2f",
+      "source_group_id": "group-unknown_clock",
+      "split": "validation"
+    }
+  ],
+  "settings": {
+    "automatic_write_allowed": false,
+    "maximum_chain_gap_seconds": 3.0,
+    "maximum_uncertainty_seconds": 0.02,
+    "possession_hold_seconds": 3.0,
+    "rule_version": "contact-analytics-v1",
+    "schema_version": 1
+  }
+}

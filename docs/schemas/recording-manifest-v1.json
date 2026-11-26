@@ -1,0 +1,692 @@
+{
+  "$defs": {
+    "CalibrationRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "distortion": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Distortion"
+        },
+        "floor_homography": {
+          "anyOf": [
+            {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Floor Homography"
+        },
+        "goal_geometry": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Goal Geometry",
+          "type": "object"
+        },
+        "goal_roi": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Goal Roi",
+          "type": "array"
+        },
+        "height": {
+          "exclusiveMinimum": 0,
+          "title": "Height",
+          "type": "integer"
+        },
+        "intrinsics": {
+          "anyOf": [
+            {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intrinsics"
+        },
+        "lens_model": {
+          "default": "pinhole",
+          "enum": [
+            "pinhole",
+            "fisheye"
+          ],
+          "title": "Lens Model",
+          "type": "string"
+        },
+        "net_roi": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Net Roi",
+          "type": "array"
+        },
+        "notes": {
+          "default": "",
+          "title": "Notes",
+          "type": "string"
+        },
+        "pitch_corners": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Pitch Corners",
+          "type": "array"
+        },
+        "placement": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Placement",
+          "type": "object"
+        },
+        "reprojection_error_px": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reprojection Error Px"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "status": {
+          "default": "draft",
+          "enum": [
+            "draft",
+            "measured"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Version",
+          "type": "string"
+        },
+        "width": {
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "camera_id",
+        "version",
+        "width",
+        "height"
+      ],
+      "title": "CalibrationRecord",
+      "type": "object"
+    },
+    "CameraRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CalibrationRecord"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "calibration_error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Calibration Error"
+        },
+        "calibration_valid": {
+          "default": false,
+          "title": "Calibration Valid",
+          "type": "boolean"
+        },
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "clock_resets": {
+          "default": 0,
+          "title": "Clock Resets",
+          "type": "integer"
+        },
+        "encoded_bytes": {
+          "default": 0,
+          "title": "Encoded Bytes",
+          "type": "integer"
+        },
+        "expected_fps": {
+          "title": "Expected Fps",
+          "type": "number"
+        },
+        "frames": {
+          "default": 0,
+          "title": "Frames",
+          "type": "integer"
+        },
+        "gaps": {
+          "default": 0,
+          "title": "Gaps",
+          "type": "integer"
+        },
+        "height": {
+          "title": "Height",
+          "type": "integer"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "live_dropped_frames": {
+          "default": 0,
+          "title": "Live Dropped Frames",
+          "type": "integer"
+        },
+        "observed_height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed Height"
+        },
+        "observed_width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed Width"
+        },
+        "reconnects": {
+          "default": 0,
+          "title": "Reconnects",
+          "type": "integer"
+        },
+        "segments": {
+          "items": {
+            "$ref": "#/$defs/SegmentRecord"
+          },
+          "title": "Segments",
+          "type": "array"
+        },
+        "timestamp_quality": {
+          "default": "media_pts",
+          "enum": [
+            "media_pts",
+            "receipt_only"
+          ],
+          "title": "Timestamp Quality",
+          "type": "string"
+        },
+        "width": {
+          "title": "Width",
+          "type": "integer"
+        },
+        "write_seconds": {
+          "default": 0,
+          "title": "Write Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "camera_id",
+        "kind",
+        "width",
+        "height",
+        "expected_fps"
+      ],
+      "title": "CameraRecord",
+      "type": "object"
+    },
+    "CaptureSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "buffer_max_bytes": {
+          "default": 67108864,
+          "minimum": 1024,
+          "title": "Buffer Max Bytes",
+          "type": "integer"
+        },
+        "buffer_seconds": {
+          "default": 6,
+          "exclusiveMinimum": 0,
+          "maximum": 30,
+          "title": "Buffer Seconds",
+          "type": "number"
+        },
+        "clip_max_bytes": {
+          "default": 134217728,
+          "minimum": 1024,
+          "title": "Clip Max Bytes",
+          "type": "integer"
+        },
+        "clip_post_seconds": {
+          "default": 3,
+          "maximum": 10,
+          "minimum": 0,
+          "title": "Clip Post Seconds",
+          "type": "number"
+        },
+        "clip_pre_seconds": {
+          "default": 3,
+          "maximum": 10,
+          "minimum": 0,
+          "title": "Clip Pre Seconds",
+          "type": "number"
+        },
+        "enabled": {
+          "default": false,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "ffmpeg": {
+          "default": "ffmpeg",
+          "title": "Ffmpeg",
+          "type": "string"
+        },
+        "jpeg_quality": {
+          "default": 3,
+          "maximum": 31,
+          "minimum": 2,
+          "title": "Jpeg Quality",
+          "type": "integer"
+        },
+        "live_queue_capacity": {
+          "default": 2,
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Live Queue Capacity",
+          "type": "integer"
+        },
+        "max_frame_bytes": {
+          "default": 16777216,
+          "minimum": 1024,
+          "title": "Max Frame Bytes",
+          "type": "integer"
+        },
+        "max_pending_clips": {
+          "default": 8,
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Max Pending Clips",
+          "type": "integer"
+        },
+        "max_session_bytes": {
+          "default": 53687091200,
+          "minimum": 1024,
+          "title": "Max Session Bytes",
+          "type": "integer"
+        },
+        "min_free_bytes": {
+          "default": 1073741824,
+          "minimum": 0,
+          "title": "Min Free Bytes",
+          "type": "integer"
+        },
+        "reconnect_seconds": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 60,
+          "title": "Reconnect Seconds",
+          "type": "number"
+        },
+        "root": {
+          "default": "data/recordings",
+          "title": "Root",
+          "type": "string"
+        },
+        "segment_seconds": {
+          "default": 60,
+          "exclusiveMinimum": 0,
+          "maximum": 3600,
+          "title": "Segment Seconds",
+          "type": "number"
+        },
+        "stale_seconds": {
+          "default": 3,
+          "exclusiveMinimum": 0,
+          "maximum": 60,
+          "title": "Stale Seconds",
+          "type": "number"
+        },
+        "startup_timeout_seconds": {
+          "default": 15,
+          "exclusiveMinimum": 0,
+          "maximum": 120,
+          "title": "Startup Timeout Seconds",
+          "type": "number"
+        }
+      },
+      "title": "CaptureSettings",
+      "type": "object"
+    },
+    "SegmentRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "bytes": {
+          "minimum": 0,
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "complete": {
+          "title": "Complete",
+          "type": "boolean"
+        },
+        "first_host_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Host Seconds"
+        },
+        "first_source_seconds": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Source Seconds"
+        },
+        "frames": {
+          "minimum": 0,
+          "title": "Frames",
+          "type": "integer"
+        },
+        "index_path": {
+          "title": "Index Path",
+          "type": "string"
+        },
+        "index_sha256": {
+          "title": "Index Sha256",
+          "type": "string"
+        },
+        "last_host_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Host Seconds"
+        },
+        "last_source_seconds": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Source Seconds"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "index_path",
+        "boot_id",
+        "frames",
+        "bytes",
+        "sha256",
+        "index_sha256",
+        "complete"
+      ],
+      "title": "SegmentRecord",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "backend": {
+      "const": "ffmpeg-mjpeg",
+      "default": "ffmpeg-mjpeg",
+      "title": "Backend",
+      "type": "string"
+    },
+    "backend_version": {
+      "title": "Backend Version",
+      "type": "string"
+    },
+    "cameras": {
+      "items": {
+        "$ref": "#/$defs/CameraRecord"
+      },
+      "title": "Cameras",
+      "type": "array"
+    },
+    "capture_settings": {
+      "$ref": "#/$defs/CaptureSettings"
+    },
+    "ended_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ended At"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error"
+    },
+    "host_clock_domain": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Host Clock Domain",
+      "type": "string"
+    },
+    "incidents_path": {
+      "default": "incidents.jsonl",
+      "title": "Incidents Path",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "session_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "recording",
+        "closed",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "timing_alignment_verified": {
+      "default": false,
+      "title": "Timing Alignment Verified",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "session_id",
+    "host_clock_domain",
+    "started_at",
+    "status",
+    "backend_version",
+    "capture_settings",
+    "cameras"
+  ],
+  "title": "RecordingManifest",
+  "type": "object"
+}

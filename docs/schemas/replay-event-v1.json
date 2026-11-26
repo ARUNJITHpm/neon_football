@@ -1,0 +1,331 @@
+{
+  "$defs": {
+    "TimingEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "clock_reset": {
+          "default": false,
+          "title": "Clock Reset",
+          "type": "boolean"
+        },
+        "host_clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Host Clock Domain",
+          "type": "string"
+        },
+        "host_monotonic_seconds": {
+          "minimum": 0,
+          "title": "Host Monotonic Seconds",
+          "type": "number"
+        },
+        "offset_seconds": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Offset Seconds"
+        },
+        "quality": {
+          "enum": [
+            "media_pts",
+            "exposure",
+            "receipt_only"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "received_at": {
+          "format": "date-time",
+          "title": "Received At",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "sequence": {
+          "minimum": 0,
+          "title": "Sequence",
+          "type": "integer"
+        },
+        "source_clock_domain": {
+          "title": "Source Clock Domain",
+          "type": "string"
+        },
+        "source_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_seconds": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Seconds"
+        },
+        "source_sequence": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Sequence"
+        },
+        "uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Seconds"
+        }
+      },
+      "required": [
+        "source_id",
+        "boot_id",
+        "sequence",
+        "source_clock_domain",
+        "host_clock_domain",
+        "host_monotonic_seconds",
+        "received_at",
+        "quality"
+      ],
+      "title": "TimingEnvelope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "clip_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clip Path"
+    },
+    "corrected": {
+      "default": false,
+      "title": "Corrected",
+      "type": "boolean"
+    },
+    "delivered_seconds": {
+      "minimum": 0,
+      "title": "Delivered Seconds",
+      "type": "number"
+    },
+    "display_uncertainty_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Display Uncertainty Seconds"
+    },
+    "displayed_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Displayed Seconds"
+    },
+    "event_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "goal_end": {
+      "anyOf": [
+        {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Goal End"
+    },
+    "kind": {
+      "enum": [
+        "observation",
+        "decision"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    },
+    "occurred_seconds": {
+      "minimum": 0,
+      "title": "Occurred Seconds",
+      "type": "number"
+    },
+    "outcome": {
+      "anyOf": [
+        {
+          "enum": [
+            "automatic",
+            "manual",
+            "operator_confirmed",
+            "pending",
+            "expired",
+            "rejected"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Outcome"
+    },
+    "payload": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Payload",
+      "type": "object"
+    },
+    "review_required": {
+      "default": false,
+      "title": "Review Required",
+      "type": "boolean"
+    },
+    "sequence": {
+      "minimum": 0,
+      "title": "Sequence",
+      "type": "integer"
+    },
+    "session_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "shadow": {
+      "default": false,
+      "title": "Shadow",
+      "type": "boolean"
+    },
+    "source_timing": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/TimingEnvelope"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "team": {
+      "anyOf": [
+        {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Team"
+    },
+    "timing_uncertainty_seconds": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Timing Uncertainty Seconds",
+      "type": "number"
+    }
+  },
+  "required": [
+    "event_id",
+    "session_id",
+    "match_id",
+    "sequence",
+    "occurred_seconds",
+    "delivered_seconds",
+    "kind"
+  ],
+  "title": "ReplayEvent",
+  "type": "object"
+}

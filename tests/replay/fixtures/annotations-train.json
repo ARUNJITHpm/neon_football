@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-challenge-v1",
+  "version": "synthetic-labels-v1",
+  "split": "train",
+  "annotation_policy_version": "annotation-policy-v1",
+  "audits": [
+    {
+      "session_id": "synthetic-train",
+      "continuous_footage_reviewed": false,
+      "reviewer": "synthetic-fixture-builder",
+      "notes": "There is no football footage to adjudicate"
+    }
+  ],
+  "labels": [
+    {
+      "label_id": "synthetic-train-label-0",
+      "session_id": "synthetic-train",
+      "match_id": "synthetic-train-match",
+      "crossing_start_seconds": 3.0,
+      "crossing_end_seconds": 3.0,
+      "goal_end": "goal_a",
+      "team": "orange",
+      "validity": "valid",
+      "visibility": "clear",
+      "uncertainty_seconds": 0.01,
+      "challenge": "ordinary",
+      "clip_path": null,
+      "adjudicator": "synthetic-ground-truth-v1",
+      "notes": "Hand-authored challenge event, not measured football footage"
+    }
+  ]
+}

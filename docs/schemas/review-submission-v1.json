@@ -1,0 +1,749 @@
+{
+  "$defs": {
+    "FusedCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_score_mutation_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Score Mutation Allowed",
+          "type": "boolean"
+        },
+        "candidate_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "collect_until_seconds": {
+          "minimum": 0,
+          "title": "Collect Until Seconds",
+          "type": "number"
+        },
+        "configuration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Configuration Version",
+          "type": "string"
+        },
+        "confirmation": {
+          "anyOf": [
+            {
+              "enum": [
+                "shadow_rule",
+                "operator"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmation"
+        },
+        "confirmed_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmed Seconds"
+        },
+        "corrected": {
+          "default": false,
+          "title": "Corrected",
+          "type": "boolean"
+        },
+        "created_seconds": {
+          "minimum": 0,
+          "title": "Created Seconds",
+          "type": "number"
+        },
+        "evidence_ids": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Occurred Seconds"
+        },
+        "play_epoch": {
+          "title": "Play Epoch",
+          "type": "integer"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "review_until_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Review Until Seconds"
+        },
+        "rule_label": {
+          "default": "collecting",
+          "enum": [
+            "collecting",
+            "observed_and_corroborated",
+            "review_required",
+            "unresolved",
+            "operator_decision"
+          ],
+          "title": "Rule Label",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "status": {
+          "default": "COLLECTING",
+          "enum": [
+            "COLLECTING",
+            "PENDING_REVIEW",
+            "CONFIRMED",
+            "REJECTED",
+            "UNRESOLVED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "team": {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "title": "Team",
+          "type": "string"
+        },
+        "track_ids": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "type": "string"
+          },
+          "title": "Track Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "session_id",
+        "match_id",
+        "play_epoch",
+        "goal_end",
+        "team",
+        "occurred_seconds",
+        "created_seconds",
+        "collect_until_seconds",
+        "configuration_version"
+      ],
+      "title": "FusedCandidate",
+      "type": "object"
+    },
+    "FusionEvidence": {
+      "additionalProperties": false,
+      "description": "Composition supplies the registered session, host clock and play epoch.",
+      "properties": {
+        "clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Clock Domain",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "observation": {
+          "discriminator": {
+            "mapping": {
+              "sensor_impact": "#/$defs/SensorImpact",
+              "vision_candidate": "#/$defs/VisionCandidate"
+            },
+            "propertyName": "type"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/VisionCandidate"
+            },
+            {
+              "$ref": "#/$defs/SensorImpact"
+            }
+          ],
+          "title": "Observation"
+        },
+        "play_epoch": {
+          "minimum": 0,
+          "title": "Play Epoch",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "match_id",
+        "clock_domain",
+        "play_epoch",
+        "observation"
+      ],
+      "title": "FusionEvidence",
+      "type": "object"
+    },
+    "ReviewClip": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "anyOf": [
+            {
+              "maximum": 4194304,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bytes"
+        },
+        "detail": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "kind": {
+          "const": "generated_pattern",
+          "default": "generated_pattern",
+          "title": "Kind",
+          "type": "string"
+        },
+        "media_id": {
+          "anyOf": [
+            {
+              "const": "dummy-review-pattern-v1",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Media Id"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "missing",
+            "pending",
+            "failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "detail"
+      ],
+      "title": "ReviewClip",
+      "type": "object"
+    },
+    "SensorImpact": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_confirmation_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Confirmation Allowed",
+          "type": "boolean"
+        },
+        "boot_id": {
+          "title": "Boot Id",
+          "type": "integer"
+        },
+        "classification": {
+          "enum": [
+            "net_impact",
+            "frame_impact",
+            "mixed_impact",
+            "slow_impact",
+            "unknown"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "configuration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Configuration Version",
+          "type": "string"
+        },
+        "device_id": {
+          "title": "Device Id",
+          "type": "integer"
+        },
+        "emitted_seconds": {
+          "minimum": 0,
+          "title": "Emitted Seconds",
+          "type": "number"
+        },
+        "event_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue",
+            "unverified"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "features": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Features",
+          "type": "object"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "host_clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Host Clock Domain",
+          "type": "string"
+        },
+        "occurred_device_seconds": {
+          "minimum": 0,
+          "title": "Occurred Device Seconds",
+          "type": "number"
+        },
+        "occurred_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Occurred Seconds"
+        },
+        "possible_goal": {
+          "const": true,
+          "default": true,
+          "title": "Possible Goal",
+          "type": "boolean"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "timing_uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Timing Uncertainty Seconds"
+        },
+        "type": {
+          "const": "sensor_impact",
+          "default": "sensor_impact",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "goal_end",
+        "device_id",
+        "boot_id",
+        "occurred_device_seconds",
+        "occurred_seconds",
+        "emitted_seconds",
+        "timing_uncertainty_seconds",
+        "host_clock_domain",
+        "evidence",
+        "classification",
+        "features",
+        "flags",
+        "configuration_version"
+      ],
+      "title": "SensorImpact",
+      "type": "object"
+    },
+    "VisionCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_confirmation_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Confirmation Allowed",
+          "type": "boolean"
+        },
+        "calibration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Calibration Version",
+          "type": "string"
+        },
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "clip_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clip Path"
+        },
+        "configuration_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Configuration Version",
+          "type": "string"
+        },
+        "crossing_interval_seconds": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "minimum": 0,
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Crossing Interval Seconds"
+        },
+        "emitted_seconds": {
+          "minimum": 0,
+          "title": "Emitted Seconds",
+          "type": "number"
+        },
+        "event_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "model_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Model Version",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "quality": {
+          "enum": [
+            "observed_crossing",
+            "predicted_crossing",
+            "depth_ambiguous",
+            "boundary_uncertain",
+            "net_motion_only"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "requires_review": {
+          "const": true,
+          "default": true,
+          "title": "Requires Review",
+          "type": "boolean"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "supporting_sequences": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Supporting Sequences",
+          "type": "array"
+        },
+        "timing_uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Timing Uncertainty Seconds"
+        },
+        "track_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Track Id"
+        },
+        "type": {
+          "const": "vision_candidate",
+          "default": "vision_candidate",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "session_id",
+        "match_id",
+        "camera_id",
+        "goal_end",
+        "track_id",
+        "occurred_seconds",
+        "emitted_seconds",
+        "timing_uncertainty_seconds",
+        "calibration_version",
+        "model_version",
+        "configuration_version",
+        "quality",
+        "evidence",
+        "reasons",
+        "flags",
+        "supporting_sequences"
+      ],
+      "title": "VisionCandidate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "candidate": {
+      "$ref": "#/$defs/FusedCandidate"
+    },
+    "clips": {
+      "items": {
+        "$ref": "#/$defs/ReviewClip"
+      },
+      "maxItems": 2,
+      "title": "Clips",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/FusionEvidence"
+      },
+      "maxItems": 16,
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "origin": {
+      "const": "dummy_fusion",
+      "default": "dummy_fusion",
+      "title": "Origin",
+      "type": "string"
+    },
+    "review_seconds": {
+      "default": 15,
+      "exclusiveMinimum": 0,
+      "maximum": 300,
+      "title": "Review Seconds",
+      "type": "number"
+    }
+  },
+  "required": [
+    "candidate",
+    "evidence",
+    "clips"
+  ],
+  "title": "ReviewSubmission",
+  "type": "object"
+}

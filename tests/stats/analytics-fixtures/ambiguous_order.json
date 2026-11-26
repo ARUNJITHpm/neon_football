@@ -1,0 +1,143 @@
+{
+  "conditions": [
+    "generated_numeric",
+    "ambiguous_order",
+    "clear_view",
+    "normal_light"
+  ],
+  "contacts": [
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "controlled_pass",
+      "occurred_seconds": 1.0,
+      "play_epoch": 0,
+      "player_id": "green-7",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-0",
+      "uncertainty_seconds": 0.0
+    },
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "control",
+      "occurred_seconds": 1.0,
+      "play_epoch": 0,
+      "player_id": "green-11",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-1",
+      "uncertainty_seconds": 0.0
+    },
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "controlled_pass",
+      "occurred_seconds": 5.0,
+      "play_epoch": 0,
+      "player_id": "green-11",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-2",
+      "uncertainty_seconds": 0.0
+    },
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "control",
+      "occurred_seconds": 7.0,
+      "play_epoch": 0,
+      "player_id": "green-7",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-3",
+      "uncertainty_seconds": 0.0
+    },
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "interception",
+      "occurred_seconds": 9.0,
+      "play_epoch": 0,
+      "player_id": "orange-9",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-4",
+      "uncertainty_seconds": 0.0
+    },
+    {
+      "boot_id": "dummy-boot",
+      "certainty": "certain",
+      "kind": "control",
+      "occurred_seconds": 11.0,
+      "play_epoch": 0,
+      "player_id": "orange-13",
+      "roster_revision": 0,
+      "source_id": "generated-contacts",
+      "touch_id": "touch-5",
+      "uncertainty_seconds": 0.0
+    }
+  ],
+  "duration_seconds": 12.0,
+  "evidence": "synthetic",
+  "match_id": "match-ambiguous_order",
+  "periods": [
+    {
+      "end_seconds": 12.0,
+      "start_seconds": 0.0,
+      "state": "in_play",
+      "touch_coverage": "complete"
+    }
+  ],
+  "rosters": [
+    {
+      "roster": {
+        "active_player_ids": [
+          "green-7",
+          "green-11",
+          "orange-9",
+          "orange-13"
+        ],
+        "match_id": "match-ambiguous_order",
+        "players": [
+          {
+            "bib": 7,
+            "id": "green-7",
+            "name": "Green Seven",
+            "team": "green"
+          },
+          {
+            "bib": 11,
+            "id": "green-11",
+            "name": "Green Eleven",
+            "team": "green"
+          },
+          {
+            "bib": 9,
+            "id": "orange-9",
+            "name": "Orange Nine",
+            "team": "orange"
+          },
+          {
+            "bib": 13,
+            "id": "orange-13",
+            "name": "Orange Thirteen",
+            "team": "orange"
+          },
+          {
+            "bib": 15,
+            "id": "green-15",
+            "name": "Green Fifteen",
+            "team": "green"
+          }
+        ],
+        "revision": 0
+      },
+      "start_seconds": 0.0
+    }
+  ],
+  "schema_version": 1,
+  "session_id": "session-ambiguous_order",
+  "timing_quality": "synthetic_aligned"
+}

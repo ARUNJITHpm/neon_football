@@ -1,0 +1,199 @@
+{
+  "association_slack_px": 30.0,
+  "association_speed_px_per_second": 1500.0,
+  "max_crossing_gap_seconds": 0.15,
+  "max_frame_count": 250000,
+  "max_prediction_seconds": 0.2,
+  "max_queue_age_seconds": 0.25,
+  "max_timing_uncertainty_seconds": 0.02,
+  "min_ball_score": 0.3,
+  "min_image_inward_speed_px_per_second": 5.0,
+  "min_inward_speed_m_per_second": 0.1,
+  "net_motion_fraction": 0.15,
+  "prediction_uncertainty_m_per_second": 1.0,
+  "prediction_uncertainty_px_per_second": 60.0,
+  "schema_version": 1,
+  "version": "synthetic-vision-v1",
+  "views": [
+    {
+      "ball_radius_m": 0.11,
+      "calibration": {
+        "camera_id": "goal-a",
+        "distortion": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "floor_homography": null,
+        "goal_geometry": {},
+        "goal_roi": [
+          [
+            100.0,
+            20.0
+          ],
+          [
+            250.0,
+            20.0
+          ],
+          [
+            250.0,
+            160.0
+          ],
+          [
+            100.0,
+            160.0
+          ]
+        ],
+        "height": 180,
+        "intrinsics": [
+          [
+            250.0,
+            0.0,
+            160.0
+          ],
+          [
+            0.0,
+            250.0,
+            90.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens_model": "pinhole",
+        "net_roi": [
+          [
+            120.0,
+            30.0
+          ],
+          [
+            240.0,
+            30.0
+          ],
+          [
+            240.0,
+            150.0
+          ],
+          [
+            120.0,
+            150.0
+          ]
+        ],
+        "notes": "Synthetic test coordinates; NOT a venue measurement",
+        "pitch_corners": [],
+        "placement": {},
+        "reprojection_error_px": 0.1,
+        "schema_version": 1,
+        "status": "measured",
+        "version": "synthetic-geometry-v1",
+        "width": 320
+      },
+      "calibration_evidence": "synthetic",
+      "camera_id": "goal-a",
+      "depth_calibration_id": "synthetic-rig-v1",
+      "goal_end": "goal_a",
+      "image_inward_direction": [
+        1.0,
+        0.0
+      ],
+      "max_reprojection_error_px": 2.0,
+      "opening_height_m": 2.0,
+      "opening_width_m": 3.0,
+      "plane_margin_m": 0.01
+    },
+    {
+      "ball_radius_m": 0.11,
+      "calibration": {
+        "camera_id": "goal-b",
+        "distortion": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "floor_homography": null,
+        "goal_geometry": {},
+        "goal_roi": [
+          [
+            100.0,
+            20.0
+          ],
+          [
+            250.0,
+            20.0
+          ],
+          [
+            250.0,
+            160.0
+          ],
+          [
+            100.0,
+            160.0
+          ]
+        ],
+        "height": 180,
+        "intrinsics": [
+          [
+            250.0,
+            0.0,
+            160.0
+          ],
+          [
+            0.0,
+            250.0,
+            90.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens_model": "pinhole",
+        "net_roi": [
+          [
+            120.0,
+            30.0
+          ],
+          [
+            240.0,
+            30.0
+          ],
+          [
+            240.0,
+            150.0
+          ],
+          [
+            120.0,
+            150.0
+          ]
+        ],
+        "notes": "Synthetic test coordinates; NOT a venue measurement",
+        "pitch_corners": [],
+        "placement": {},
+        "reprojection_error_px": 0.1,
+        "schema_version": 1,
+        "status": "measured",
+        "version": "synthetic-geometry-v1",
+        "width": 320
+      },
+      "calibration_evidence": "synthetic",
+      "camera_id": "goal-b",
+      "depth_calibration_id": "synthetic-rig-v1",
+      "goal_end": "goal_b",
+      "image_inward_direction": [
+        1.0,
+        0.0
+      ],
+      "max_reprojection_error_px": 2.0,
+      "opening_height_m": 2.0,
+      "opening_width_m": 3.0,
+      "plane_margin_m": 0.01
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "bytes": 88688,
+  "duration_seconds": 2,
+  "generator": "ffmpeg version N-118471-ga50d36b5fd-20250215 Copyright (c) 2000-2025 the FFmpeg developers",
+  "height": 360,
+  "kind": "generated_pattern",
+  "media_id": "dummy-review-pattern-v1",
+  "rate_hz": 15,
+  "represents_football": false,
+  "sha256": "336868a0a397a59443fe0c49f54df2f0aa0768eb8f4aece871e46078156a11dd",
+  "source": "FFmpeg testsrc2 numeric video generator",
+  "width": 640
+}

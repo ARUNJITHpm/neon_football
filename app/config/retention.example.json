@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "raw_days": 30,
+  "clip_days": 30,
+  "audit_policy": "retain",
+  "holds": {}
+}

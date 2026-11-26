@@ -1,0 +1,386 @@
+{
+  "annotation_sha256": "706813aeeefad5f2cce279fa6cc0c1375cf416a8ffa3a62244ee3eb5d05f07c5",
+  "annotation_version": "synthetic-labels-v1",
+  "conditions": {
+    "challenge": {
+      "active_auto_seconds": 50.0,
+      "false_automatic_per_hour": {
+        "ci95": [
+          65.39192241757954,
+          614.4953205242218
+        ],
+        "count": 4,
+        "hours": 0.016666666666666666,
+        "interval_method": "exact-central-poisson",
+        "value": 240.0
+      },
+      "false_positives": 4,
+      "recall": {
+        "ci95": [
+          0.09677141110578041,
+          0.700006684861608
+        ],
+        "denominator": 6,
+        "interval_method": "wilson",
+        "numerator": 2,
+        "value": 0.3333333333333333
+      },
+      "scheduled_seconds": 60.0,
+      "session_ids": [
+        "synthetic-validation"
+      ],
+      "true_positives": 2,
+      "valid_goals": 6
+    },
+    "synthetic": {
+      "active_auto_seconds": 50.0,
+      "false_automatic_per_hour": {
+        "ci95": [
+          65.39192241757954,
+          614.4953205242218
+        ],
+        "count": 4,
+        "hours": 0.016666666666666666,
+        "interval_method": "exact-central-poisson",
+        "value": 240.0
+      },
+      "false_positives": 4,
+      "recall": {
+        "ci95": [
+          0.09677141110578041,
+          0.700006684861608
+        ],
+        "denominator": 6,
+        "interval_method": "wilson",
+        "numerator": 2,
+        "value": 0.3333333333333333
+      },
+      "scheduled_seconds": 60.0,
+      "session_ids": [
+        "synthetic-validation"
+      ],
+      "true_positives": 2,
+      "valid_goals": 6
+    }
+  },
+  "configuration": {
+    "annotation_policy": "annotation-policy-v1",
+    "evaluator": "event-evaluator-v1",
+    "implementation_sha256": "c5984c655bcc6d2edd3aa99f132f64ac308653f2bb61bba4a0a1b92458a0081c",
+    "matching": "maximum-cardinality-minimum-time",
+    "matching_tolerance_seconds": 0.5
+  },
+  "configuration_sha256": "188cca9fdd6272475ebf5168a997f89e46db8d6f6519e36567eb4b255f897844",
+  "counts": {
+    "automatic_decisions": 7,
+    "automatic_outside_active_window": 1,
+    "confirmed_goals": 1,
+    "corrected_goals": 1,
+    "false_negatives": 4,
+    "false_positives": 4,
+    "human_rescued_goals": 1,
+    "invalid_labels": 1,
+    "manual_goals": 0,
+    "operator_confirmed": 1,
+    "review_prompts": 2,
+    "shadow_automatic_decisions": 7,
+    "true_positives": 2,
+    "unadjudicated_automatic": 1,
+    "uncertain_labels": 1,
+    "valid_goals": 6
+  },
+  "dataset_id": "synthetic-challenge-v1",
+  "errors": [
+    {
+      "clip_path": null,
+      "delivered_seconds": 5.3,
+      "event_id": "duplicate-a",
+      "goal_end": "goal_a",
+      "match_id": "synthetic-validation-match",
+      "occurred_seconds": 5.2,
+      "session_id": "synthetic-validation",
+      "type": "duplicate"
+    },
+    {
+      "clip_path": null,
+      "delivered_seconds": 10.1,
+      "event_id": "wrong-end",
+      "goal_end": "goal_a",
+      "match_id": "synthetic-validation-match",
+      "occurred_seconds": 10.0,
+      "session_id": "synthetic-validation",
+      "type": "wrong_goal_end"
+    },
+    {
+      "clip_path": null,
+      "delivered_seconds": 30.1,
+      "event_id": "inactive-auto",
+      "goal_end": "goal_a",
+      "match_id": "synthetic-validation-match",
+      "occurred_seconds": 30.0,
+      "session_id": "synthetic-validation",
+      "type": "automatic_while_inactive"
+    },
+    {
+      "clip_path": null,
+      "delivered_seconds": 45.1,
+      "event_id": "false-impact",
+      "goal_end": "goal_a",
+      "match_id": "synthetic-validation-match",
+      "occurred_seconds": 45.0,
+      "session_id": "synthetic-validation",
+      "type": "unmatched_automatic"
+    },
+    {
+      "clip_path": null,
+      "crossing_seconds": 10.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "goal_end": "goal_b",
+      "human_rescued": false,
+      "label_id": "synthetic-validation-label-1",
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "type": "missed_valid_goal"
+    },
+    {
+      "clip_path": null,
+      "crossing_seconds": 15.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "goal_end": "goal_a",
+      "human_rescued": true,
+      "label_id": "synthetic-validation-label-2",
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "type": "missed_valid_goal"
+    },
+    {
+      "clip_path": null,
+      "crossing_seconds": 20.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "goal_end": "goal_a",
+      "human_rescued": false,
+      "label_id": "synthetic-validation-label-3",
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "type": "missed_valid_goal"
+    },
+    {
+      "clip_path": null,
+      "crossing_seconds": 30.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "goal_end": "goal_a",
+      "human_rescued": false,
+      "label_id": "synthetic-validation-label-4",
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "type": "missed_valid_goal"
+    },
+    {
+      "clip_path": null,
+      "event_id": "uncertain-auto",
+      "session_id": "synthetic-validation",
+      "type": "unadjudicated_automatic"
+    }
+  ],
+  "evaluator": "event-evaluator-v1",
+  "input_fingerprint": "12daf3150113ea1c4a64f9377559a139055388addfe93c8ae2e39f0adf55901f",
+  "limitations": [
+    "Injected recorded decisions; no detector or goal-engine performance is established.",
+    "Wilson/Poisson intervals assume independent events; match clustering is not adjusted.",
+    "Synthetic evidence cannot qualify a venue release.",
+    "Continuous-footage audit is missing; goal recall and false-goal counts are provisional.",
+    "Uncertain labels are reported separately; unadjudicated automatic decisions are excluded from precision/rates.",
+    "Some matched goals have no measured display timestamp/uncertainty; visible latency coverage is incomplete.",
+    "Physical crossing/display alignment has not been verified for every session."
+  ],
+  "manifest_sha256": "916585b8d7919d5271f2fd28aec2603c411fb3d32bbedff50fe016f85228ba20",
+  "matches": [
+    {
+      "clip_path": null,
+      "crossing_error_seconds": 0.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "event_id": "true-a",
+      "label_id": "synthetic-validation-label-0",
+      "latency_seconds": 0.40000000000000036,
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "shadow": true
+    },
+    {
+      "clip_path": null,
+      "crossing_error_seconds": 0.0,
+      "crossing_uncertainty_seconds": 0.01,
+      "event_id": "true-b",
+      "label_id": "synthetic-validation-label-7",
+      "latency_seconds": null,
+      "match_id": "synthetic-validation-match",
+      "session_id": "synthetic-validation",
+      "shadow": true
+    }
+  ],
+  "metrics": {
+    "automatic_precision": {
+      "ci95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "denominator": 6,
+      "interval_method": "wilson",
+      "numerator": 2,
+      "value": 0.3333333333333333
+    },
+    "automatic_recall": {
+      "ci95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "denominator": 6,
+      "interval_method": "wilson",
+      "numerator": 2,
+      "value": 0.3333333333333333
+    },
+    "availability": {
+      "active_auto_seconds": 50.0,
+      "scheduled_seconds": 60.0,
+      "value": 0.8333333333333334
+    },
+    "correction_rate": {
+      "ci95": [
+        0.20654931437723745,
+        1
+      ],
+      "denominator": 1,
+      "interval_method": "wilson",
+      "numerator": 1,
+      "value": 1.0
+    },
+    "crossing_uncertainty_seconds": {
+      "maximum": 0.01,
+      "p50": 0.01,
+      "p95": 0.01,
+      "p99": 0.01,
+      "samples": 2
+    },
+    "display_measurement_coverage": {
+      "ci95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "denominator": 2,
+      "interval_method": "wilson",
+      "numerator": 1,
+      "value": 0.5
+    },
+    "false_automatic_per_active_hour": {
+      "ci95": [
+        78.47030690109544,
+        737.3943846290663
+      ],
+      "count": 4,
+      "hours": 0.013888888888888888,
+      "interval_method": "exact-central-poisson",
+      "value": 288.0
+    },
+    "false_automatic_per_scheduled_hour": {
+      "ci95": [
+        65.39192241757954,
+        614.4953205242218
+      ],
+      "count": 4,
+      "hours": 0.016666666666666666,
+      "interval_method": "exact-central-poisson",
+      "value": 240.0
+    },
+    "healthy_only_recall": {
+      "ci95": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "denominator": 5,
+      "interval_method": "wilson",
+      "numerator": 2,
+      "value": 0.4
+    },
+    "review_prompts_per_goal": {
+      "prompts": 2,
+      "valid_goals": 6,
+      "value": 0.3333333333333333
+    },
+    "review_prompts_per_hour": {
+      "ci95": [
+        14.532556712637858,
+        433.4812600634377
+      ],
+      "count": 2,
+      "hours": 0.016666666666666666,
+      "interval_method": "exact-central-poisson",
+      "value": 120.0
+    },
+    "visible_latency_seconds": {
+      "maximum": 0.40000000000000036,
+      "p50": 0.40000000000000036,
+      "p95": 0.40000000000000036,
+      "p99": 0.40000000000000036,
+      "samples": 1
+    },
+    "visible_latency_upper_bound_seconds": {
+      "maximum": 0.4200000000000004,
+      "p50": 0.4200000000000004,
+      "p95": 0.4200000000000004,
+      "p99": 0.4200000000000004,
+      "samples": 1
+    }
+  },
+  "release_qualified": false,
+  "schema_version": 1,
+  "sessions": [
+    {
+      "active_auto_seconds": 50.0,
+      "conditions": [
+        "synthetic",
+        "challenge"
+      ],
+      "counts": {
+        "automatic_decisions": 7,
+        "automatic_outside_active_window": 1,
+        "confirmed_goals": 1,
+        "corrected_goals": 1,
+        "false_negatives": 4,
+        "false_positives": 4,
+        "human_rescued_goals": 1,
+        "invalid_labels": 1,
+        "manual_goals": 0,
+        "operator_confirmed": 1,
+        "review_prompts": 2,
+        "shadow_automatic_decisions": 7,
+        "true_positives": 2,
+        "unadjudicated_automatic": 1,
+        "uncertain_labels": 1,
+        "valid_goals": 6
+      },
+      "false_automatic_per_hour": {
+        "ci95": [
+          65.39192241757954,
+          614.4953205242218
+        ],
+        "count": 4,
+        "hours": 0.016666666666666666,
+        "interval_method": "exact-central-poisson",
+        "value": 240.0
+      },
+      "recall": {
+        "ci95": [
+          0.09677141110578041,
+          0.700006684861608
+        ],
+        "denominator": 6,
+        "interval_method": "wilson",
+        "numerator": 2,
+        "value": 0.3333333333333333
+      },
+      "scheduled_seconds": 60.0,
+      "session_id": "synthetic-validation"
+    }
+  ],
+  "split": "validation"
+}

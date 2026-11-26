@@ -1,0 +1,444 @@
+{
+  "$defs": {
+    "CalibrationRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "distortion": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Distortion"
+        },
+        "floor_homography": {
+          "anyOf": [
+            {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Floor Homography"
+        },
+        "goal_geometry": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Goal Geometry",
+          "type": "object"
+        },
+        "goal_roi": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Goal Roi",
+          "type": "array"
+        },
+        "height": {
+          "exclusiveMinimum": 0,
+          "title": "Height",
+          "type": "integer"
+        },
+        "intrinsics": {
+          "anyOf": [
+            {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intrinsics"
+        },
+        "lens_model": {
+          "default": "pinhole",
+          "enum": [
+            "pinhole",
+            "fisheye"
+          ],
+          "title": "Lens Model",
+          "type": "string"
+        },
+        "net_roi": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Net Roi",
+          "type": "array"
+        },
+        "notes": {
+          "default": "",
+          "title": "Notes",
+          "type": "string"
+        },
+        "pitch_corners": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Pitch Corners",
+          "type": "array"
+        },
+        "placement": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Placement",
+          "type": "object"
+        },
+        "reprojection_error_px": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reprojection Error Px"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "status": {
+          "default": "draft",
+          "enum": [
+            "draft",
+            "measured"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Version",
+          "type": "string"
+        },
+        "width": {
+          "exclusiveMinimum": 0,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "camera_id",
+        "version",
+        "width",
+        "height"
+      ],
+      "title": "CalibrationRecord",
+      "type": "object"
+    },
+    "GoalView": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_radius_m": {
+          "exclusiveMinimum": 0,
+          "title": "Ball Radius M",
+          "type": "number"
+        },
+        "calibration": {
+          "$ref": "#/$defs/CalibrationRecord"
+        },
+        "calibration_evidence": {
+          "default": "unverified",
+          "enum": [
+            "synthetic",
+            "venue",
+            "unverified"
+          ],
+          "title": "Calibration Evidence",
+          "type": "string"
+        },
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "depth_calibration_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Depth Calibration Id"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "image_inward_direction": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Image Inward Direction"
+        },
+        "max_reprojection_error_px": {
+          "default": 2,
+          "exclusiveMinimum": 0,
+          "title": "Max Reprojection Error Px",
+          "type": "number"
+        },
+        "opening_height_m": {
+          "exclusiveMinimum": 0,
+          "title": "Opening Height M",
+          "type": "number"
+        },
+        "opening_width_m": {
+          "exclusiveMinimum": 0,
+          "title": "Opening Width M",
+          "type": "number"
+        },
+        "plane_margin_m": {
+          "default": 0.01,
+          "minimum": 0,
+          "title": "Plane Margin M",
+          "type": "number"
+        }
+      },
+      "required": [
+        "camera_id",
+        "goal_end",
+        "calibration",
+        "opening_width_m",
+        "opening_height_m",
+        "ball_radius_m"
+      ],
+      "title": "GoalView",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "association_slack_px": {
+      "default": 30,
+      "exclusiveMinimum": 0,
+      "title": "Association Slack Px",
+      "type": "number"
+    },
+    "association_speed_px_per_second": {
+      "default": 1500,
+      "exclusiveMinimum": 0,
+      "title": "Association Speed Px Per Second",
+      "type": "number"
+    },
+    "max_crossing_gap_seconds": {
+      "default": 0.15,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Max Crossing Gap Seconds",
+      "type": "number"
+    },
+    "max_frame_count": {
+      "default": 250000,
+      "maximum": 2000000,
+      "minimum": 1,
+      "title": "Max Frame Count",
+      "type": "integer"
+    },
+    "max_prediction_seconds": {
+      "default": 0.2,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Max Prediction Seconds",
+      "type": "number"
+    },
+    "max_queue_age_seconds": {
+      "default": 0.25,
+      "exclusiveMinimum": 0,
+      "maximum": 5,
+      "title": "Max Queue Age Seconds",
+      "type": "number"
+    },
+    "max_timing_uncertainty_seconds": {
+      "default": 0.02,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Max Timing Uncertainty Seconds",
+      "type": "number"
+    },
+    "min_ball_score": {
+      "default": 0.3,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Min Ball Score",
+      "type": "number"
+    },
+    "min_image_inward_speed_px_per_second": {
+      "default": 5,
+      "exclusiveMinimum": 0,
+      "title": "Min Image Inward Speed Px Per Second",
+      "type": "number"
+    },
+    "min_inward_speed_m_per_second": {
+      "default": 0.1,
+      "exclusiveMinimum": 0,
+      "title": "Min Inward Speed M Per Second",
+      "type": "number"
+    },
+    "net_motion_fraction": {
+      "default": 0.15,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Net Motion Fraction",
+      "type": "number"
+    },
+    "prediction_uncertainty_m_per_second": {
+      "default": 1,
+      "exclusiveMinimum": 0,
+      "title": "Prediction Uncertainty M Per Second",
+      "type": "number"
+    },
+    "prediction_uncertainty_px_per_second": {
+      "default": 60,
+      "exclusiveMinimum": 0,
+      "title": "Prediction Uncertainty Px Per Second",
+      "type": "number"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    },
+    "views": {
+      "items": {
+        "$ref": "#/$defs/GoalView"
+      },
+      "title": "Views",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "views"
+  ],
+  "title": "VisionSettings",
+  "type": "object"
+}

@@ -1,0 +1,79 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "actor": {
+      "default": "fusion",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Actor",
+      "type": "string"
+    },
+    "candidate_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Candidate Id"
+    },
+    "details": {
+      "additionalProperties": true,
+      "title": "Details",
+      "type": "object"
+    },
+    "event_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    },
+    "recorded_seconds": {
+      "minimum": 0,
+      "title": "Recorded Seconds",
+      "type": "number"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "type": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "revision",
+    "recorded_seconds",
+    "match_id",
+    "type"
+  ],
+  "title": "FusionEvent",
+  "type": "object"
+}

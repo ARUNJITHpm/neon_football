@@ -1,0 +1,240 @@
+{
+  "$defs": {
+    "Annotation": {
+      "additionalProperties": false,
+      "properties": {
+        "adjudicator": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Adjudicator",
+          "type": "string"
+        },
+        "challenge": {
+          "default": "ordinary",
+          "enum": [
+            "ordinary",
+            "partial_crossing",
+            "post_and_out",
+            "post_and_in",
+            "outside_net",
+            "player_impact",
+            "loose_net",
+            "ball_retrieval",
+            "glare",
+            "paused_play",
+            "other"
+          ],
+          "title": "Challenge",
+          "type": "string"
+        },
+        "clip_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clip Path"
+        },
+        "crossing_end_seconds": {
+          "minimum": 0,
+          "title": "Crossing End Seconds",
+          "type": "number"
+        },
+        "crossing_start_seconds": {
+          "minimum": 0,
+          "title": "Crossing Start Seconds",
+          "type": "number"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "label_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Label Id",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "notes": {
+          "default": "",
+          "title": "Notes",
+          "type": "string"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "team": {
+          "anyOf": [
+            {
+              "enum": [
+                "orange",
+                "green"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Team"
+        },
+        "uncertainty_seconds": {
+          "minimum": 0,
+          "title": "Uncertainty Seconds",
+          "type": "number"
+        },
+        "validity": {
+          "enum": [
+            "valid",
+            "invalid",
+            "uncertain"
+          ],
+          "title": "Validity",
+          "type": "string"
+        },
+        "visibility": {
+          "enum": [
+            "clear",
+            "partial",
+            "occluded",
+            "unobservable"
+          ],
+          "title": "Visibility",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label_id",
+        "session_id",
+        "match_id",
+        "crossing_start_seconds",
+        "crossing_end_seconds",
+        "goal_end",
+        "validity",
+        "visibility",
+        "uncertainty_seconds",
+        "adjudicator"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "SessionAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "continuous_footage_reviewed": {
+          "title": "Continuous Footage Reviewed",
+          "type": "boolean"
+        },
+        "notes": {
+          "default": "",
+          "title": "Notes",
+          "type": "string"
+        },
+        "reviewer": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "continuous_footage_reviewed",
+        "reviewer"
+      ],
+      "title": "SessionAudit",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "annotation_policy_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Annotation Policy Version",
+      "type": "string"
+    },
+    "audits": {
+      "items": {
+        "$ref": "#/$defs/SessionAudit"
+      },
+      "title": "Audits",
+      "type": "array"
+    },
+    "dataset_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "labels": {
+      "items": {
+        "$ref": "#/$defs/Annotation"
+      },
+      "title": "Labels",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "blind_test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "version",
+    "split",
+    "annotation_policy_version",
+    "audits",
+    "labels"
+  ],
+  "title": "AnnotationSet",
+  "type": "object"
+}

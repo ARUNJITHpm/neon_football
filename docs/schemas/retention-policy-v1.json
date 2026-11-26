@@ -1,0 +1,46 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "audit_policy": {
+      "const": "retain",
+      "default": "retain",
+      "title": "Audit Policy",
+      "type": "string"
+    },
+    "clip_days": {
+      "default": 30,
+      "maximum": 3650,
+      "minimum": 1,
+      "title": "Clip Days",
+      "type": "integer"
+    },
+    "enabled": {
+      "default": false,
+      "title": "Enabled",
+      "type": "boolean"
+    },
+    "holds": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "maxProperties": 10000,
+      "title": "Holds",
+      "type": "object"
+    },
+    "raw_days": {
+      "default": 30,
+      "maximum": 3650,
+      "minimum": 1,
+      "title": "Raw Days",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "title": "RetentionPolicy",
+  "type": "object"
+}

@@ -1,0 +1,127 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "boot_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Boot Id",
+      "type": "string"
+    },
+    "clock_reset": {
+      "default": false,
+      "title": "Clock Reset",
+      "type": "boolean"
+    },
+    "host_clock_domain": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Host Clock Domain",
+      "type": "string"
+    },
+    "host_monotonic_seconds": {
+      "minimum": 0,
+      "title": "Host Monotonic Seconds",
+      "type": "number"
+    },
+    "offset_seconds": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Offset Seconds"
+    },
+    "quality": {
+      "enum": [
+        "media_pts",
+        "exposure",
+        "receipt_only"
+      ],
+      "title": "Quality",
+      "type": "string"
+    },
+    "received_at": {
+      "format": "date-time",
+      "title": "Received At",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sequence": {
+      "minimum": 0,
+      "title": "Sequence",
+      "type": "integer"
+    },
+    "source_clock_domain": {
+      "title": "Source Clock Domain",
+      "type": "string"
+    },
+    "source_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_seconds": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Seconds"
+    },
+    "source_sequence": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Sequence"
+    },
+    "uncertainty_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uncertainty Seconds"
+    }
+  },
+  "required": [
+    "source_id",
+    "boot_id",
+    "sequence",
+    "source_clock_domain",
+    "host_clock_domain",
+    "host_monotonic_seconds",
+    "received_at",
+    "quality"
+  ],
+  "title": "TimingEnvelope",
+  "type": "object"
+}

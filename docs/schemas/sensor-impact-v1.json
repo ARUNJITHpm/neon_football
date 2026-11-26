@@ -1,0 +1,152 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "automatic_confirmation_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Confirmation Allowed",
+      "type": "boolean"
+    },
+    "boot_id": {
+      "title": "Boot Id",
+      "type": "integer"
+    },
+    "classification": {
+      "enum": [
+        "net_impact",
+        "frame_impact",
+        "mixed_impact",
+        "slow_impact",
+        "unknown"
+      ],
+      "title": "Classification",
+      "type": "string"
+    },
+    "configuration_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Configuration Version",
+      "type": "string"
+    },
+    "device_id": {
+      "title": "Device Id",
+      "type": "integer"
+    },
+    "emitted_seconds": {
+      "minimum": 0,
+      "title": "Emitted Seconds",
+      "type": "number"
+    },
+    "event_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue",
+        "unverified"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "features": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Features",
+      "type": "object"
+    },
+    "flags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Flags",
+      "type": "array"
+    },
+    "goal_end": {
+      "enum": [
+        "goal_a",
+        "goal_b"
+      ],
+      "title": "Goal End",
+      "type": "string"
+    },
+    "host_clock_domain": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Host Clock Domain",
+      "type": "string"
+    },
+    "occurred_device_seconds": {
+      "minimum": 0,
+      "title": "Occurred Device Seconds",
+      "type": "number"
+    },
+    "occurred_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Occurred Seconds"
+    },
+    "possible_goal": {
+      "const": true,
+      "default": true,
+      "title": "Possible Goal",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "timing_uncertainty_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Timing Uncertainty Seconds"
+    },
+    "type": {
+      "const": "sensor_impact",
+      "default": "sensor_impact",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "goal_end",
+    "device_id",
+    "boot_id",
+    "occurred_device_seconds",
+    "occurred_seconds",
+    "emitted_seconds",
+    "timing_uncertainty_seconds",
+    "host_clock_domain",
+    "evidence",
+    "classification",
+    "features",
+    "flags",
+    "configuration_version"
+  ],
+  "title": "SensorImpact",
+  "type": "object"
+}

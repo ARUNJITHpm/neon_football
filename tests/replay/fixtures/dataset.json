@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-challenge-v1",
+  "annotation_policy_version": "annotation-policy-v1",
+  "split_assignment_version": "fixed-synthetic-splits-v1",
+  "split_frozen_at": "2026-10-11T00:00:00Z",
+  "sessions": [
+    {
+      "session_id": "synthetic-train",
+      "source_group_id": "synthetic-train",
+      "split": "train",
+      "evidence": "synthetic",
+      "duration_seconds": 60.0,
+      "host_clock_domain": "host-synthetic-train",
+      "configuration_version": "synthetic-config-1",
+      "model_version": "injected-no-detector-1",
+      "calibration_versions": {},
+      "matches": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 60.0,
+          "match_id": "synthetic-train-match",
+          "active_auto_windows": [
+            {
+              "start_seconds": 0.0,
+              "end_seconds": 25.0
+            },
+            {
+              "start_seconds": 35.0,
+              "end_seconds": 60.0
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "path": "synthetic-train.jsonl",
+          "sha256": "a6512240404b45caf25b00aea6d72f4b026142b3da3bc8ca14a7902ef5bf7090",
+          "kind": "replay_events"
+        }
+      ],
+      "conditions": [
+        "synthetic",
+        "challenge"
+      ],
+      "physical_alignment_verified": false
+    },
+    {
+      "session_id": "synthetic-validation",
+      "source_group_id": "synthetic-validation",
+      "split": "validation",
+      "evidence": "synthetic",
+      "duration_seconds": 60.0,
+      "host_clock_domain": "host-synthetic-validation",
+      "configuration_version": "synthetic-config-1",
+      "model_version": "injected-no-detector-1",
+      "calibration_versions": {},
+      "matches": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 60.0,
+          "match_id": "synthetic-validation-match",
+          "active_auto_windows": [
+            {
+              "start_seconds": 0.0,
+              "end_seconds": 25.0
+            },
+            {
+              "start_seconds": 35.0,
+              "end_seconds": 60.0
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "path": "synthetic-validation.jsonl",
+          "sha256": "5e7133d21b1c64184e3d051c7bfdebb48929a7ba0e09cb4a436c72f14305e739",
+          "kind": "replay_events"
+        }
+      ],
+      "conditions": [
+        "synthetic",
+        "challenge"
+      ],
+      "physical_alignment_verified": false
+    },
+    {
+      "session_id": "synthetic-blind",
+      "source_group_id": "synthetic-blind",
+      "split": "blind_test",
+      "evidence": "synthetic",
+      "duration_seconds": 60.0,
+      "host_clock_domain": "host-synthetic-blind",
+      "configuration_version": "synthetic-config-1",
+      "model_version": "injected-no-detector-1",
+      "calibration_versions": {},
+      "matches": [
+        {
+          "start_seconds": 0.0,
+          "end_seconds": 60.0,
+          "match_id": "synthetic-blind-match",
+          "active_auto_windows": [
+            {
+              "start_seconds": 0.0,
+              "end_seconds": 25.0
+            },
+            {
+              "start_seconds": 35.0,
+              "end_seconds": 60.0
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "path": "synthetic-blind.jsonl",
+          "sha256": "09805399fab72d00b06775390485693d0dda3f3e110ada6d2feeeb6a14752620",
+          "kind": "replay_events"
+        }
+      ],
+      "conditions": [
+        "synthetic",
+        "challenge"
+      ],
+      "physical_alignment_verified": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-challenge-v1",
+  "version": "synthetic-labels-v1",
+  "split": "blind_test",
+  "annotation_policy_version": "annotation-policy-v1",
+  "audits": [
+    {
+      "session_id": "synthetic-blind",
+      "continuous_footage_reviewed": false,
+      "reviewer": "synthetic-fixture-builder",
+      "notes": "There is no football footage to adjudicate"
+    }
+  ],
+  "labels": [
+    {
+      "label_id": "synthetic-blind-label-0",
+      "session_id": "synthetic-blind",
+      "match_id": "synthetic-blind-match",
+      "crossing_start_seconds": 8.0,
+      "crossing_end_seconds": 8.0,
+      "goal_end": "goal_b",
+      "team": "orange",
+      "validity": "valid",
+      "visibility": "clear",
+      "uncertainty_seconds": 0.01,
+      "challenge": "ordinary",
+      "clip_path": null,
+      "adjudicator": "synthetic-ground-truth-v1",
+      "notes": "Hand-authored challenge event, not measured football footage"
+    },
+    {
+      "label_id": "synthetic-blind-label-1",
+      "session_id": "synthetic-blind",
+      "match_id": "synthetic-blind-match",
+      "crossing_start_seconds": 55.0,
+      "crossing_end_seconds": 55.0,
+      "goal_end": "goal_a",
+      "team": "green",
+      "validity": "valid",
+      "visibility": "clear",
+      "uncertainty_seconds": 0.01,
+      "challenge": "ordinary",
+      "clip_path": null,
+      "adjudicator": "synthetic-ground-truth-v1",
+      "notes": "Hand-authored challenge event, not measured football footage"
+    }
+  ]
+}

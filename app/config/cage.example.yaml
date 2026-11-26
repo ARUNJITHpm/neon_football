@@ -1,0 +1,27 @@
+schema_version: 1
+venue_name: Neon Football
+database_path: data/neon-score.sqlite3
+operator_key_path: data/operator.key
+host: 127.0.0.1
+port: 8000
+default_duration_seconds: 1200
+# Part 00 measurements are unknown. Automatic scoring is deliberately disabled.
+automatic_scoring_enabled: false
+# Explicit dummy review mode can be selected by the operator; no live fusion is enabled.
+demo_review_enabled: true
+pitch:
+  length_m: 15
+  width_m: 10
+  goal_width_m: null
+  goal_height_m: null
+  roof_height_m: null
+  ball_diameter_m: null
+cameras: []
+capture:
+  enabled: false
+  root: data/recordings
+  ffmpeg: ffmpeg
+sensors: []
+operations:
+  min_free_bytes: 1073741824
+  integrity_interval_seconds: 30

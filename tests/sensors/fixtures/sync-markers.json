@@ -1,0 +1,92 @@
+{
+  "evidence": "synthetic",
+  "groups": [
+    {
+      "boot_id": 101,
+      "device_id": 1,
+      "host_clock_domain": "dummy-host",
+      "markers": [
+        {
+          "device_seconds": 0,
+          "host_seconds": 0,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 0.5,
+          "host_seconds": 0.5,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 1,
+          "host_seconds": 1,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 2,
+          "host_seconds": 2,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 5,
+          "host_seconds": 5,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 9.998,
+          "host_seconds": 9.998,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        }
+      ]
+    },
+    {
+      "boot_id": 101,
+      "device_id": 2,
+      "host_clock_domain": "dummy-host",
+      "markers": [
+        {
+          "device_seconds": 0,
+          "host_seconds": 0.0,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 0.5,
+          "host_seconds": 0.50005,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 1,
+          "host_seconds": 1.0001,
+          "split": "fit",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 2,
+          "host_seconds": 2.0002,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 5,
+          "host_seconds": 5.0005,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        },
+        {
+          "device_seconds": 9.998,
+          "host_seconds": 9.9989998,
+          "split": "validation",
+          "uncertainty_seconds": 0.0005
+        }
+      ]
+    }
+  ],
+  "version": "dummy-alignment-validation-v1"
+}

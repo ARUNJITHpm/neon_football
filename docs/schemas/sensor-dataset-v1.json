@@ -1,0 +1,409 @@
+{
+  "$defs": {
+    "ImpactLabel": {
+      "additionalProperties": false,
+      "properties": {
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "incident_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Incident Id",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "physical_class": {
+          "enum": [
+            "goal",
+            "frame",
+            "wall",
+            "player",
+            "noise",
+            "post_and_in"
+          ],
+          "title": "Physical Class",
+          "type": "string"
+        }
+      },
+      "required": [
+        "incident_id",
+        "match_id",
+        "goal_end",
+        "occurred_seconds",
+        "physical_class"
+      ],
+      "title": "ImpactLabel",
+      "type": "object"
+    },
+    "SensorAlignment": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "minimum": 1,
+          "title": "Boot Id",
+          "type": "integer"
+        },
+        "device_id": {
+          "minimum": 1,
+          "title": "Device Id",
+          "type": "integer"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "physical"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "host_clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Host Clock Domain",
+          "type": "string"
+        },
+        "host_origin_seconds": {
+          "minimum": 0,
+          "title": "Host Origin Seconds",
+          "type": "number"
+        },
+        "scale": {
+          "exclusiveMinimum": 0,
+          "maximum": 2,
+          "title": "Scale",
+          "type": "number"
+        },
+        "source_origin_seconds": {
+          "minimum": 0,
+          "title": "Source Origin Seconds",
+          "type": "number"
+        },
+        "uncertainty_seconds": {
+          "minimum": 0,
+          "title": "Uncertainty Seconds",
+          "type": "number"
+        },
+        "valid_from_device_seconds": {
+          "minimum": 0,
+          "title": "Valid From Device Seconds",
+          "type": "number"
+        },
+        "valid_to_device_seconds": {
+          "minimum": 0,
+          "title": "Valid To Device Seconds",
+          "type": "number"
+        },
+        "version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "device_id",
+        "boot_id",
+        "host_clock_domain",
+        "evidence",
+        "source_origin_seconds",
+        "host_origin_seconds",
+        "scale",
+        "uncertainty_seconds",
+        "valid_from_device_seconds",
+        "valid_to_device_seconds"
+      ],
+      "title": "SensorAlignment",
+      "type": "object"
+    },
+    "SensorAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "SensorAsset",
+      "type": "object"
+    },
+    "SensorSession": {
+      "additionalProperties": false,
+      "properties": {
+        "alignments": {
+          "items": {
+            "$ref": "#/$defs/SensorAlignment"
+          },
+          "title": "Alignments",
+          "type": "array"
+        },
+        "devices": {
+          "additionalProperties": {
+            "enum": [
+              "goal_a",
+              "goal_b"
+            ],
+            "type": "string"
+          },
+          "title": "Devices",
+          "type": "object"
+        },
+        "duration_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "host_clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Host Clock Domain",
+          "type": "string"
+        },
+        "labels": {
+          "items": {
+            "$ref": "#/$defs/ImpactLabel"
+          },
+          "title": "Labels",
+          "type": "array"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "raw": {
+          "$ref": "#/$defs/SensorAsset"
+        },
+        "receipts": {
+          "$ref": "#/$defs/SensorAsset"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "source_group_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Group Id",
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "train",
+            "validation",
+            "blind_test"
+          ],
+          "title": "Split",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "match_id",
+        "source_group_id",
+        "split",
+        "evidence",
+        "duration_seconds",
+        "host_clock_domain",
+        "raw",
+        "devices",
+        "receipts",
+        "labels",
+        "alignments"
+      ],
+      "title": "SensorSession",
+      "type": "object"
+    },
+    "SensorSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_max_rms_g": {
+          "default": 0.08,
+          "exclusiveMinimum": 0,
+          "title": "Baseline Max Rms G",
+          "type": "number"
+        },
+        "baseline_samples": {
+          "default": 320,
+          "maximum": 800,
+          "minimum": 80,
+          "title": "Baseline Samples",
+          "type": "integer"
+        },
+        "cooldown_seconds": {
+          "default": 0.6,
+          "exclusiveMinimum": 0,
+          "maximum": 2,
+          "title": "Cooldown Seconds",
+          "type": "number"
+        },
+        "dominance_ratio": {
+          "default": 1.8,
+          "exclusiveMinimum": 1,
+          "title": "Dominance Ratio",
+          "type": "number"
+        },
+        "max_delivery_age_seconds": {
+          "default": 0.25,
+          "exclusiveMinimum": 0,
+          "title": "Max Delivery Age Seconds",
+          "type": "number"
+        },
+        "max_history_samples": {
+          "default": 1600,
+          "maximum": 8000,
+          "minimum": 800,
+          "title": "Max History Samples",
+          "type": "integer"
+        },
+        "max_timing_uncertainty_seconds": {
+          "default": 0.02,
+          "exclusiveMinimum": 0,
+          "title": "Max Timing Uncertainty Seconds",
+          "type": "number"
+        },
+        "minimum_peak_g": {
+          "default": 0.6,
+          "exclusiveMinimum": 0,
+          "title": "Minimum Peak G",
+          "type": "number"
+        },
+        "post_seconds": {
+          "default": 0.1,
+          "exclusiveMinimum": 0,
+          "maximum": 0.5,
+          "title": "Post Seconds",
+          "type": "number"
+        },
+        "pre_seconds": {
+          "default": 0.4,
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "title": "Pre Seconds",
+          "type": "number"
+        },
+        "scale_g_per_lsb": {
+          "default": 0.0039,
+          "exclusiveMinimum": 0,
+          "maximum": 0.01,
+          "title": "Scale G Per Lsb",
+          "type": "number"
+        },
+        "slow_roughness_ratio": {
+          "default": 0.12,
+          "exclusiveMaximum": 1,
+          "exclusiveMinimum": 0,
+          "title": "Slow Roughness Ratio",
+          "type": "number"
+        },
+        "stale_seconds": {
+          "default": 0.3,
+          "exclusiveMinimum": 0,
+          "title": "Stale Seconds",
+          "type": "number"
+        },
+        "trigger_g": {
+          "default": 0.6,
+          "exclusiveMinimum": 0,
+          "title": "Trigger G",
+          "type": "number"
+        },
+        "version": {
+          "default": "impact-rules-v1",
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "SensorSettings",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "dataset_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sessions": {
+      "items": {
+        "$ref": "#/$defs/SensorSession"
+      },
+      "title": "Sessions",
+      "type": "array"
+    },
+    "settings": {
+      "$ref": "#/$defs/SensorSettings"
+    },
+    "split_assignment_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Split Assignment Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset_id",
+    "split_assignment_version",
+    "settings",
+    "sessions"
+  ],
+  "title": "SensorDataset",
+  "type": "object"
+}

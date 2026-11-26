@@ -1,0 +1,73 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "bytes": {
+      "anyOf": [
+        {
+          "maximum": 4194304,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bytes"
+    },
+    "detail": {
+      "maxLength": 300,
+      "minLength": 1,
+      "title": "Detail",
+      "type": "string"
+    },
+    "kind": {
+      "const": "generated_pattern",
+      "default": "generated_pattern",
+      "title": "Kind",
+      "type": "string"
+    },
+    "media_id": {
+      "anyOf": [
+        {
+          "const": "dummy-review-pattern-v1",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Media Id"
+    },
+    "sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sha256"
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "missing",
+        "pending",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "detail"
+  ],
+  "title": "ReviewClip",
+  "type": "object"
+}

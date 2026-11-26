@@ -1,0 +1,299 @@
+{
+  "aggregate_offline_frames_per_second": 49.358462357213796,
+  "benchmark": "offline-two-worker-vision-v1",
+  "detector_accuracy_measured": false,
+  "field_capacity_passed": false,
+  "hardware": {
+    "cpu": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "logical_cpus": 8,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "provider": "CPUExecutionProvider",
+    "python": "3.12.4"
+  },
+  "inputs": [
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000001.mjpeg",
+      "sha256": "39a35a219056141be748192cbc2f32e75da91aab6159dd588129690e053d2503"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000001.jsonl",
+      "sha256": "745466d802d2cde7a2b88639b26bf44cf3a5e47620333e7cb0b3a950654f4145"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000002.mjpeg",
+      "sha256": "55f3444360616b13dffaecd18eac96f52ee5a18eba12576d8dd95e5834b85102"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000002.jsonl",
+      "sha256": "61e254ebedd047d5ef040693b42cea10ecb7d5cb58e626f1263bc55b0ffdd7d3"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000003.mjpeg",
+      "sha256": "71a00a6bdf12f724f9c987b0bc016878051892c5d28e22cbfdce19976aa4623a"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000003.jsonl",
+      "sha256": "eff3b8a4fc6818467d77561b3d4b3cfa2cb5301dafd7c0c287943da7685d30d8"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000004.mjpeg",
+      "sha256": "168688e8520f1a75d5945040a456adc57fabe1b63e49652551814c7043a38b61"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000004.jsonl",
+      "sha256": "da07022584a63a6b3fe4e95ee5b3bf9a1c8c425cf280a7485fb437178b28a9fe"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000005.mjpeg",
+      "sha256": "f43bed18ffa1d18b2280be44e15d2c4f346bd805a20e787316550027617f6b00"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000005.jsonl",
+      "sha256": "ced0344606f331922ab9db3924ec73a2c72f0699ad7c3fc16b9e9eb6d221a194"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000006.mjpeg",
+      "sha256": "2271ec4549ef4219cbba402e0010a792d2f95d4dc729e608fa080f1e51dceb3b"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000006.jsonl",
+      "sha256": "18e7418752dd1e4db334ccfdb8ac1682cd89859499569c9195006ecf8f615af5"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000001.mjpeg",
+      "sha256": "be8fa766eda505f17efb15c2f46682b945665763aecb6613f12df32e51e96993"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000001.jsonl",
+      "sha256": "59622e67e158aa4968417bf905d270a2dc2c037d2e9c3e257b0613a8e0c33023"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000002.mjpeg",
+      "sha256": "ee3ffbd3ac9329af5621890a8f3bb308851cdaf84b2cc6fd7ad510f96a1560ad"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000002.jsonl",
+      "sha256": "54e572ab0657b223ccb54d38604c2fcc72ba78db13da0a813b7a284bb6ceb0a0"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000003.mjpeg",
+      "sha256": "ea04a4801ef60a7aca638a01914536e7efa8c09c09442ddd34fb70c8ed42f3c3"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000003.jsonl",
+      "sha256": "ead19c6bf8df12be688b89edb6f8d4674b32e69656410c7e0d7742b26d33f71b"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000004.mjpeg",
+      "sha256": "a2a8457b5290ba330ddd5ca56a0206380a900cf40d5806f343b823334a5754ec"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000004.jsonl",
+      "sha256": "8a80bbc7e6a2f6a1289bb8ff3dbaee33de8f3877720d27478479f9224bd6004b"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000005.mjpeg",
+      "sha256": "eb28bcb2f046d81f0a5f4f101e9f5c7734a12c9fed2ef224bc8dacc8a21e1e8a"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000005.jsonl",
+      "sha256": "306d04aa6ee63689dfd4c51ac98c067506762a2ba0b851f880c3dd573e6f9033"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000006.mjpeg",
+      "sha256": "4912c18b4a47a1bb51d06558bfbf1a2650a93d7c714a1641e5ba6b099577db3e"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000006.jsonl",
+      "sha256": "c007836cf45bc25f7f480d30a914523610cf3dce7ab95749daa6c67a72bfa3f7"
+    }
+  ],
+  "limitations": [
+    "File replay, no live capture contention or bounded live queue",
+    "Short run includes filesystem caching; no sustained temperature/RAM measurement",
+    "Model purpose and source recorded; Constant fixture ignores image pixels",
+    "Net ROI settings may be synthetic; no field geometry/lighting acceptance"
+  ],
+  "model": {
+    "class_count": 2,
+    "classes": {
+      "0": "player",
+      "1": "ball"
+    },
+    "input_height": 32,
+    "input_width": 32,
+    "licence": "Project-generated synthetic test fixture",
+    "licence_decision": "synthetic_fixture",
+    "max_detections": 100,
+    "min_score": 0.25,
+    "nms_iou": 0.45,
+    "output_layout": "raw_channels_first",
+    "path": "constant.onnx",
+    "pre_nms_limit": 1000,
+    "precision": "float32",
+    "provider": "CPUExecutionProvider",
+    "purpose": "synthetic_adapter_test",
+    "schema_version": 1,
+    "sha256": "8c0e14952e1044ced80d42f54d2816bc960c50bc1169905e485a086b77f1bb49",
+    "source": "Hand-authored Constant graph; input pixels are ignored",
+    "version": "constant-adapter-test-v1"
+  },
+  "packages": {
+    "Pillow": "11.0.0",
+    "numpy": "1.26.4",
+    "onnxruntime": "1.19.2"
+  },
+  "recording_manifest_sha256": "ad4a2a06f5bcf3e559287efa614950c25648f44230b73acf48f116c1f04f7f02",
+  "schema_version": 1,
+  "session_id": "879a56b3a74c4a65a80066178047871c",
+  "settings_sha256": "ea6dc7aa69d1e6d6006f882f4f63626dc358cc842e5fa8fa88ac1deb5f1785c9",
+  "streams": [
+    {
+      "camera_id": "goal-a",
+      "elapsed_seconds": 14.26546490000328,
+      "frames": 360,
+      "live_dropped_frames": null,
+      "live_queue_age_seconds": null,
+      "model_load_seconds": 0.035647500000777654,
+      "motion_quality_counts": {
+        "baseline_warming": 360,
+        "player_overlap": 360
+      },
+      "offline_frames_per_second": 25.235770619709506,
+      "raw_detections": 720,
+      "source_expected_fps": 60.0,
+      "timings": {
+        "decode_seconds": {
+          "maximum": 0.08318770000187214,
+          "p50": 0.01601479999953881,
+          "p95": 0.019943199993576854,
+          "p99": 0.04441610000503715,
+          "samples": 360
+        },
+        "inference_seconds": {
+          "maximum": 0.002286600007209927,
+          "p50": 0.00026339999749325216,
+          "p95": 0.0005855000053998083,
+          "p99": 0.0011407999991206452,
+          "samples": 360
+        },
+        "motion_seconds": {
+          "maximum": 0.08116669999435544,
+          "p50": 0.0055668999993940815,
+          "p95": 0.007883199999923818,
+          "p99": 0.011767999996664003,
+          "samples": 360
+        },
+        "pipeline_seconds": {
+          "maximum": 0.14296009999816306,
+          "p50": 0.037712199991801754,
+          "p95": 0.0460952000139514,
+          "p99": 0.10340500000165775,
+          "samples": 360
+        },
+        "postprocess_seconds": {
+          "maximum": 0.0043674000044120476,
+          "p50": 0.0004785999917658046,
+          "p95": 0.0009538000012980774,
+          "p99": 0.0015776000072946772,
+          "samples": 360
+        },
+        "preprocess_seconds": {
+          "maximum": 0.04017599999497179,
+          "p50": 0.009519200000795536,
+          "p95": 0.012763999999151565,
+          "p99": 0.029036100007942878,
+          "samples": 360
+        },
+        "read_seconds": {
+          "maximum": 0.039653600004385225,
+          "p50": 0.004502700001467019,
+          "p95": 0.008168099986505695,
+          "p99": 0.011668700011796318,
+          "samples": 360
+        },
+        "total_seconds": {
+          "maximum": 0.0420657999929972,
+          "p50": 0.0103135000099428,
+          "p95": 0.01396700000623241,
+          "p99": 0.03211350001220126,
+          "samples": 360
+        }
+      }
+    },
+    {
+      "camera_id": "goal-b",
+      "elapsed_seconds": 14.474376100013615,
+      "frames": 360,
+      "live_dropped_frames": null,
+      "live_queue_age_seconds": null,
+      "model_load_seconds": 0.03942729999835137,
+      "motion_quality_counts": {
+        "baseline_warming": 360,
+        "player_overlap": 360
+      },
+      "offline_frames_per_second": 24.871538331773856,
+      "raw_detections": 720,
+      "source_expected_fps": 60.0,
+      "timings": {
+        "decode_seconds": {
+          "maximum": 0.08631199999945238,
+          "p50": 0.016900300004635938,
+          "p95": 0.020935099993948825,
+          "p99": 0.03541379999660421,
+          "samples": 360
+        },
+        "inference_seconds": {
+          "maximum": 0.026823399995919317,
+          "p50": 0.00026450000586919487,
+          "p95": 0.0005691999976988882,
+          "p99": 0.0012679000064963475,
+          "samples": 360
+        },
+        "motion_seconds": {
+          "maximum": 0.036659499994129874,
+          "p50": 0.00560859999677632,
+          "p95": 0.007791299998643808,
+          "p99": 0.02452179999090731,
+          "samples": 360
+        },
+        "pipeline_seconds": {
+          "maximum": 0.14686449999862816,
+          "p50": 0.038452999986475334,
+          "p95": 0.04738099999667611,
+          "p99": 0.11115500000596512,
+          "samples": 360
+        },
+        "postprocess_seconds": {
+          "maximum": 0.0027722999948309734,
+          "p50": 0.0004810999962501228,
+          "p95": 0.0008994000090751797,
+          "p99": 0.0014277000009315088,
+          "samples": 360
+        },
+        "preprocess_seconds": {
+          "maximum": 0.09578440000768751,
+          "p50": 0.009495000005699694,
+          "p95": 0.012067999996361323,
+          "p99": 0.023403399987728335,
+          "samples": 360
+        },
+        "read_seconds": {
+          "maximum": 0.035155500008841045,
+          "p50": 0.004113500006496906,
+          "p95": 0.008023399990634061,
+          "p99": 0.012212699992232956,
+          "samples": 360
+        },
+        "total_seconds": {
+          "maximum": 0.09650759999931324,
+          "p50": 0.010289099998772144,
+          "p95": 0.012957400002051145,
+          "p99": 0.024146599986124784,
+          "samples": 360
+        }
+      }
+    }
+  ],
+  "wall_seconds_including_model_load_and_motion_setup": 14.587164299999131
+}

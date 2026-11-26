@@ -1,0 +1,112 @@
+{
+  "$defs": {
+    "Marker": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "host_clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Host Clock Domain",
+          "type": "string"
+        },
+        "marker_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Marker Id",
+          "type": "string"
+        },
+        "reference_host_seconds": {
+          "minimum": 0,
+          "title": "Reference Host Seconds",
+          "type": "number"
+        },
+        "source_clock_domain": {
+          "title": "Source Clock Domain",
+          "type": "string"
+        },
+        "source_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_seconds": {
+          "title": "Source Seconds",
+          "type": "number"
+        },
+        "split": {
+          "enum": [
+            "fit",
+            "validation"
+          ],
+          "title": "Split",
+          "type": "string"
+        },
+        "uncertainty_seconds": {
+          "minimum": 0,
+          "title": "Uncertainty Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "source_id",
+        "boot_id",
+        "source_clock_domain",
+        "host_clock_domain",
+        "marker_id",
+        "source_seconds",
+        "reference_host_seconds",
+        "uncertainty_seconds",
+        "split"
+      ],
+      "title": "Marker",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "physical"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "markers": {
+      "items": {
+        "$ref": "#/$defs/Marker"
+      },
+      "title": "Markers",
+      "type": "array"
+    },
+    "procedure": {
+      "minLength": 1,
+      "title": "Procedure",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "evidence",
+    "procedure",
+    "markers"
+  ],
+  "title": "MarkerSet",
+  "type": "object"
+}

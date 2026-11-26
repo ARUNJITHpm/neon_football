@@ -1,0 +1,470 @@
+{
+  "candidates": [
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": [
+        1.0,
+        1.1
+      ],
+      "emitted_seconds": 1.105,
+      "event_id": "bfb05ced29b24a6ada2b66e258f545d139c5be2c09f611fa4fc08cd714d336b2",
+      "evidence": "synthetic",
+      "flags": [],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 1.08,
+      "quality": "observed_crossing",
+      "reasons": [
+        "inward sphere crosses the goal plane"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        0,
+        1
+      ],
+      "timing_uncertainty_seconds": 0.10499999999999998,
+      "track_id": "79aad29d5c0c3f7c505f1bcb",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-b",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": [
+        2.0,
+        2.1
+      ],
+      "emitted_seconds": 2.105,
+      "event_id": "e82d5716428f0ca377fb29e7aa941ab0aa8647f4d6c77ba1184613eb7a86771b",
+      "evidence": "synthetic",
+      "flags": [],
+      "goal_end": "goal_b",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 2.08,
+      "quality": "observed_crossing",
+      "reasons": [
+        "inward sphere crosses the goal plane"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        0,
+        1
+      ],
+      "timing_uncertainty_seconds": 0.10499999999999998,
+      "track_id": "3afec08b5210033dcb8924fd",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": [
+        3.0,
+        3.1
+      ],
+      "emitted_seconds": 3.105,
+      "event_id": "9a3d1e6e4851176da566d833ec0121b5bce95de4e0ed8b72ea1cc8c6b1341259",
+      "evidence": "synthetic",
+      "flags": [
+        "stream_epoch_reset"
+      ],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 3.08,
+      "quality": "boundary_uncertain",
+      "reasons": [
+        "crossing needs additional observed/geometry/quality evidence"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        0,
+        1
+      ],
+      "timing_uncertainty_seconds": 0.10499999999999998,
+      "track_id": "ee90d66bf9846933e238196b",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": [
+        7.0,
+        7.1
+      ],
+      "emitted_seconds": 7.1049999999999995,
+      "event_id": "58b8d2db7905eb2295cde3d8ff650ee3c391e4c56850cd14ba7c533602c5b15e",
+      "evidence": "synthetic",
+      "flags": [
+        "association_ambiguous",
+        "stream_epoch_reset"
+      ],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 7.08,
+      "quality": "boundary_uncertain",
+      "reasons": [
+        "crossing needs additional observed/geometry/quality evidence"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        0,
+        1
+      ],
+      "timing_uncertainty_seconds": 0.10499999999999954,
+      "track_id": "7eba33fbeea7c0cb38d29f34",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": [
+        8.05,
+        8.15
+      ],
+      "emitted_seconds": 8.155000000000001,
+      "event_id": "edc37fc5e6dc60460d00d105e87a568afa8bcb4e025f302cbcf3378f7acdaefd",
+      "evidence": "synthetic",
+      "flags": [
+        "prediction_only"
+      ],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 8.140000000000002,
+      "quality": "predicted_crossing",
+      "reasons": [
+        "crossing needs additional observed/geometry/quality evidence"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        1,
+        3
+      ],
+      "timing_uncertainty_seconds": 0.10500000000000043,
+      "track_id": "72ccef452af275f7ceee99df",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": null,
+      "emitted_seconds": 10.105,
+      "event_id": "974946c4b28f11d4939e9dc4dae54c47d87001116548b66ec7ddd69555966e8e",
+      "evidence": "synthetic",
+      "flags": [
+        "no_depth_evidence"
+      ],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 10.1,
+      "quality": "depth_ambiguous",
+      "reasons": [
+        "image-space goal-opening entry has no verified airborne depth"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        1
+      ],
+      "timing_uncertainty_seconds": 0.005,
+      "track_id": "6ebbc66be22f39440806ec05",
+      "type": "vision_candidate"
+    },
+    {
+      "automatic_confirmation_allowed": false,
+      "calibration_version": "synthetic-geometry-v1",
+      "camera_id": "goal-a",
+      "clip_path": null,
+      "configuration_version": "synthetic-vision-v1",
+      "crossing_interval_seconds": null,
+      "emitted_seconds": 11.005,
+      "event_id": "28756991604da92b96b6e99737860e16d9bf49a7d629b7f21518e95082a626ce",
+      "evidence": "synthetic",
+      "flags": [
+        "stream_epoch_reset"
+      ],
+      "goal_end": "goal_a",
+      "match_id": "vision-match",
+      "model_version": "injected-trajectories-no-detector-v1",
+      "occurred_seconds": 11.0,
+      "quality": "net_motion_only",
+      "reasons": [
+        "net movement without sufficient crossing evidence"
+      ],
+      "requires_review": true,
+      "schema_version": 1,
+      "session_id": "vision-validation",
+      "supporting_sequences": [
+        0
+      ],
+      "timing_uncertainty_seconds": 0.005,
+      "track_id": null,
+      "type": "vision_candidate"
+    }
+  ],
+  "dataset_id": "vision-numerical-fixture-v1",
+  "engine": "vision-candidates-v1",
+  "evidence": [
+    "synthetic"
+  ],
+  "field_gate": "pending real detector, held-out venue labels, calibration and two-stream live capacity",
+  "frame_count": 24,
+  "metrics": {
+    "automatic_confirmation_allowed": false,
+    "candidate_recall": {
+      "ci95": [
+        0.43649717781352987,
+        0.9699466302516935
+      ],
+      "denominator": 6,
+      "interval_method": "wilson",
+      "numerator": 5,
+      "value": 0.8333333333333334
+    },
+    "counts": {
+      "candidates": 7,
+      "false_candidates": 1,
+      "misses": 1,
+      "true_positives": 5,
+      "unadjudicated": 1,
+      "valid_references": 6
+    },
+    "errors": {
+      "false_candidates": [
+        {
+          "camera_id": "goal-a",
+          "clip_path": null,
+          "event_id": "28756991604da92b96b6e99737860e16d9bf49a7d629b7f21518e95082a626ce",
+          "quality": "net_motion_only"
+        }
+      ],
+      "missed_label_ids": [
+        "stale"
+      ],
+      "unadjudicated_candidate_ids": [
+        "974946c4b28f11d4939e9dc4dae54c47d87001116548b66ec7ddd69555966e8e"
+      ]
+    },
+    "false_candidates_per_hour": {
+      "ci95": [
+        6.076273916229562,
+        1337.1944138253357
+      ],
+      "count": 1,
+      "hours": 0.004166666666666667,
+      "interval_method": "exact-central-poisson",
+      "value": 240.0
+    },
+    "interpretation": "One-to-one goal-end candidate matching; team attribution and cross-view fusion are not evaluated",
+    "matched_pairs": [
+      {
+        "error_seconds": 0.0,
+        "event_id": "58b8d2db7905eb2295cde3d8ff650ee3c391e4c56850cd14ba7c533602c5b15e",
+        "label_id": "ambiguous"
+      },
+      {
+        "error_seconds": 1.7763568394002505e-15,
+        "event_id": "edc37fc5e6dc60460d00d105e87a568afa8bcb4e025f302cbcf3378f7acdaefd",
+        "label_id": "occluded"
+      },
+      {
+        "error_seconds": 0.0,
+        "event_id": "bfb05ced29b24a6ada2b66e258f545d139c5be2c09f611fa4fc08cd714d336b2",
+        "label_id": "ordinary-a"
+      },
+      {
+        "error_seconds": 0.0,
+        "event_id": "e82d5716428f0ca377fb29e7aa941ab0aa8647f4d6c77ba1184613eb7a86771b",
+        "label_id": "ordinary-b"
+      },
+      {
+        "error_seconds": 0.0,
+        "event_id": "9a3d1e6e4851176da566d833ec0121b5bce95de4e0ed8b72ea1cc8c6b1341259",
+        "label_id": "post-in"
+      }
+    ],
+    "matching_tolerance_seconds": 0.5,
+    "qualities": {
+      "boundary_uncertain": 2,
+      "depth_ambiguous": 1,
+      "net_motion_only": 1,
+      "observed_crossing": 2,
+      "predicted_crossing": 1
+    },
+    "scheduled_seconds": 15.0,
+    "scoring_accuracy_measured": false
+  },
+  "per_session": [
+    {
+      "automatic_confirmation_allowed": false,
+      "candidate_recall": {
+        "ci95": [
+          0.43649717781352987,
+          0.9699466302516935
+        ],
+        "denominator": 6,
+        "interval_method": "wilson",
+        "numerator": 5,
+        "value": 0.8333333333333334
+      },
+      "conditions": [
+        "numerical-test-not-football"
+      ],
+      "counts": {
+        "candidates": 7,
+        "false_candidates": 1,
+        "misses": 1,
+        "true_positives": 5,
+        "unadjudicated": 1,
+        "valid_references": 6
+      },
+      "errors": {
+        "false_candidates": [
+          {
+            "camera_id": "goal-a",
+            "clip_path": null,
+            "event_id": "28756991604da92b96b6e99737860e16d9bf49a7d629b7f21518e95082a626ce",
+            "quality": "net_motion_only"
+          }
+        ],
+        "missed_label_ids": [
+          "stale"
+        ],
+        "unadjudicated_candidate_ids": [
+          "974946c4b28f11d4939e9dc4dae54c47d87001116548b66ec7ddd69555966e8e"
+        ]
+      },
+      "evidence": "synthetic",
+      "false_candidates_per_hour": {
+        "ci95": [
+          6.076273916229562,
+          1337.1944138253357
+        ],
+        "count": 1,
+        "hours": 0.004166666666666667,
+        "interval_method": "exact-central-poisson",
+        "value": 240.0
+      },
+      "interpretation": "One-to-one goal-end candidate matching; team attribution and cross-view fusion are not evaluated",
+      "matched_pairs": [
+        {
+          "error_seconds": 0.0,
+          "event_id": "58b8d2db7905eb2295cde3d8ff650ee3c391e4c56850cd14ba7c533602c5b15e",
+          "label_id": "ambiguous"
+        },
+        {
+          "error_seconds": 1.7763568394002505e-15,
+          "event_id": "edc37fc5e6dc60460d00d105e87a568afa8bcb4e025f302cbcf3378f7acdaefd",
+          "label_id": "occluded"
+        },
+        {
+          "error_seconds": 0.0,
+          "event_id": "bfb05ced29b24a6ada2b66e258f545d139c5be2c09f611fa4fc08cd714d336b2",
+          "label_id": "ordinary-a"
+        },
+        {
+          "error_seconds": 0.0,
+          "event_id": "e82d5716428f0ca377fb29e7aa941ab0aa8647f4d6c77ba1184613eb7a86771b",
+          "label_id": "ordinary-b"
+        },
+        {
+          "error_seconds": 0.0,
+          "event_id": "9a3d1e6e4851176da566d833ec0121b5bce95de4e0ed8b72ea1cc8c6b1341259",
+          "label_id": "post-in"
+        }
+      ],
+      "matching_tolerance_seconds": 0.5,
+      "qualities": {
+        "boundary_uncertain": 2,
+        "depth_ambiguous": 1,
+        "net_motion_only": 1,
+        "observed_crossing": 2,
+        "predicted_crossing": 1
+      },
+      "scheduled_seconds": 15.0,
+      "scoring_accuracy_measured": false,
+      "session_id": "vision-validation"
+    }
+  ],
+  "provenance": {
+    "annotations_sha256": "c7b446a692440023565b400b978d1ce4bbd9ada6dd94cf45e9f8698a82cf1c3f",
+    "detector_inference": false,
+    "implementation": {
+      "core\\dataset.py": "15b0097eaa39c48ee14da0955daab1261fd122aa2bc5b595a007071b2f3cb778",
+      "core\\vision.py": "27efc66172052acb19a47d414a4823f5fc5f6dfb2bedb223be4c9c35d9e7b7a0",
+      "modules\\replay\\dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+      "modules\\replay\\matching.py": "d28cb9b611acc81793f940e439dd8f3369cde35233aca6facd97e388dea8292d",
+      "modules\\replay\\statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+      "modules\\vision\\__init__.py": "d72394cc80cd5d4e3f41d09e428a7ca329e4b04216d779cb262309ea9e82a0de",
+      "modules\\vision\\detector.py": "1370b63eb2271d3925efcf2ab5b9001c62d943fee80bcb538f02b0e7b000ff26",
+      "modules\\vision\\engine.py": "a8763c2abf08e21f276ffeb8bbcfa26050ee8be12a74b467fd487b65084a67b2",
+      "modules\\vision\\geometry.py": "d3c90679038970c2b1c0e7f160cd591edf6e663604392ac44131ac98654b94d0",
+      "modules\\vision\\motion.py": "eba177ec6fd6841cfcd5f65947d3c97e659347b9bb3c8dbb14a0688d23ed673b",
+      "modules\\vision\\tracking.py": "ef879170f022edfde89f09832502020663429f491bbc3a808239a79d1fc9205c",
+      "tools\\vision_replay.py": "f48b3a2dd8a88ab42a39bbadce6281f1b696624ac34fb55cf9163598051d394e"
+    },
+    "inputs": [
+      {
+        "path": "observations.jsonl",
+        "session_id": "vision-validation",
+        "sha256": "d1ba390fb11d2d98d6d314ec04b3f17f189e3ad6d36c57c9877e93687ca5fee4"
+      },
+      {
+        "path": "events.jsonl",
+        "session_id": "vision-validation",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "manifest_sha256": "1a02bc4496f01f38e65541a010351184020a9fd30a10c1e59ded275269563626",
+    "model_versions": {
+      "vision-validation": "injected-trajectories-no-detector-v1"
+    },
+    "observations": "Injected/imported detection and depth observations",
+    "settings_sha256": "2c487683885ba037bc773fda1a55bb0440b70fa6714baf3ca16177176f103df2"
+  },
+  "release_qualified": false,
+  "replay_verification": {
+    "byte_identical": true,
+    "frame_count": 24,
+    "paths": [
+      "local_scratch/part04-proof-a.json",
+      "local_scratch/part04-proof-b.json"
+    ],
+    "sha256": "ae702c8fd57ae0074fdaef6b14971232a704c4dcb32c9c2e7bceae3649eeeed1"
+  },
+  "schema_version": 1,
+  "split": "validation"
+}

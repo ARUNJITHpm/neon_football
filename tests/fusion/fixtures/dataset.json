@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "dataset_id": "dummy-fusion-v1",
+  "split_assignment_version": "dummy-fusion-groups-v1",
+  "settings": {
+    "schema_version": 1,
+    "version": "fusion-rules-v1",
+    "cameras": {
+      "camera-goal_a": {
+        "goal_end": "goal_a",
+        "calibration_version": "cal-v1",
+        "model_version": "injected-v1",
+        "configuration_version": "vision-v1"
+      },
+      "camera-goal_b": {
+        "goal_end": "goal_b",
+        "calibration_version": "cal-v1",
+        "model_version": "injected-v1",
+        "configuration_version": "vision-v1"
+      },
+      "goal-a": {
+        "goal_end": "goal_a",
+        "calibration_version": "synthetic-geometry-v1",
+        "model_version": "injected-trajectories-no-detector-v1",
+        "configuration_version": "synthetic-vision-v1"
+      },
+      "goal-b": {
+        "goal_end": "goal_b",
+        "calibration_version": "synthetic-geometry-v1",
+        "model_version": "injected-trajectories-no-detector-v1",
+        "configuration_version": "synthetic-vision-v1"
+      }
+    },
+    "devices": {
+      "1": "goal_a",
+      "2": "goal_b"
+    },
+    "sensor_configuration_version": "impact-rules-v1",
+    "correlation_seconds": 0.2,
+    "collection_seconds": 0.3,
+    "maximum_evidence_age_seconds": 0.5,
+    "maximum_uncertainty_seconds": 0.02,
+    "repeat_seconds": 0.6,
+    "review_seconds": 15.0,
+    "max_candidates": 10000,
+    "max_inputs": 100000,
+    "max_events": 250000,
+    "mode": "shadow",
+    "automatic_score_mutation_allowed": false
+  },
+  "provenance_assets": [
+    {
+      "path": "upstream-sensors.json",
+      "sha256": "0ca586244b798995af4f32142b9d3d1ea449c86a0c9cd96664da044722b9cc1a"
+    },
+    {
+      "path": "upstream-vision.json",
+      "sha256": "ae702c8fd57ae0074fdaef6b14971232a704c4dcb32c9c2e7bceae3649eeeed1"
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "fusion-observed",
+      "match_id": "match-observed",
+      "source_group_id": "dummy-group-observed",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "observed.jsonl",
+        "sha256": "83a8be819f724c327a0e1a7594153cd0b25b35eff697ee331d9ebc1df5bb186b"
+      },
+      "labels": [
+        {
+          "label_id": "observed:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-post-and-in",
+      "match_id": "match-post-and-in",
+      "source_group_id": "dummy-group-post-and-in",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "post-and-in.jsonl",
+        "sha256": "288afd060f1d1d096a1273413b4213dfb365da011f38e4c5e60b9800f27f3d98"
+      },
+      "labels": [
+        {
+          "label_id": "post-and-in:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-player-net",
+      "match_id": "match-player-net",
+      "source_group_id": "dummy-group-player-net",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "player-net.jsonl",
+        "sha256": "1e790b2dae610e74fe592662e3245d3b4354406b44aacb2654a62c29a85a24a3"
+      },
+      "labels": [
+        {
+          "label_id": "player-net:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-partial",
+      "match_id": "match-partial",
+      "source_group_id": "dummy-group-partial",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "partial.jsonl",
+        "sha256": "811f1161ab42d7cdf71a4043d0a1ff31f32170c117742fee86fa828c75b1a7d0"
+      },
+      "labels": [
+        {
+          "label_id": "partial:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-occluded",
+      "match_id": "match-occluded",
+      "source_group_id": "dummy-group-occluded",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "occluded.jsonl",
+        "sha256": "ad894c9d5a75be700df8f881277777217c8bb451e4422f9ea8297feded8380a8"
+      },
+      "labels": [
+        {
+          "label_id": "occluded:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-duplicates",
+      "match_id": "match-duplicates",
+      "source_group_id": "dummy-group-duplicates",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "duplicates.jsonl",
+        "sha256": "44cb434a2d26b93dab18d917afa73d8f2bdf8f23c992797ebf1899735577f0fa"
+      },
+      "labels": [
+        {
+          "label_id": "duplicates:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-late",
+      "match_id": "match-late",
+      "source_group_id": "dummy-group-late",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "late.jsonl",
+        "sha256": "558ad1dd9d0d62be8c38a4b9945948812db38e0d7a954d58332d475e1d37fcc6"
+      },
+      "labels": [
+        {
+          "label_id": "late:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-nearby",
+      "match_id": "match-nearby",
+      "source_group_id": "dummy-group-nearby",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "nearby.jsonl",
+        "sha256": "541a61bbfff7589aec042666b2cb23b9d9d4865154b18198840a43b34c77119b"
+      },
+      "labels": [
+        {
+          "label_id": "nearby:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        },
+        {
+          "label_id": "nearby:label:1",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.05,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-early-impact-nearby",
+      "match_id": "match-early-impact-nearby",
+      "source_group_id": "dummy-group-early-impact-nearby",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "early-impact-nearby.jsonl",
+        "sha256": "fbc33c4076ae2147a7dee148f326b3f7d04b0325bf376c170e3156589c19c965"
+      },
+      "labels": [
+        {
+          "label_id": "early-impact-nearby:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        },
+        {
+          "label_id": "early-impact-nearby:label:1",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.14,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-quick-restart",
+      "match_id": "match-quick-restart",
+      "source_group_id": "dummy-group-quick-restart",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "quick-restart.jsonl",
+        "sha256": "538b672b304a13f89a103859d7e508d273bc78a28e86e2e3c04f515e5e175804"
+      },
+      "labels": [
+        {
+          "label_id": "quick-restart:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        },
+        {
+          "label_id": "quick-restart:label:1",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.8,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-dead-ball",
+      "match_id": "match-dead-ball",
+      "source_group_id": "dummy-group-dead-ball",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "dead-ball.jsonl",
+        "sha256": "96a9b5a1c45eb391ae3e237f2a6836f3fa16f2211f1135f54bae91f48d61f8b0"
+      },
+      "labels": [
+        {
+          "label_id": "dead-ball:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        },
+        {
+          "label_id": "dead-ball:label:1",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.5,
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-pause",
+      "match_id": "match-pause",
+      "source_group_id": "dummy-group-pause",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "pause.jsonl",
+        "sha256": "bd7c8b3972e514d68509709cb553ba6860fad34300f0f5f0ab20441dd1d729cf"
+      },
+      "labels": [
+        {
+          "label_id": "pause:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-side-change",
+      "match_id": "match-side-change",
+      "source_group_id": "dummy-group-side-change",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "side-change.jsonl",
+        "sha256": "4d0a3d7a0c0aa2508da7331d462d185321d71662d57fd35b8763ed4b475c7a9e"
+      },
+      "labels": [
+        {
+          "label_id": "side-change:label:0",
+          "goal_end": "goal_a",
+          "team": "orange",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-stale-and-future",
+      "match_id": "match-stale-and-future",
+      "source_group_id": "dummy-group-stale-and-future",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "stale-and-future.jsonl",
+        "sha256": "8635f450fde5db369b64f30d4f1c1f69ade21b682d26a1f8cb11d7741763090d"
+      },
+      "labels": []
+    },
+    {
+      "session_id": "fusion-review-expiry",
+      "match_id": "match-review-expiry",
+      "source_group_id": "dummy-group-review-expiry",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 20.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "review-expiry.jsonl",
+        "sha256": "4b6082b1b72265c8b65f8559e45441c732e3d5e6128edb640ba6d2c4c72d0ff5"
+      },
+      "labels": [
+        {
+          "label_id": "review-expiry:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-correction",
+      "match_id": "match-correction",
+      "source_group_id": "dummy-group-correction",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "correction.jsonl",
+        "sha256": "63fc85c0ba266e8ce70a645cb3fc6303ba3e18b4d603d3a950d255848d56ab43"
+      },
+      "labels": [
+        {
+          "label_id": "correction:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 1.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-unmapped",
+      "match_id": "match-unmapped",
+      "source_group_id": "dummy-group-unmapped",
+      "split": "validation",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 3.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "unmapped.jsonl",
+        "sha256": "0e60f17636a3d7728365eb4df08c979d6210f9c30e46d828d8366169935e0085"
+      },
+      "labels": []
+    },
+    {
+      "session_id": "fusion-train-guard",
+      "match_id": "match-train-guard",
+      "source_group_id": "dummy-group-train-guard",
+      "split": "train",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 4.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "train-guard.jsonl",
+        "sha256": "cc60d820f41982f665f3167cfb0e7512d22d8e095a5487335f74838078c27508"
+      },
+      "labels": [
+        {
+          "label_id": "train-guard:label:0",
+          "goal_end": "goal_a",
+          "team": "green",
+          "occurred_seconds": 2.0,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "session_id": "fusion-blind-guard",
+      "match_id": "match-blind-guard",
+      "source_group_id": "dummy-group-blind-guard",
+      "split": "blind_test",
+      "clock_domain": "host",
+      "evidence": "synthetic",
+      "duration_seconds": 4.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "blind-guard.jsonl",
+        "sha256": "65a323123b6ac3952a03dd7b4bdf1403bb9c20a1b6070b64b8a4dd0093d1f797"
+      },
+      "labels": []
+    },
+    {
+      "session_id": "sensor-validation",
+      "match_id": "sensor-validation-match",
+      "source_group_id": "dummy-group-upstream-sensors",
+      "split": "validation",
+      "clock_domain": "dummy-host",
+      "evidence": "synthetic",
+      "duration_seconds": 10.1,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "upstream-sensors.jsonl",
+        "sha256": "c40d7c5a5e9eceb6851d91d6e641c30a8fba8c71db5713457940e1599790c1be"
+      },
+      "labels": []
+    },
+    {
+      "session_id": "vision-validation",
+      "match_id": "vision-match",
+      "source_group_id": "dummy-group-upstream-vision",
+      "split": "validation",
+      "clock_domain": "fixture-clock",
+      "evidence": "synthetic",
+      "duration_seconds": 15.0,
+      "goal_a_defending": "orange",
+      "steps": {
+        "path": "upstream-vision.jsonl",
+        "sha256": "3b939fe420d3209fe97b77bd9fd157393d4d7b1e4f1a9a84c91123c9e0c4a8f8"
+      },
+      "labels": []
+    }
+  ]
+}

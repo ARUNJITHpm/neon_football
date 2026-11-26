@@ -1,0 +1,126 @@
+{
+  "conditions": [
+    "generated_numeric",
+    "substituted_roster",
+    "low_light",
+    "overlap"
+  ],
+  "goal": {
+    "evidence": "synthetic",
+    "goal_end": "goal_a",
+    "goal_id": "goal-substituted_roster",
+    "match_id": "match-substituted_roster",
+    "occurred_seconds": 10.0,
+    "scoring_team": "green",
+    "session_id": "session-substituted_roster",
+    "timing_quality": "synthetic_aligned",
+    "touch_coverage": "complete",
+    "uncertainty_seconds": 0.005
+  },
+  "readings": [
+    {
+      "bib": 15,
+      "boot_id": "dummy-boot",
+      "camera_id": "dummy-camera",
+      "event_id": "identity-track-0-0",
+      "evidence": "synthetic",
+      "frame_sequence": 0,
+      "match_id": "match-substituted_roster",
+      "occurred_seconds": 8.7,
+      "quality": "clear",
+      "roster_revision": 1,
+      "session_id": "session-substituted_roster",
+      "team": "green",
+      "track_id": "track-0"
+    },
+    {
+      "bib": 15,
+      "boot_id": "dummy-boot",
+      "camera_id": "dummy-camera",
+      "event_id": "identity-track-0-1",
+      "evidence": "synthetic",
+      "frame_sequence": 1,
+      "match_id": "match-substituted_roster",
+      "occurred_seconds": 8.799999999999999,
+      "quality": "clear",
+      "roster_revision": 1,
+      "session_id": "session-substituted_roster",
+      "team": "green",
+      "track_id": "track-0"
+    },
+    {
+      "bib": 15,
+      "boot_id": "dummy-boot",
+      "camera_id": "dummy-camera",
+      "event_id": "identity-track-0-2",
+      "evidence": "synthetic",
+      "frame_sequence": 2,
+      "match_id": "match-substituted_roster",
+      "occurred_seconds": 8.899999999999999,
+      "quality": "clear",
+      "roster_revision": 1,
+      "session_id": "session-substituted_roster",
+      "team": "green",
+      "track_id": "track-0"
+    }
+  ],
+  "roster": {
+    "active_player_ids": [
+      "green-15",
+      "green-11",
+      "orange-9",
+      "orange-13"
+    ],
+    "match_id": "match-substituted_roster",
+    "players": [
+      {
+        "bib": 7,
+        "id": "green-7",
+        "name": "Green Seven",
+        "team": "green"
+      },
+      {
+        "bib": 11,
+        "id": "green-11",
+        "name": "Green Eleven",
+        "team": "green"
+      },
+      {
+        "bib": 9,
+        "id": "orange-9",
+        "name": "Orange Nine",
+        "team": "orange"
+      },
+      {
+        "bib": 13,
+        "id": "orange-13",
+        "name": "Orange Thirteen",
+        "team": "orange"
+      },
+      {
+        "bib": 15,
+        "id": "green-15",
+        "name": "Green Fifteen",
+        "team": "green"
+      }
+    ],
+    "revision": 1
+  },
+  "schema_version": 1,
+  "touches": [
+    {
+      "boot_id": "dummy-boot",
+      "camera_id": "dummy-camera",
+      "certainty": "certain",
+      "event_id": "touch-track-0",
+      "evidence": "synthetic",
+      "kind": "shot",
+      "match_id": "match-substituted_roster",
+      "occurred_seconds": 9.0,
+      "roster_revision": 1,
+      "session_id": "session-substituted_roster",
+      "track_id": "track-0",
+      "uncertainty_seconds": 0.005
+    }
+  ]
+}

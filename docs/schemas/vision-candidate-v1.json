@@ -1,0 +1,219 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "automatic_confirmation_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Confirmation Allowed",
+      "type": "boolean"
+    },
+    "calibration_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Calibration Version",
+      "type": "string"
+    },
+    "camera_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Camera Id",
+      "type": "string"
+    },
+    "clip_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clip Path"
+    },
+    "configuration_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Configuration Version",
+      "type": "string"
+    },
+    "crossing_interval_seconds": {
+      "anyOf": [
+        {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "minimum": 0,
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Crossing Interval Seconds"
+    },
+    "emitted_seconds": {
+      "minimum": 0,
+      "title": "Emitted Seconds",
+      "type": "number"
+    },
+    "event_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Event Id",
+      "type": "string"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "flags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Flags",
+      "type": "array"
+    },
+    "goal_end": {
+      "enum": [
+        "goal_a",
+        "goal_b"
+      ],
+      "title": "Goal End",
+      "type": "string"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    },
+    "model_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Model Version",
+      "type": "string"
+    },
+    "occurred_seconds": {
+      "minimum": 0,
+      "title": "Occurred Seconds",
+      "type": "number"
+    },
+    "quality": {
+      "enum": [
+        "observed_crossing",
+        "predicted_crossing",
+        "depth_ambiguous",
+        "boundary_uncertain",
+        "net_motion_only"
+      ],
+      "title": "Quality",
+      "type": "string"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+    },
+    "requires_review": {
+      "const": true,
+      "default": true,
+      "title": "Requires Review",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "session_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "supporting_sequences": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Supporting Sequences",
+      "type": "array"
+    },
+    "timing_uncertainty_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Timing Uncertainty Seconds"
+    },
+    "track_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Track Id"
+    },
+    "type": {
+      "const": "vision_candidate",
+      "default": "vision_candidate",
+      "title": "Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "session_id",
+    "match_id",
+    "camera_id",
+    "goal_end",
+    "track_id",
+    "occurred_seconds",
+    "emitted_seconds",
+    "timing_uncertainty_seconds",
+    "calibration_version",
+    "model_version",
+    "configuration_version",
+    "quality",
+    "evidence",
+    "reasons",
+    "flags",
+    "supporting_sequences"
+  ],
+  "title": "VisionCandidate",
+  "type": "object"
+}

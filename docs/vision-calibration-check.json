@@ -1,0 +1,28 @@
+{
+  "configuration_version": "synthetic-vision-v1",
+  "field_acceptance": false,
+  "schema_version": 1,
+  "settings_sha256": "2c487683885ba037bc773fda1a55bb0440b70fa6714baf3ca16177176f103df2",
+  "views": [
+    {
+      "airborne_depth_from_floor_mapping": false,
+      "camera_id": "goal-a",
+      "depth_calibration_reference": "synthetic-rig-v1",
+      "depth_rig_independently_verified": false,
+      "errors": [],
+      "evidence": "synthetic",
+      "goal_end": "goal_a",
+      "image_record_valid": true
+    },
+    {
+      "airborne_depth_from_floor_mapping": false,
+      "camera_id": "goal-b",
+      "depth_calibration_reference": "synthetic-rig-v1",
+      "depth_rig_independently_verified": false,
+      "errors": [],
+      "evidence": "synthetic",
+      "goal_end": "goal_b",
+      "image_record_valid": true
+    }
+  ]
+}

@@ -1,0 +1,516 @@
+{
+  "confusion": {
+    "frame": {
+      "frame_impact": 1
+    },
+    "goal": {
+      "net_impact": 1,
+      "no_event": 1,
+      "unknown": 2
+    },
+    "noise": {
+      "no_event": 1
+    },
+    "player": {
+      "slow_impact": 1
+    },
+    "post_and_in": {
+      "mixed_impact": 1
+    },
+    "wall": {
+      "frame_impact": 1
+    }
+  },
+  "counts": {
+    "detected_labelled_impacts": 7,
+    "events": 8,
+    "false_impacts": 0,
+    "impact_labels": 8,
+    "misses": 1,
+    "noise_labels": 1,
+    "unknown": 3,
+    "unmapped": 1
+  },
+  "dataset_id": "dummy-sensors-v1",
+  "false_impacts_per_hour": {
+    "ci95": [
+      0.0,
+      1314.8481222584326
+    ],
+    "count": 0,
+    "hours": 0.0028055555555555555,
+    "interval_method": "exact-central-poisson",
+    "value": 0.0
+  },
+  "firmware_compiled": false,
+  "goal_accuracy_measured": false,
+  "hardware_tested": false,
+  "impact_detection_recall": {
+    "ci95": [
+      0.5291118177871464,
+      0.9775825085499433
+    ],
+    "denominator": 8,
+    "interval_method": "wilson",
+    "numerator": 7,
+    "value": 0.875
+  },
+  "latency_seconds": {
+    "maximum": 0.16875000000000018,
+    "p50": 0.12876187499999947,
+    "p95": 0.16875000000000018,
+    "p99": 0.16875000000000018,
+    "samples": 7
+  },
+  "limitations": [
+    "Dummy waveforms and markers do not validate field impacts or timing",
+    "Fixed inspectable rules; no training or calibrated class probabilities",
+    "Confusion rows are physical labels, columns are evidence classes; wall/frame are not separated",
+    "Unmapped events are separately counted; missing timing retains reference misses",
+    "Trigger/cooldown performance is not full goal recall; sensors never confirm or veto goals"
+  ],
+  "packet_count": 998,
+  "provenance": {
+    "implementation": {
+      "core/clock.py": "89e365bf6fd10d63e91be9c8dfa79b4177c7d023d4bcd899eb48801ab43fe7ab",
+      "core/sensors.py": "d209e329667bc2bed79229b980ce904915e5202e0108e5b7f5ed58e9e0cfecfc",
+      "firmware/esp32/neon_sensors/neon_sensors.ino": "4a5cb7ba54f3f797ac4a9472f701ec997fc677e78c8a7a34058733e70bb5258f",
+      "modules/replay/dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+      "modules/replay/matching.py": "d28cb9b611acc81793f940e439dd8f3369cde35233aca6facd97e388dea8292d",
+      "modules/replay/statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+      "modules/sensors/__init__.py": "4144357fb4bc309b5bf3e983d3dfd632976afa3784195b5b4c511003d7222294",
+      "modules/sensors/host.py": "53d8c60f644a9ab64382070f0dff1f522b2627cfb8e2aa6067df19b74f48bc81",
+      "modules/sensors/impact.py": "616037846d9f25c6d8cab0310b9b80a461119c1d503cfb06b502261ca996e22d",
+      "modules/sensors/protocol.py": "3c7cea5c030b657aa409dc67a4fb86aeaeabfe6e9ff48538ec1c2004a73fc236",
+      "modules/sensors/reader.py": "a19652e84ef15bab8d4f45a1f76b5f2aa76bdeba50d2ad85d4d7b4949860af18",
+      "tools/sensor_replay.py": "109c0fb1ec70cb38c76485459de49372ff9f0624e9b24ef1f8f119a2adb9b322"
+    },
+    "inputs": [
+      {
+        "path": "validation.nfsp",
+        "session_id": "sensor-validation",
+        "sha256": "599e0cc66ea55eafa92b4dfca720bc422da728feaeeddcbb6d360cb273a043ef"
+      },
+      {
+        "path": "validation-receipts.jsonl",
+        "session_id": "sensor-validation",
+        "sha256": "e572631770be500f01065770145dcf190f4543431b7415c075c3c3f54dfbcefc"
+      }
+    ],
+    "manifest_sha256": "9f5dee29837c6cf3b306fe9d9df1522b3301d9567d1f8993f72fbc9b7fbcad1b"
+  },
+  "release_qualified": false,
+  "runner": "sensor-evidence-v1",
+  "sample_count": 31936,
+  "schema_version": 1,
+  "sessions": [
+    {
+      "baseline": [
+        {
+          "boot_id": 1101,
+          "device_id": 1,
+          "goal_end": "goal_a",
+          "ready": true,
+          "sensors": {
+            "frame": {
+              "field_self_test_passed": false,
+              "flags": [],
+              "gravity_g": 1.000362231450487,
+              "rms_g": 0.0045111369024164825
+            },
+            "net": {
+              "field_self_test_passed": false,
+              "flags": [],
+              "gravity_g": 1.000362231450487,
+              "rms_g": 0.0045111369024164825
+            }
+          }
+        },
+        {
+          "boot_id": 101,
+          "device_id": 2,
+          "goal_end": "goal_b",
+          "ready": true,
+          "sensors": {
+            "frame": {
+              "field_self_test_passed": false,
+              "flags": [],
+              "gravity_g": 1.0000087859451925,
+              "rms_g": 0.004489435646256111
+            },
+            "net": {
+              "field_self_test_passed": false,
+              "flags": [],
+              "gravity_g": 1.0000087859451925,
+              "rms_g": 0.004489435646256111
+            }
+          }
+        }
+      ],
+      "counts": {
+        "detected_labelled_impacts": 7,
+        "events": 8,
+        "false_impacts": 0,
+        "impact_labels": 8,
+        "misses": 1,
+        "noise_labels": 1,
+        "unknown": 3,
+        "unmapped": 1
+      },
+      "decoder": {
+        "bytes_discarded": 279,
+        "crc_errors": 1,
+        "layout_errors": 0,
+        "packets": 998,
+        "truncated_on_disconnect": 0
+      },
+      "duration_seconds": 10.1,
+      "engine": {
+        "baseline_epochs": 4,
+        "impacts": 8,
+        "triggers": 8
+      },
+      "error_incidents": [
+        "validation-8.8"
+      ],
+      "evidence": "synthetic",
+      "false_impacts_per_hour": {
+        "ci95": [
+          0.0,
+          1314.8481222584326
+        ],
+        "count": 0,
+        "hours": 0.0028055555555555555,
+        "interval_method": "exact-central-poisson",
+        "value": 0.0
+      },
+      "final_health": [
+        {
+          "alignment_registered": false,
+          "device_id": 1,
+          "flags": [
+            "alignment_unavailable_or_expired",
+            "timestamp_estimated"
+          ],
+          "goal_end": "goal_a",
+          "last_sample_receipt": 10.00875,
+          "role": "net",
+          "state": "stale"
+        },
+        {
+          "alignment_registered": false,
+          "device_id": 1,
+          "flags": [
+            "alignment_unavailable_or_expired",
+            "timestamp_estimated"
+          ],
+          "goal_end": "goal_a",
+          "last_sample_receipt": 10.00875,
+          "role": "frame",
+          "state": "stale"
+        },
+        {
+          "alignment_registered": true,
+          "device_id": 2,
+          "flags": [
+            "alignment_unavailable_or_expired",
+            "timestamp_estimated"
+          ],
+          "goal_end": "goal_b",
+          "last_sample_receipt": 10.009749874999999,
+          "role": "net",
+          "state": "stale"
+        },
+        {
+          "alignment_registered": true,
+          "device_id": 2,
+          "flags": [
+            "alignment_unavailable_or_expired",
+            "timestamp_estimated"
+          ],
+          "goal_end": "goal_b",
+          "last_sample_receipt": 10.009749874999999,
+          "role": "frame",
+          "state": "stale"
+        }
+      ],
+      "host": {
+        "accepted_packets": 998,
+        "accepted_samples": 31936,
+        "flag_fifo_overrun": 1,
+        "flag_timestamp_estimated": 998,
+        "missing_packets": 2,
+        "missing_samples": 64,
+        "reboots": 1,
+        "saturated_samples": 13,
+        "transport_resets": 1
+      },
+      "impact_detection_recall": {
+        "ci95": [
+          0.5291118177871464,
+          0.9775825085499433
+        ],
+        "denominator": 8,
+        "interval_method": "wilson",
+        "numerator": 7,
+        "value": 0.875
+      },
+      "impacts": [
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "frame_impact",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 1,
+          "emitted_seconds": 1.12875,
+          "event_id": "22636a5edb58933118658342e96c6b0d05f0d8f5f424f72c54bf19b06a97eb15",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 2.569835337885013,
+            "frame_rms_g": 0.49006935964745985,
+            "frame_roughness_ratio": 0.5853358756953102,
+            "frame_samples": 401.0,
+            "net_peak_g": 0.10121983114774558,
+            "net_rms_g": 0.02004276500976048,
+            "net_roughness_ratio": 0.5814238945524236,
+            "net_samples": 401.0
+          },
+          "flags": [],
+          "goal_end": "goal_a",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 1.00125,
+          "occurred_seconds": 1.00125,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.0022500000000000003,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "net_impact",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 1,
+          "emitted_seconds": 2.1287499999999997,
+          "event_id": "ed54d1c3ace11f8a0f90693aceb638dfb988320e4884ed473484a93758a4c538",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 0.10512922806041204,
+            "frame_rms_g": 0.020143368926715706,
+            "frame_roughness_ratio": 0.5517742377020028,
+            "frame_samples": 401.0,
+            "net_peak_g": 2.144736644781261,
+            "net_rms_g": 0.40836253263281735,
+            "net_roughness_ratio": 0.5841203743386734,
+            "net_samples": 401.0
+          },
+          "flags": [],
+          "goal_end": "goal_a",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 2.00125,
+          "occurred_seconds": 2.00125,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.0022500000000000003,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "slow_impact",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 2,
+          "emitted_seconds": 3.1290618749999997,
+          "event_id": "321bf54f7c3d76b38d8c499e89bbe01678e1e63abd63546e707de81accdb3210",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 0.0700780063042473,
+            "frame_rms_g": 0.02272802457993885,
+            "frame_roughness_ratio": 0.05307139236012798,
+            "frame_samples": 401.0,
+            "net_peak_g": 1.0761401444363918,
+            "net_rms_g": 0.34105762397925315,
+            "net_roughness_ratio": 0.03125686746710519,
+            "net_samples": 401.0
+          },
+          "flags": [],
+          "goal_end": "goal_b",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 2.995,
+          "occurred_seconds": 2.9952995,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.002250125,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "frame_impact",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 2,
+          "emitted_seconds": 4.129161875,
+          "event_id": "458a91e284c3f647fa6d42b153207f55102a7894eaf5e31effb96d6a65f7c1f7",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 1.7118334083936373,
+            "frame_rms_g": 0.3266428593841528,
+            "frame_roughness_ratio": 0.5838059127072415,
+            "frame_samples": 401.0,
+            "net_peak_g": 0.08556255879517703,
+            "net_rms_g": 0.01692399973829225,
+            "net_roughness_ratio": 0.5472469273725367,
+            "net_samples": 401.0
+          },
+          "flags": [],
+          "goal_end": "goal_b",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 4.00125,
+          "occurred_seconds": 4.001650124999999,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.002250125,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "mixed_impact",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 1,
+          "emitted_seconds": 5.12875,
+          "event_id": "ad48b1eb3d8f1df3eed41aa5e305331f3996aa48ad396884e9548da5e7bcc3fd",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 2.0589325034997086,
+            "frame_rms_g": 0.39212140630514897,
+            "frame_roughness_ratio": 0.5846906564078441,
+            "frame_samples": 401.0,
+            "net_peak_g": 2.144732478356585,
+            "net_rms_g": 0.40850100902338876,
+            "net_roughness_ratio": 0.5847426855159189,
+            "net_samples": 401.0
+          },
+          "flags": [],
+          "goal_end": "goal_a",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 5.00125,
+          "occurred_seconds": 5.00125,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.0022500000000000003,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "unknown",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 2,
+          "emitted_seconds": 6.129361875,
+          "event_id": "fa7ffd38bd6213c91bfe2e1d34e28f32c68aa568b0eb85baac361ab0ae2a4a52",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 0.10115782702083968,
+            "frame_rms_g": 0.02006053444928855,
+            "frame_roughness_ratio": 0.5648838911388595,
+            "frame_samples": 401.0,
+            "net_peak_g": 15.970232039362877,
+            "net_rms_g": 2.89283212996789,
+            "net_roughness_ratio": 0.39033885247528455,
+            "net_samples": 401.0
+          },
+          "flags": [
+            "saturated"
+          ],
+          "goal_end": "goal_b",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 6.0,
+          "occurred_seconds": 6.0005999999999995,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.002250125,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 101,
+          "classification": "unknown",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 1,
+          "emitted_seconds": 7.16875,
+          "event_id": "38e1f7858ebb87526c9070c5a18f8a4fe48e8295f2b75e877d1634a001b0c214",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 0.10511656787860858,
+            "frame_rms_g": 0.021298743333307838,
+            "frame_roughness_ratio": 0.54770886230644,
+            "frame_samples": 369.0,
+            "net_peak_g": 1.2131754603488227,
+            "net_rms_g": 0.24428703717471895,
+            "net_roughness_ratio": 0.5875600905002708,
+            "net_samples": 369.0
+          },
+          "flags": [
+            "fifo_overrun",
+            "packet_gap",
+            "sample_gap",
+            "window_incomplete",
+            "window_sample_gap"
+          ],
+          "goal_end": "goal_a",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 7.04,
+          "occurred_seconds": 7.04,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": 0.0022500000000000003,
+          "type": "sensor_impact"
+        },
+        {
+          "automatic_confirmation_allowed": false,
+          "boot_id": 1101,
+          "classification": "unknown",
+          "configuration_version": "impact-rules-v1",
+          "device_id": 1,
+          "emitted_seconds": 8.928749999999999,
+          "event_id": "7bc0b842f6376ab780c9f0d8d2610f1a6bd5a07ff85c29b40192c9af0029d39c",
+          "evidence": "synthetic",
+          "features": {
+            "frame_peak_g": 0.10561074099066654,
+            "frame_rms_g": 0.02018561333928678,
+            "frame_roughness_ratio": 0.5665388259687302,
+            "frame_samples": 401.0,
+            "net_peak_g": 2.145293397909153,
+            "net_rms_g": 0.408515303518822,
+            "net_roughness_ratio": 0.5851128910068776,
+            "net_samples": 401.0
+          },
+          "flags": [
+            "alignment_unavailable_or_expired"
+          ],
+          "goal_end": "goal_a",
+          "host_clock_domain": "dummy-host",
+          "occurred_device_seconds": 0.80125,
+          "occurred_seconds": null,
+          "possible_goal": true,
+          "schema_version": 1,
+          "timing_uncertainty_seconds": null,
+          "type": "sensor_impact"
+        }
+      ],
+      "latency_seconds": {
+        "maximum": 0.16875000000000018,
+        "p50": 0.12876187499999947,
+        "p95": 0.16875000000000018,
+        "p99": 0.16875000000000018,
+        "samples": 7
+      },
+      "session_id": "sensor-validation",
+      "transport": {
+        "disconnects": 1
+      }
+    }
+  ],
+  "split": "validation"
+}

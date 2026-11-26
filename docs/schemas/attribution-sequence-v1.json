@@ -1,0 +1,478 @@
+{
+  "$defs": {
+    "AttributionGoal": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "goal_end": {
+          "enum": [
+            "goal_a",
+            "goal_b"
+          ],
+          "title": "Goal End",
+          "type": "string"
+        },
+        "goal_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Goal Id",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "scoring_team": {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "title": "Scoring Team",
+          "type": "string"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "timing_quality": {
+          "default": "unverified",
+          "enum": [
+            "synthetic_aligned",
+            "measured",
+            "unverified"
+          ],
+          "title": "Timing Quality",
+          "type": "string"
+        },
+        "touch_coverage": {
+          "default": "unknown",
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ],
+          "title": "Touch Coverage",
+          "type": "string"
+        },
+        "uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Seconds"
+        }
+      },
+      "required": [
+        "match_id",
+        "session_id",
+        "goal_id",
+        "scoring_team",
+        "goal_end",
+        "occurred_seconds",
+        "evidence"
+      ],
+      "title": "AttributionGoal",
+      "type": "object"
+    },
+    "AttributionRoster": {
+      "additionalProperties": false,
+      "properties": {
+        "active_player_ids": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 50,
+          "title": "Active Player Ids",
+          "type": "array"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "players": {
+          "items": {
+            "$ref": "#/$defs/Player"
+          },
+          "maxItems": 50,
+          "title": "Players",
+          "type": "array"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "match_id",
+        "revision",
+        "players",
+        "active_player_ids"
+      ],
+      "title": "AttributionRoster",
+      "type": "object"
+    },
+    "IdentityReading": {
+      "additionalProperties": false,
+      "properties": {
+        "bib": {
+          "anyOf": [
+            {
+              "maximum": 99,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bib"
+        },
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "event_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "frame_sequence": {
+          "minimum": 0,
+          "title": "Frame Sequence",
+          "type": "integer"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "quality": {
+          "default": "uncertain",
+          "enum": [
+            "clear",
+            "uncertain",
+            "occluded"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "roster_revision": {
+          "minimum": 0,
+          "title": "Roster Revision",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "team": {
+          "anyOf": [
+            {
+              "enum": [
+                "orange",
+                "green"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Team"
+        },
+        "track_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Track Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "session_id",
+        "roster_revision",
+        "camera_id",
+        "boot_id",
+        "track_id",
+        "frame_sequence",
+        "occurred_seconds",
+        "evidence"
+      ],
+      "title": "IdentityReading",
+      "type": "object"
+    },
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "bib": {
+          "maximum": 99,
+          "minimum": 0,
+          "title": "Bib",
+          "type": "integer"
+        },
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 60,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "team": {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "title": "Team",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "team",
+        "bib"
+      ],
+      "title": "Player",
+      "type": "object"
+    },
+    "TouchObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "camera_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "certainty": {
+          "default": "uncertain",
+          "enum": [
+            "certain",
+            "uncertain"
+          ],
+          "title": "Certainty",
+          "type": "string"
+        },
+        "event_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "controlled_pass",
+            "shot",
+            "control",
+            "interception",
+            "deflection",
+            "frame_rebound",
+            "proximity",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "roster_revision": {
+          "minimum": 0,
+          "title": "Roster Revision",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "track_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Track Id"
+        },
+        "uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Seconds"
+        }
+      },
+      "required": [
+        "event_id",
+        "match_id",
+        "session_id",
+        "roster_revision",
+        "occurred_seconds",
+        "camera_id",
+        "boot_id",
+        "kind",
+        "evidence"
+      ],
+      "title": "TouchObservation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "conditions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Conditions",
+      "type": "array"
+    },
+    "goal": {
+      "$ref": "#/$defs/AttributionGoal"
+    },
+    "readings": {
+      "items": {
+        "$ref": "#/$defs/IdentityReading"
+      },
+      "maxItems": 10000,
+      "title": "Readings",
+      "type": "array"
+    },
+    "roster": {
+      "$ref": "#/$defs/AttributionRoster"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "touches": {
+      "items": {
+        "$ref": "#/$defs/TouchObservation"
+      },
+      "maxItems": 1000,
+      "title": "Touches",
+      "type": "array"
+    }
+  },
+  "required": [
+    "goal",
+    "roster"
+  ],
+  "title": "AttributionSequence",
+  "type": "object"
+}

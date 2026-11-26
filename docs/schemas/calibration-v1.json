@@ -1,0 +1,219 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "camera_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Camera Id",
+      "type": "string"
+    },
+    "distortion": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Distortion"
+    },
+    "floor_homography": {
+      "anyOf": [
+        {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Floor Homography"
+    },
+    "goal_geometry": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "items": {},
+            "type": "array"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Goal Geometry",
+      "type": "object"
+    },
+    "goal_roi": {
+      "items": {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Goal Roi",
+      "type": "array"
+    },
+    "height": {
+      "exclusiveMinimum": 0,
+      "title": "Height",
+      "type": "integer"
+    },
+    "intrinsics": {
+      "anyOf": [
+        {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Intrinsics"
+    },
+    "lens_model": {
+      "default": "pinhole",
+      "enum": [
+        "pinhole",
+        "fisheye"
+      ],
+      "title": "Lens Model",
+      "type": "string"
+    },
+    "net_roi": {
+      "items": {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Net Roi",
+      "type": "array"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "pitch_corners": {
+      "items": {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Pitch Corners",
+      "type": "array"
+    },
+    "placement": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Placement",
+      "type": "object"
+    },
+    "reprojection_error_px": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reprojection Error Px"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "measured"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    },
+    "width": {
+      "exclusiveMinimum": 0,
+      "title": "Width",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "camera_id",
+    "version",
+    "width",
+    "height"
+  ],
+  "title": "CalibrationRecord",
+  "type": "object"
+}

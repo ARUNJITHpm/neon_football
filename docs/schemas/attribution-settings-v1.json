@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "automatic_write_allowed": {
+      "const": false,
+      "default": false,
+      "title": "Automatic Write Allowed",
+      "type": "boolean"
+    },
+    "identity_window_seconds": {
+      "default": 1.5,
+      "exclusiveMinimum": 0,
+      "maximum": 10,
+      "title": "Identity Window Seconds",
+      "type": "number"
+    },
+    "max_uncertainty_seconds": {
+      "default": 0.02,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Max Uncertainty Seconds",
+      "type": "number"
+    },
+    "minimum_identity_reads": {
+      "default": 3,
+      "maximum": 10,
+      "minimum": 2,
+      "title": "Minimum Identity Reads",
+      "type": "integer"
+    },
+    "rule_version": {
+      "default": "conservative-attribution-v1",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "touch_lookback_seconds": {
+      "default": 10,
+      "exclusiveMinimum": 0,
+      "maximum": 30,
+      "title": "Touch Lookback Seconds",
+      "type": "number"
+    }
+  },
+  "title": "AttributionSettings",
+  "type": "object"
+}

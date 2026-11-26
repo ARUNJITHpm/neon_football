@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neon-score"
+version = "0.1.0"
+description = "Local, durable manual scoreboard for the neon football pilot"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastapi==0.115.4",
+  "uvicorn==0.32.0",
+  "pydantic==2.13.4",
+  "PyYAML==6.0.3",
+  "websockets==13.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1", "httpx==0.27.2"]
+calibration = ["numpy==1.26.4"]
+vision = ["numpy==1.26.4", "Pillow==11.0.0", "onnxruntime==1.19.2"]
+
+[tool.setuptools.packages.find]
+include = ["app*", "core*", "modules*"]
+
+[tool.setuptools.package-data]
+app = ["config/*.yaml", "config/*.json", "fixtures/*.mp4", "fixtures/*.json"]
+"modules.api" = ["static/*", "static/fonts/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

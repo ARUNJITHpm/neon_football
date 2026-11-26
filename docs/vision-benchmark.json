@@ -1,0 +1,235 @@
+{
+  "aggregate_offline_frames_per_second": 179.69761922190364,
+  "benchmark": "offline-two-worker-vision-v1",
+  "detector_accuracy_measured": false,
+  "field_capacity_passed": false,
+  "hardware": {
+    "cpu": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "logical_cpus": 8,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "provider": "CPUExecutionProvider",
+    "python": "3.12.4"
+  },
+  "inputs": [
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000001.mjpeg",
+      "sha256": "0f8e44294e8a321bff03bce9a1b7767abe097398f05d779e5e068caf84b23bdf"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000001.jsonl",
+      "sha256": "3d80c86d678361add1b1ab9e5a060baf4b1cc372c58e6e99269efbf621a5625e"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000002.mjpeg",
+      "sha256": "c10780c4621ca837f26c9a80384ebf0bfbe47c6d9281694adaafbfe1824c8101"
+    },
+    {
+      "path": "cameras/bf21e67b01a351a136738782/000002.jsonl",
+      "sha256": "dd2f19ee5ab79f8228118c3e5358d2218ffda3097f654f140d43811dba64bb60"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000001.mjpeg",
+      "sha256": "42016e8501f78e7e2f1aed98e49eca1023cf094aebc0641bf985182a0dd92b78"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000001.jsonl",
+      "sha256": "6bfb319872301c111d94f39163c597bb787867bf24c891c008a8236c86ea8f45"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000002.mjpeg",
+      "sha256": "c6b7e4ed267bd5a62a2776325ec4e010f07ada4029a6da2332b9c65453906642"
+    },
+    {
+      "path": "cameras/0976a45ef5e8127d98f36072/000002.jsonl",
+      "sha256": "46c949b7be0f2382599973fbb7ebdc0b2680b28cbd2bd6190265d6199901daf5"
+    }
+  ],
+  "limitations": [
+    "File replay, no live capture contention or bounded live queue",
+    "Short run includes filesystem caching; no sustained temperature/RAM measurement",
+    "Model purpose and source recorded; Constant fixture ignores image pixels",
+    "Net ROI settings may be synthetic; no field geometry/lighting acceptance"
+  ],
+  "model": {
+    "class_count": 2,
+    "classes": {
+      "0": "player",
+      "1": "ball"
+    },
+    "input_height": 32,
+    "input_width": 32,
+    "licence": "Project-generated synthetic test fixture",
+    "licence_decision": "synthetic_fixture",
+    "max_detections": 100,
+    "min_score": 0.25,
+    "nms_iou": 0.45,
+    "output_layout": "raw_channels_first",
+    "path": "constant.onnx",
+    "pre_nms_limit": 1000,
+    "precision": "float32",
+    "provider": "CPUExecutionProvider",
+    "purpose": "synthetic_adapter_test",
+    "schema_version": 1,
+    "sha256": "8c0e14952e1044ced80d42f54d2816bc960c50bc1169905e485a086b77f1bb49",
+    "source": "Hand-authored Constant graph; input pixels are ignored",
+    "version": "constant-adapter-test-v1"
+  },
+  "packages": {
+    "Pillow": "11.0.0",
+    "numpy": "1.26.4",
+    "onnxruntime": "1.19.2"
+  },
+  "recording_manifest_sha256": "e477a5a38284537c98e6e19626220062319d25c1712ccfe67db69a868560b04e",
+  "schema_version": 1,
+  "session_id": "22a2ad5857e64d59b710ddeb37348b04",
+  "settings_sha256": "2c487683885ba037bc773fda1a55bb0440b70fa6714baf3ca16177176f103df2",
+  "streams": [
+    {
+      "camera_id": "goal-a",
+      "elapsed_seconds": 0.7380484000022989,
+      "frames": 75,
+      "live_dropped_frames": null,
+      "live_queue_age_seconds": null,
+      "model_load_seconds": 0.022222499988856725,
+      "motion_quality_counts": {
+        "baseline_warming": 75,
+        "player_overlap": 75
+      },
+      "offline_frames_per_second": 101.61935179287211,
+      "raw_detections": 150,
+      "source_expected_fps": 15.0,
+      "timings": {
+        "decode_seconds": {
+          "maximum": 0.06164439998974558,
+          "p50": 0.001284000012674369,
+          "p95": 0.0026476000057300553,
+          "p99": 0.06164439998974558,
+          "samples": 75
+        },
+        "inference_seconds": {
+          "maximum": 0.0016123999957926571,
+          "p50": 0.0003259000077378005,
+          "p95": 0.0009548000089125708,
+          "p99": 0.0016123999957926571,
+          "samples": 75
+        },
+        "motion_seconds": {
+          "maximum": 0.002607500005979091,
+          "p50": 0.0010984999971697107,
+          "p95": 0.002263600006699562,
+          "p99": 0.002607500005979091,
+          "samples": 75
+        },
+        "pipeline_seconds": {
+          "maximum": 0.06961630001023877,
+          "p50": 0.00850360000913497,
+          "p95": 0.015064600011100993,
+          "p99": 0.06961630001023877,
+          "samples": 75
+        },
+        "postprocess_seconds": {
+          "maximum": 0.0024545000051148236,
+          "p50": 0.0005053000058978796,
+          "p95": 0.0008195999980671331,
+          "p99": 0.0024545000051148236,
+          "samples": 75
+        },
+        "preprocess_seconds": {
+          "maximum": 0.002863499990780838,
+          "p50": 0.0010111000010510907,
+          "p95": 0.0020927999867126346,
+          "p99": 0.002863499990780838,
+          "samples": 75
+        },
+        "read_seconds": {
+          "maximum": 0.009574999989126809,
+          "p50": 0.003801200000452809,
+          "p95": 0.007670700011658482,
+          "p99": 0.009574999989126809,
+          "samples": 75
+        },
+        "total_seconds": {
+          "maximum": 0.0043953999993391335,
+          "p50": 0.0018770000024233013,
+          "p95": 0.0034344000014243647,
+          "p99": 0.0043953999993391335,
+          "samples": 75
+        }
+      }
+    },
+    {
+      "camera_id": "goal-b",
+      "elapsed_seconds": 0.736677700013388,
+      "frames": 75,
+      "live_dropped_frames": null,
+      "live_queue_age_seconds": null,
+      "model_load_seconds": 0.055912800002261065,
+      "motion_quality_counts": {
+        "baseline_warming": 75,
+        "player_overlap": 75
+      },
+      "offline_frames_per_second": 101.80842992619024,
+      "raw_detections": 150,
+      "source_expected_fps": 15.0,
+      "timings": {
+        "decode_seconds": {
+          "maximum": 0.06122479999612551,
+          "p50": 0.0013548999995691702,
+          "p95": 0.002645100001245737,
+          "p99": 0.06122479999612551,
+          "samples": 75
+        },
+        "inference_seconds": {
+          "maximum": 0.0011649999942164868,
+          "p50": 0.0003403000009711832,
+          "p95": 0.0010153000039281324,
+          "p99": 0.0011649999942164868,
+          "samples": 75
+        },
+        "motion_seconds": {
+          "maximum": 0.0024714000028325245,
+          "p50": 0.0010631000041030347,
+          "p95": 0.002245499999844469,
+          "p99": 0.0024714000028325245,
+          "samples": 75
+        },
+        "pipeline_seconds": {
+          "maximum": 0.07028849999187514,
+          "p50": 0.008545400007278658,
+          "p95": 0.013288000001921318,
+          "p99": 0.07028849999187514,
+          "samples": 75
+        },
+        "postprocess_seconds": {
+          "maximum": 0.0011012000031769276,
+          "p50": 0.0004442999925231561,
+          "p95": 0.0007495999889215454,
+          "p99": 0.0011012000031769276,
+          "samples": 75
+        },
+        "preprocess_seconds": {
+          "maximum": 0.0031556000030832365,
+          "p50": 0.001059200003510341,
+          "p95": 0.0020007999992230907,
+          "p99": 0.0031556000030832365,
+          "samples": 75
+        },
+        "read_seconds": {
+          "maximum": 0.010594000006676652,
+          "p50": 0.0035515999916242436,
+          "p95": 0.007433200007653795,
+          "p99": 0.010594000006676652,
+          "samples": 75
+        },
+        "total_seconds": {
+          "maximum": 0.004603599998517893,
+          "p50": 0.0019129000138491392,
+          "p95": 0.0030900999990990385,
+          "p99": 0.004603599998517893,
+          "samples": 75
+        }
+      }
+    }
+  ],
+  "wall_seconds_including_model_load_and_motion_setup": 0.8347356000012951
+}

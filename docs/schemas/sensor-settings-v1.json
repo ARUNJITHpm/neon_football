@@ -1,0 +1,106 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "baseline_max_rms_g": {
+      "default": 0.08,
+      "exclusiveMinimum": 0,
+      "title": "Baseline Max Rms G",
+      "type": "number"
+    },
+    "baseline_samples": {
+      "default": 320,
+      "maximum": 800,
+      "minimum": 80,
+      "title": "Baseline Samples",
+      "type": "integer"
+    },
+    "cooldown_seconds": {
+      "default": 0.6,
+      "exclusiveMinimum": 0,
+      "maximum": 2,
+      "title": "Cooldown Seconds",
+      "type": "number"
+    },
+    "dominance_ratio": {
+      "default": 1.8,
+      "exclusiveMinimum": 1,
+      "title": "Dominance Ratio",
+      "type": "number"
+    },
+    "max_delivery_age_seconds": {
+      "default": 0.25,
+      "exclusiveMinimum": 0,
+      "title": "Max Delivery Age Seconds",
+      "type": "number"
+    },
+    "max_history_samples": {
+      "default": 1600,
+      "maximum": 8000,
+      "minimum": 800,
+      "title": "Max History Samples",
+      "type": "integer"
+    },
+    "max_timing_uncertainty_seconds": {
+      "default": 0.02,
+      "exclusiveMinimum": 0,
+      "title": "Max Timing Uncertainty Seconds",
+      "type": "number"
+    },
+    "minimum_peak_g": {
+      "default": 0.6,
+      "exclusiveMinimum": 0,
+      "title": "Minimum Peak G",
+      "type": "number"
+    },
+    "post_seconds": {
+      "default": 0.1,
+      "exclusiveMinimum": 0,
+      "maximum": 0.5,
+      "title": "Post Seconds",
+      "type": "number"
+    },
+    "pre_seconds": {
+      "default": 0.4,
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "title": "Pre Seconds",
+      "type": "number"
+    },
+    "scale_g_per_lsb": {
+      "default": 0.0039,
+      "exclusiveMinimum": 0,
+      "maximum": 0.01,
+      "title": "Scale G Per Lsb",
+      "type": "number"
+    },
+    "slow_roughness_ratio": {
+      "default": 0.12,
+      "exclusiveMaximum": 1,
+      "exclusiveMinimum": 0,
+      "title": "Slow Roughness Ratio",
+      "type": "number"
+    },
+    "stale_seconds": {
+      "default": 0.3,
+      "exclusiveMinimum": 0,
+      "title": "Stale Seconds",
+      "type": "number"
+    },
+    "trigger_g": {
+      "default": 0.6,
+      "exclusiveMinimum": 0,
+      "title": "Trigger G",
+      "type": "number"
+    },
+    "version": {
+      "default": "impact-rules-v1",
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "title": "SensorSettings",
+  "type": "object"
+}

@@ -1,0 +1,5 @@
+# Optional offline vision packages tested on the inherited Python 3.12 environment.
+# Fresh network installation has not been verified.
+numpy==1.26.4
+Pillow==11.0.0
+onnxruntime==1.19.2

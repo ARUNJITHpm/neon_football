@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "dataset_id": "dummy-sensors-v1",
+  "split_assignment_version": "dummy-groups-v1",
+  "settings": {
+    "version": "impact-rules-v1",
+    "pre_seconds": 0.4,
+    "post_seconds": 0.1,
+    "cooldown_seconds": 0.6,
+    "baseline_samples": 320,
+    "baseline_max_rms_g": 0.08,
+    "trigger_g": 0.6,
+    "minimum_peak_g": 0.6,
+    "dominance_ratio": 1.8,
+    "slow_roughness_ratio": 0.12,
+    "max_timing_uncertainty_seconds": 0.02,
+    "max_delivery_age_seconds": 0.25,
+    "stale_seconds": 0.3,
+    "scale_g_per_lsb": 0.0039,
+    "max_history_samples": 1600
+  },
+  "sessions": [
+    {
+      "session_id": "sensor-train",
+      "match_id": "sensor-train-match",
+      "source_group_id": "dummy-match-train",
+      "split": "train",
+      "evidence": "synthetic",
+      "duration_seconds": 10.1,
+      "host_clock_domain": "dummy-host",
+      "raw": {
+        "path": "train.nfsp",
+        "sha256": "9db91315e639f181f019f07dce1aeb88b791d67eda0c2d4a4d39be59d39fb213"
+      },
+      "devices": {
+        "1": "goal_a",
+        "2": "goal_b"
+      },
+      "receipts": {
+        "path": "train-receipts.jsonl",
+        "sha256": "4fc8273c835a6f852330ce3774006f3223fc996cf21da8487f9252d3d2d3a902"
+      },
+      "labels": [
+        {
+          "incident_id": "train-1",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 1.0,
+          "physical_class": "frame"
+        },
+        {
+          "incident_id": "train-2",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 2.0,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "train-3",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 3.0003,
+          "physical_class": "player"
+        },
+        {
+          "incident_id": "train-4",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 4.0004,
+          "physical_class": "wall"
+        },
+        {
+          "incident_id": "train-5",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 5.0,
+          "physical_class": "post_and_in"
+        },
+        {
+          "incident_id": "train-6",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 6.0006,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "train-quiet",
+          "match_id": "sensor-train-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 0.7,
+          "physical_class": "noise"
+        }
+      ],
+      "alignments": [
+        {
+          "version": "dummy-alignment-train-v1",
+          "device_id": 1,
+          "boot_id": 100,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.5,
+          "scale": 1.0,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        },
+        {
+          "version": "dummy-alignment-train-v1",
+          "device_id": 2,
+          "boot_id": 100,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.50005,
+          "scale": 1.0001,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        }
+      ]
+    },
+    {
+      "session_id": "sensor-validation",
+      "match_id": "sensor-validation-match",
+      "source_group_id": "dummy-match-validation",
+      "split": "validation",
+      "evidence": "synthetic",
+      "duration_seconds": 10.1,
+      "host_clock_domain": "dummy-host",
+      "raw": {
+        "path": "validation.nfsp",
+        "sha256": "599e0cc66ea55eafa92b4dfca720bc422da728feaeeddcbb6d360cb273a043ef"
+      },
+      "devices": {
+        "1": "goal_a",
+        "2": "goal_b"
+      },
+      "receipts": {
+        "path": "validation-receipts.jsonl",
+        "sha256": "e572631770be500f01065770145dcf190f4543431b7415c075c3c3f54dfbcefc"
+      },
+      "labels": [
+        {
+          "incident_id": "validation-1",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 1.0,
+          "physical_class": "frame"
+        },
+        {
+          "incident_id": "validation-2",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 2.0,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "validation-3",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 3.0003,
+          "physical_class": "player"
+        },
+        {
+          "incident_id": "validation-4",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 4.0004,
+          "physical_class": "wall"
+        },
+        {
+          "incident_id": "validation-5",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 5.0,
+          "physical_class": "post_and_in"
+        },
+        {
+          "incident_id": "validation-6",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 6.0006,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "validation-7",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 7.0,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "validation-8.8",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 8.8,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "validation-quiet",
+          "match_id": "sensor-validation-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 0.7,
+          "physical_class": "noise"
+        }
+      ],
+      "alignments": [
+        {
+          "version": "dummy-alignment-validation-v1",
+          "device_id": 1,
+          "boot_id": 101,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.5,
+          "scale": 1.0,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        },
+        {
+          "version": "dummy-alignment-validation-v1",
+          "device_id": 2,
+          "boot_id": 101,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.50005,
+          "scale": 1.0001,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        }
+      ]
+    },
+    {
+      "session_id": "sensor-blind_test",
+      "match_id": "sensor-blind_test-match",
+      "source_group_id": "dummy-match-blind_test",
+      "split": "blind_test",
+      "evidence": "synthetic",
+      "duration_seconds": 10.1,
+      "host_clock_domain": "dummy-host",
+      "raw": {
+        "path": "blind_test.nfsp",
+        "sha256": "16eb15368a34104df62035a402a784f1aee9c9d6d8c719b0460c2e6dac5b771b"
+      },
+      "devices": {
+        "1": "goal_a",
+        "2": "goal_b"
+      },
+      "receipts": {
+        "path": "blind_test-receipts.jsonl",
+        "sha256": "de337974840b09803936b0ee04ab75b0faf88ad734a9c95cf8ca15be71ce35fd"
+      },
+      "labels": [
+        {
+          "incident_id": "blind_test-1",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 1.0,
+          "physical_class": "frame"
+        },
+        {
+          "incident_id": "blind_test-2",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 2.0,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "blind_test-3",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 3.0003,
+          "physical_class": "player"
+        },
+        {
+          "incident_id": "blind_test-4",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 4.0004,
+          "physical_class": "wall"
+        },
+        {
+          "incident_id": "blind_test-5",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 5.0,
+          "physical_class": "post_and_in"
+        },
+        {
+          "incident_id": "blind_test-6",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_b",
+          "occurred_seconds": 6.0006,
+          "physical_class": "goal"
+        },
+        {
+          "incident_id": "blind_test-quiet",
+          "match_id": "sensor-blind_test-match",
+          "goal_end": "goal_a",
+          "occurred_seconds": 0.7,
+          "physical_class": "noise"
+        }
+      ],
+      "alignments": [
+        {
+          "version": "dummy-alignment-blind_test-v1",
+          "device_id": 1,
+          "boot_id": 102,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.5,
+          "scale": 1.0,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        },
+        {
+          "version": "dummy-alignment-blind_test-v1",
+          "device_id": 2,
+          "boot_id": 102,
+          "host_clock_domain": "dummy-host",
+          "evidence": "synthetic",
+          "source_origin_seconds": 0.5,
+          "host_origin_seconds": 0.50005,
+          "scale": 1.0001,
+          "uncertainty_seconds": 0.001,
+          "valid_from_device_seconds": 0.0,
+          "valid_to_device_seconds": 9.998
+        }
+      ]
+    }
+  ]
+}

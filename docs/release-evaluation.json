@@ -1,0 +1,288 @@
+{
+  "automatic_scoring_enabled": false,
+  "candidate": "neon-score-0.1.0-part08-prototype",
+  "dummy_counts": {
+    "candidates": 37,
+    "false_shadow": 0,
+    "ignored_evidence": 4,
+    "matched_shadow": 7,
+    "operator_confirmations": 1,
+    "rejected_commands": 1,
+    "shadow_confirmations": 7,
+    "shadow_misses": 8,
+    "unadjudicated_shadow": 0,
+    "valid_references": 15
+  },
+  "dummy_false_per_hour": {
+    "ci95": [
+      0.0,
+      142.6419552611189
+    ],
+    "count": 0,
+    "hours": 0.02586111111111111,
+    "interval_method": "exact-central-poisson",
+    "value": 0.0
+  },
+  "dummy_scheduled_seconds": 93.1,
+  "dummy_shadow_recall": {
+    "ci95": [
+      0.24809535365737387,
+      0.698830199745016
+    ],
+    "denominator": 15,
+    "interval_method": "wilson",
+    "numerator": 7,
+    "value": 0.4666666666666667
+  },
+  "evidence": "dummy_shadow",
+  "field_metrics": null,
+  "frozen": {
+    "configuration": {
+      "automatic_score_mutation_allowed": false,
+      "cameras": {
+        "camera-goal_a": {
+          "calibration_version": "cal-v1",
+          "configuration_version": "vision-v1",
+          "goal_end": "goal_a",
+          "model_version": "injected-v1"
+        },
+        "camera-goal_b": {
+          "calibration_version": "cal-v1",
+          "configuration_version": "vision-v1",
+          "goal_end": "goal_b",
+          "model_version": "injected-v1"
+        },
+        "goal-a": {
+          "calibration_version": "synthetic-geometry-v1",
+          "configuration_version": "synthetic-vision-v1",
+          "goal_end": "goal_a",
+          "model_version": "injected-trajectories-no-detector-v1"
+        },
+        "goal-b": {
+          "calibration_version": "synthetic-geometry-v1",
+          "configuration_version": "synthetic-vision-v1",
+          "goal_end": "goal_b",
+          "model_version": "injected-trajectories-no-detector-v1"
+        }
+      },
+      "collection_seconds": 0.3,
+      "correlation_seconds": 0.2,
+      "devices": {
+        "1": "goal_a",
+        "2": "goal_b"
+      },
+      "max_candidates": 10000,
+      "max_events": 250000,
+      "max_inputs": 100000,
+      "maximum_evidence_age_seconds": 0.5,
+      "maximum_uncertainty_seconds": 0.02,
+      "mode": "shadow",
+      "repeat_seconds": 0.6,
+      "review_seconds": 15.0,
+      "schema_version": 1,
+      "sensor_configuration_version": "impact-rules-v1",
+      "version": "fusion-rules-v1"
+    },
+    "dataset_id": "dummy-fusion-v1",
+    "evaluator_sha256": "37c855bc23a6526f39d2d9a229b2d7877e357a7fb3142e4560de87439a40b6da",
+    "provenance": {
+      "implementation": {
+        "core/capture.py": "56b1b6deb6e3a8b4ffa3206832dfec03881b4645ac5d890e476c52317e55322b",
+        "core/fusion.py": "6dd5f14f98af36dc56e3cd710a3721da7e8de2a197f75d4f2bef54102a1f9967",
+        "core/ports.py": "2dfd7be5ab470f0d4b2dc09bf2574dc0e4a1b056668be06ff13e10969700fcfe",
+        "core/schemas.py": "c12a57d160380251b67c31097f93a09209160f26e8504ef7101ae3687504135b",
+        "core/sensors.py": "d209e329667bc2bed79229b980ce904915e5202e0108e5b7f5ed58e9e0cfecfc",
+        "core/vision.py": "27efc66172052acb19a47d414a4823f5fc5f6dfb2bedb223be4c9c35d9e7b7a0",
+        "modules/goal_engine/__init__.py": "7882d1ecc53b7d3b108c8a730cb58ee99dc34b6c439c22d4cc4a44ec14a219ed",
+        "modules/goal_engine/engine.py": "1acb51612017153072ebe601b07962115bee99b616d0d09f921e1165936e4ab6",
+        "modules/replay/dataset.py": "d7250159b71e84dd3f3f5241580dad9711879354f59d4bea3af08b14c24086af",
+        "modules/replay/matching.py": "d28cb9b611acc81793f940e439dd8f3369cde35233aca6facd97e388dea8292d",
+        "modules/replay/statistics.py": "a23ecd325df8d4725683c1af621e4f6e153fd93511c86c8190e9d15b1bafdb23",
+        "modules/storage/store.py": "dbfaebb75572d0c9ea077b324b82aaa70fa1f3a6d2ab5bdab34265f615d0a603",
+        "tools/fusion_replay.py": "58636fdc9664854eeda00e0062215951e414834cd0a7e81d10dbb5fd8ecf385a"
+      },
+      "inputs": [
+        {
+          "path": "upstream-sensors.json",
+          "sha256": "0ca586244b798995af4f32142b9d3d1ea449c86a0c9cd96664da044722b9cc1a",
+          "upstream": true
+        },
+        {
+          "path": "upstream-vision.json",
+          "sha256": "ae702c8fd57ae0074fdaef6b14971232a704c4dcb32c9c2e7bceae3649eeeed1",
+          "upstream": true
+        },
+        {
+          "path": "observed.jsonl",
+          "session_id": "fusion-observed",
+          "sha256": "83a8be819f724c327a0e1a7594153cd0b25b35eff697ee331d9ebc1df5bb186b"
+        },
+        {
+          "path": "post-and-in.jsonl",
+          "session_id": "fusion-post-and-in",
+          "sha256": "288afd060f1d1d096a1273413b4213dfb365da011f38e4c5e60b9800f27f3d98"
+        },
+        {
+          "path": "player-net.jsonl",
+          "session_id": "fusion-player-net",
+          "sha256": "1e790b2dae610e74fe592662e3245d3b4354406b44aacb2654a62c29a85a24a3"
+        },
+        {
+          "path": "partial.jsonl",
+          "session_id": "fusion-partial",
+          "sha256": "811f1161ab42d7cdf71a4043d0a1ff31f32170c117742fee86fa828c75b1a7d0"
+        },
+        {
+          "path": "occluded.jsonl",
+          "session_id": "fusion-occluded",
+          "sha256": "ad894c9d5a75be700df8f881277777217c8bb451e4422f9ea8297feded8380a8"
+        },
+        {
+          "path": "duplicates.jsonl",
+          "session_id": "fusion-duplicates",
+          "sha256": "44cb434a2d26b93dab18d917afa73d8f2bdf8f23c992797ebf1899735577f0fa"
+        },
+        {
+          "path": "late.jsonl",
+          "session_id": "fusion-late",
+          "sha256": "558ad1dd9d0d62be8c38a4b9945948812db38e0d7a954d58332d475e1d37fcc6"
+        },
+        {
+          "path": "nearby.jsonl",
+          "session_id": "fusion-nearby",
+          "sha256": "541a61bbfff7589aec042666b2cb23b9d9d4865154b18198840a43b34c77119b"
+        },
+        {
+          "path": "early-impact-nearby.jsonl",
+          "session_id": "fusion-early-impact-nearby",
+          "sha256": "fbc33c4076ae2147a7dee148f326b3f7d04b0325bf376c170e3156589c19c965"
+        },
+        {
+          "path": "quick-restart.jsonl",
+          "session_id": "fusion-quick-restart",
+          "sha256": "538b672b304a13f89a103859d7e508d273bc78a28e86e2e3c04f515e5e175804"
+        },
+        {
+          "path": "dead-ball.jsonl",
+          "session_id": "fusion-dead-ball",
+          "sha256": "96a9b5a1c45eb391ae3e237f2a6836f3fa16f2211f1135f54bae91f48d61f8b0"
+        },
+        {
+          "path": "pause.jsonl",
+          "session_id": "fusion-pause",
+          "sha256": "bd7c8b3972e514d68509709cb553ba6860fad34300f0f5f0ab20441dd1d729cf"
+        },
+        {
+          "path": "side-change.jsonl",
+          "session_id": "fusion-side-change",
+          "sha256": "4d0a3d7a0c0aa2508da7331d462d185321d71662d57fd35b8763ed4b475c7a9e"
+        },
+        {
+          "path": "stale-and-future.jsonl",
+          "session_id": "fusion-stale-and-future",
+          "sha256": "8635f450fde5db369b64f30d4f1c1f69ade21b682d26a1f8cb11d7741763090d"
+        },
+        {
+          "path": "review-expiry.jsonl",
+          "session_id": "fusion-review-expiry",
+          "sha256": "4b6082b1b72265c8b65f8559e45441c732e3d5e6128edb640ba6d2c4c72d0ff5"
+        },
+        {
+          "path": "correction.jsonl",
+          "session_id": "fusion-correction",
+          "sha256": "63fc85c0ba266e8ce70a645cb3fc6303ba3e18b4d603d3a950d255848d56ab43"
+        },
+        {
+          "path": "unmapped.jsonl",
+          "session_id": "fusion-unmapped",
+          "sha256": "0e60f17636a3d7728365eb4df08c979d6210f9c30e46d828d8366169935e0085"
+        },
+        {
+          "path": "upstream-sensors.jsonl",
+          "session_id": "sensor-validation",
+          "sha256": "c40d7c5a5e9eceb6851d91d6e641c30a8fba8c71db5713457940e1599790c1be"
+        },
+        {
+          "path": "upstream-vision.jsonl",
+          "session_id": "vision-validation",
+          "sha256": "3b939fe420d3209fe97b77bd9fd157393d4d7b1e4f1a9a84c91123c9e0c4a8f8"
+        }
+      ],
+      "manifest_sha256": "8693d109912d9287f35d0f992053f015d6aaa4ef2466f9604dd48b65f4b33510"
+    }
+  },
+  "gates": [
+    {
+      "name": "independent_field_floor",
+      "required": "300 goals, 20 scheduled match hours, both ends, 14 representative days",
+      "state": "pending"
+    },
+    {
+      "name": "automatic_recall",
+      "required": "at least 97%",
+      "state": "pending"
+    },
+    {
+      "name": "false_automatic_goals",
+      "required": "below 1 per scheduled hour",
+      "state": "pending"
+    },
+    {
+      "name": "visible_score_latency",
+      "required": "p95 below 1 second, physical crossing to rendered score",
+      "state": "pending"
+    },
+    {
+      "name": "review_workload",
+      "required": "at most 10% plus at most 2 prompts/hour; venue approval pending",
+      "state": "pending"
+    },
+    {
+      "name": "score_corrections",
+      "required": "below 5%",
+      "state": "pending"
+    },
+    {
+      "name": "automatic_availability",
+      "required": "at least 99%",
+      "state": "pending"
+    },
+    {
+      "name": "physical_failure_recovery",
+      "required": "camera/serial/host-power/migration/update/restore acceptance on selected host",
+      "state": "pending"
+    },
+    {
+      "name": "browser_hdmi",
+      "required": "rendered desktop/mobile, media/keyboard and physical display measurement",
+      "state": "pending"
+    },
+    {
+      "name": "independent_scoring_and_operator_acceptance",
+      "required": "physical fallback and supervised venue workflow acceptance",
+      "state": "pending"
+    },
+    {
+      "name": "isolated_install",
+      "required": "fresh dependency install and startup/rollback on selected host",
+      "state": "pending"
+    }
+  ],
+  "limitations": [
+    "Injected challenge evidence does not measure venue accuracy or physical synchronization",
+    "Rule labels are not probabilities; shadow score is separate from the official scoreboard",
+    "Occurrence/uncertainty window defaults are unmeasured; live integration and release remain pending",
+    "Public synthetic split guards do not constitute independent blind evaluation",
+    "Source package and synthetic recovery checks cannot activate automatic scoring",
+    "Dummy recall and rate intervals are descriptive, not release evidence; clustering is not estimated"
+  ],
+  "release_qualified": false,
+  "schema_version": 1,
+  "virtual_decision_latency_seconds": {
+    "maximum": 0.32000000000000006,
+    "p50": 0.32000000000000006,
+    "p95": 0.32000000000000006,
+    "p99": 0.32000000000000006,
+    "samples": 7
+  }
+}

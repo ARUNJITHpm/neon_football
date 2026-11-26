@@ -1,0 +1,28 @@
+schema_version: 1
+venue_name: Neon Football Fixture
+database_path: data/fixture-score.sqlite3
+operator_key_path: data/operator.key
+automatic_scoring_enabled: false
+capture:
+  enabled: true
+  root: data/fixture-recordings
+  ffmpeg: ffmpeg
+  min_free_bytes: 1073741824
+cameras:
+  - id: goal-a
+    kind: file
+    source_env: NEON_FIXTURE_A
+    width: 320
+    height: 180
+    expected_fps: 15
+    realtime: true
+    reconnect: false
+  - id: goal-b
+    kind: file
+    source_env: NEON_FIXTURE_B
+    width: 320
+    height: 180
+    expected_fps: 15
+    realtime: true
+    reconnect: false
+sensors: []

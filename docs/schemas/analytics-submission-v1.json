@@ -1,0 +1,356 @@
+{
+  "$defs": {
+    "AnalyticsContact": {
+      "additionalProperties": false,
+      "properties": {
+        "boot_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Boot Id",
+          "type": "string"
+        },
+        "certainty": {
+          "default": "uncertain",
+          "enum": [
+            "certain",
+            "uncertain"
+          ],
+          "title": "Certainty",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "control",
+            "controlled_pass",
+            "interception",
+            "shot",
+            "deflection",
+            "frame_rebound",
+            "proximity",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "occurred_seconds": {
+          "minimum": 0,
+          "title": "Occurred Seconds",
+          "type": "number"
+        },
+        "play_epoch": {
+          "minimum": 0,
+          "title": "Play Epoch",
+          "type": "integer"
+        },
+        "player_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Id"
+        },
+        "roster_revision": {
+          "minimum": 0,
+          "title": "Roster Revision",
+          "type": "integer"
+        },
+        "source_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "touch_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Touch Id",
+          "type": "string"
+        },
+        "uncertainty_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Seconds"
+        }
+      },
+      "required": [
+        "touch_id",
+        "occurred_seconds",
+        "kind",
+        "source_id",
+        "boot_id",
+        "play_epoch",
+        "roster_revision"
+      ],
+      "title": "AnalyticsContact",
+      "type": "object"
+    },
+    "AnalyticsPeriod": {
+      "additionalProperties": false,
+      "properties": {
+        "end_seconds": {
+          "minimum": 0,
+          "title": "End Seconds",
+          "type": "number"
+        },
+        "start_seconds": {
+          "minimum": 0,
+          "title": "Start Seconds",
+          "type": "number"
+        },
+        "state": {
+          "enum": [
+            "in_play",
+            "paused",
+            "dead_ball",
+            "unknown"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "touch_coverage": {
+          "default": "unknown",
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ],
+          "title": "Touch Coverage",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start_seconds",
+        "end_seconds",
+        "state"
+      ],
+      "title": "AnalyticsPeriod",
+      "type": "object"
+    },
+    "AnalyticsRosterEpoch": {
+      "additionalProperties": false,
+      "properties": {
+        "roster": {
+          "$ref": "#/$defs/AttributionRoster"
+        },
+        "start_seconds": {
+          "minimum": 0,
+          "title": "Start Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "start_seconds",
+        "roster"
+      ],
+      "title": "AnalyticsRosterEpoch",
+      "type": "object"
+    },
+    "AnalyticsSession": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Conditions",
+          "type": "array"
+        },
+        "contacts": {
+          "items": {
+            "$ref": "#/$defs/AnalyticsContact"
+          },
+          "maxItems": 10000,
+          "title": "Contacts",
+          "type": "array"
+        },
+        "duration_seconds": {
+          "exclusiveMinimum": 0,
+          "maximum": 14400,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "evidence": {
+          "enum": [
+            "synthetic",
+            "venue"
+          ],
+          "title": "Evidence",
+          "type": "string"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "periods": {
+          "items": {
+            "$ref": "#/$defs/AnalyticsPeriod"
+          },
+          "maxItems": 1000,
+          "minItems": 1,
+          "title": "Periods",
+          "type": "array"
+        },
+        "rosters": {
+          "items": {
+            "$ref": "#/$defs/AnalyticsRosterEpoch"
+          },
+          "maxItems": 1000,
+          "minItems": 1,
+          "title": "Rosters",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Version",
+          "type": "integer"
+        },
+        "session_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "timing_quality": {
+          "default": "unverified",
+          "enum": [
+            "synthetic_aligned",
+            "measured",
+            "unverified"
+          ],
+          "title": "Timing Quality",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session_id",
+        "match_id",
+        "duration_seconds",
+        "evidence",
+        "periods",
+        "rosters"
+      ],
+      "title": "AnalyticsSession",
+      "type": "object"
+    },
+    "AttributionRoster": {
+      "additionalProperties": false,
+      "properties": {
+        "active_player_ids": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "type": "string"
+          },
+          "maxItems": 50,
+          "title": "Active Player Ids",
+          "type": "array"
+        },
+        "match_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Match Id",
+          "type": "string"
+        },
+        "players": {
+          "items": {
+            "$ref": "#/$defs/Player"
+          },
+          "maxItems": 50,
+          "title": "Players",
+          "type": "array"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "match_id",
+        "revision",
+        "players",
+        "active_player_ids"
+      ],
+      "title": "AttributionRoster",
+      "type": "object"
+    },
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "bib": {
+          "maximum": 99,
+          "minimum": 0,
+          "title": "Bib",
+          "type": "integer"
+        },
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 60,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "team": {
+          "enum": [
+            "orange",
+            "green"
+          ],
+          "title": "Team",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "team",
+        "bib"
+      ],
+      "title": "Player",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "session": {
+      "$ref": "#/$defs/AnalyticsSession"
+    }
+  },
+  "required": [
+    "session"
+  ],
+  "title": "AnalyticsSubmission",
+  "type": "object"
+}

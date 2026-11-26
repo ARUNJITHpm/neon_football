@@ -1,0 +1,326 @@
+{
+  "$defs": {
+    "DepthPosition": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Calibration Id",
+          "type": "string"
+        },
+        "clock_domain": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_.:-]+$",
+          "title": "Clock Domain",
+          "type": "string"
+        },
+        "method": {
+          "enum": [
+            "stereo",
+            "external_depth",
+            "synthetic"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "observed": {
+          "default": true,
+          "title": "Observed",
+          "type": "boolean"
+        },
+        "synchronized": {
+          "default": false,
+          "title": "Synchronized",
+          "type": "boolean"
+        },
+        "uncertainty_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "minimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Uncertainty M",
+          "type": "array"
+        },
+        "x_m": {
+          "title": "X M",
+          "type": "number"
+        },
+        "y_m": {
+          "title": "Y M",
+          "type": "number"
+        },
+        "z_m": {
+          "title": "Z M",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x_m",
+        "y_m",
+        "z_m",
+        "uncertainty_m",
+        "calibration_id",
+        "clock_domain",
+        "method"
+      ],
+      "title": "DepthPosition",
+      "type": "object"
+    },
+    "Detection": {
+      "additionalProperties": false,
+      "properties": {
+        "bbox": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bbox",
+          "type": "array"
+        },
+        "depth": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DepthPosition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "kind": {
+          "enum": [
+            "ball",
+            "player"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        },
+        "uncertainty_px": {
+          "default": 2,
+          "minimum": 0,
+          "title": "Uncertainty Px",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "bbox",
+        "score"
+      ],
+      "title": "Detection",
+      "type": "object"
+    },
+    "MotionEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_frames": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Baseline Frames",
+          "type": "integer"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "global_changed_fraction": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Global Changed Fraction"
+        },
+        "net_changed_fraction": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Net Changed Fraction"
+        }
+      },
+      "title": "MotionEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "boot_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Boot Id",
+      "type": "string"
+    },
+    "camera_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Camera Id",
+      "type": "string"
+    },
+    "clip_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clip Path"
+    },
+    "clock_domain": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Clock Domain",
+      "type": "string"
+    },
+    "detections": {
+      "items": {
+        "$ref": "#/$defs/Detection"
+      },
+      "maxItems": 100,
+      "title": "Detections",
+      "type": "array"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "venue"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "height": {
+      "maximum": 8192,
+      "minimum": 16,
+      "title": "Height",
+      "type": "integer"
+    },
+    "match_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Match Id",
+      "type": "string"
+    },
+    "motion": {
+      "$ref": "#/$defs/MotionEvidence"
+    },
+    "occurred_seconds": {
+      "minimum": 0,
+      "title": "Occurred Seconds",
+      "type": "number"
+    },
+    "received_seconds": {
+      "minimum": 0,
+      "title": "Received Seconds",
+      "type": "number"
+    },
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "sequence": {
+      "minimum": 0,
+      "title": "Sequence",
+      "type": "integer"
+    },
+    "session_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "timing_uncertainty_seconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Timing Uncertainty Seconds"
+    },
+    "width": {
+      "maximum": 8192,
+      "minimum": 16,
+      "title": "Width",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "session_id",
+    "match_id",
+    "camera_id",
+    "boot_id",
+    "sequence",
+    "width",
+    "height",
+    "occurred_seconds",
+    "received_seconds",
+    "clock_domain",
+    "evidence"
+  ],
+  "title": "VisionFrame",
+  "type": "object"
+}

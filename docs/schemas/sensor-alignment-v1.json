@@ -1,0 +1,83 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "boot_id": {
+      "minimum": 1,
+      "title": "Boot Id",
+      "type": "integer"
+    },
+    "device_id": {
+      "minimum": 1,
+      "title": "Device Id",
+      "type": "integer"
+    },
+    "evidence": {
+      "enum": [
+        "synthetic",
+        "physical"
+      ],
+      "title": "Evidence",
+      "type": "string"
+    },
+    "host_clock_domain": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Host Clock Domain",
+      "type": "string"
+    },
+    "host_origin_seconds": {
+      "minimum": 0,
+      "title": "Host Origin Seconds",
+      "type": "number"
+    },
+    "scale": {
+      "exclusiveMinimum": 0,
+      "maximum": 2,
+      "title": "Scale",
+      "type": "number"
+    },
+    "source_origin_seconds": {
+      "minimum": 0,
+      "title": "Source Origin Seconds",
+      "type": "number"
+    },
+    "uncertainty_seconds": {
+      "minimum": 0,
+      "title": "Uncertainty Seconds",
+      "type": "number"
+    },
+    "valid_from_device_seconds": {
+      "minimum": 0,
+      "title": "Valid From Device Seconds",
+      "type": "number"
+    },
+    "valid_to_device_seconds": {
+      "minimum": 0,
+      "title": "Valid To Device Seconds",
+      "type": "number"
+    },
+    "version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_.:-]+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "device_id",
+    "boot_id",
+    "host_clock_domain",
+    "evidence",
+    "source_origin_seconds",
+    "host_origin_seconds",
+    "scale",
+    "uncertainty_seconds",
+    "valid_from_device_seconds",
+    "valid_to_device_seconds"
+  ],
+  "title": "SensorAlignment",
+  "type": "object"
+}

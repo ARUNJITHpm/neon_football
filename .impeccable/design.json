@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T18:47:32.863307+00:00",
+  "title": "Design System: Neon Score",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Dark ground",
+        "canonical": "#101412",
+        "tonalRamp": [
+          "oklch(15.00% 0.00743 164.05)",
+          "oklch(26.43% 0.00743 164.05)",
+          "oklch(37.86% 0.00743 164.05)",
+          "oklch(49.29% 0.00743 164.05)",
+          "oklch(60.71% 0.00743 164.05)",
+          "oklch(72.14% 0.00743 164.05)",
+          "oklch(83.57% 0.00743 164.05)",
+          "oklch(95.00% 0.00743 164.05)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Raised green-black surface",
+        "canonical": "#1b211d",
+        "tonalRamp": [
+          "oklch(15.00% 0.01157 156.25)",
+          "oklch(26.43% 0.01157 156.25)",
+          "oklch(37.86% 0.01157 156.25)",
+          "oklch(49.29% 0.01157 156.25)",
+          "oklch(60.71% 0.01157 156.25)",
+          "oklch(72.14% 0.01157 156.25)",
+          "oklch(83.57% 0.01157 156.25)",
+          "oklch(95.00% 0.01157 156.25)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Quiet rule",
+        "canonical": "#3a453e",
+        "tonalRamp": [
+          "oklch(15.00% 0.01857 157.48)",
+          "oklch(26.43% 0.01857 157.48)",
+          "oklch(37.86% 0.01857 157.48)",
+          "oklch(49.29% 0.01857 157.48)",
+          "oklch(60.71% 0.01857 157.48)",
+          "oklch(72.14% 0.01857 157.48)",
+          "oklch(83.57% 0.01857 157.48)",
+          "oklch(95.00% 0.01857 157.48)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Pale main ink",
+        "canonical": "#f1f5ef",
+        "tonalRamp": [
+          "oklch(15.00% 0.00898 134.87)",
+          "oklch(26.43% 0.00898 134.87)",
+          "oklch(37.86% 0.00898 134.87)",
+          "oklch(49.29% 0.00898 134.87)",
+          "oklch(60.71% 0.00898 134.87)",
+          "oklch(72.14% 0.00898 134.87)",
+          "oklch(83.57% 0.00898 134.87)",
+          "oklch(95.00% 0.00898 134.87)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted supporting ink",
+        "canonical": "#b5c2b8",
+        "tonalRamp": [
+          "oklch(15.00% 0.01992 152.73)",
+          "oklch(26.43% 0.01992 152.73)",
+          "oklch(37.86% 0.01992 152.73)",
+          "oklch(49.29% 0.01992 152.73)",
+          "oklch(60.71% 0.01992 152.73)",
+          "oklch(72.14% 0.01992 152.73)",
+          "oklch(83.57% 0.01992 152.73)",
+          "oklch(95.00% 0.01992 152.73)"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "Warm orange team accent",
+        "canonical": "#ffae70",
+        "tonalRamp": [
+          "oklch(15.00% 0.12318 57.38)",
+          "oklch(26.43% 0.12318 57.38)",
+          "oklch(37.86% 0.12318 57.38)",
+          "oklch(49.29% 0.12318 57.38)",
+          "oklch(60.71% 0.12318 57.38)",
+          "oklch(72.14% 0.12318 57.38)",
+          "oklch(83.57% 0.12318 57.38)",
+          "oklch(95.00% 0.12318 57.38)"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Lime team and action accent",
+        "canonical": "#b9ee79",
+        "tonalRamp": [
+          "oklch(15.00% 0.15691 129.23)",
+          "oklch(26.43% 0.15691 129.23)",
+          "oklch(37.86% 0.15691 129.23)",
+          "oklch(49.29% 0.15691 129.23)",
+          "oklch(60.71% 0.15691 129.23)",
+          "oklch(72.14% 0.15691 129.23)",
+          "oklch(83.57% 0.15691 129.23)",
+          "oklch(95.00% 0.15691 129.23)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Soft error accent",
+        "canonical": "#ffb6ab",
+        "tonalRamp": [
+          "oklch(15.00% 0.08705 28.62)",
+          "oklch(26.43% 0.08705 28.62)",
+          "oklch(37.86% 0.08705 28.62)",
+          "oklch(49.29% 0.08705 28.62)",
+          "oklch(60.71% 0.08705 28.62)",
+          "oklch(72.14% 0.08705 28.62)",
+          "oklch(83.57% 0.08705 28.62)",
+          "oklch(95.00% 0.08705 28.62)"
+        ]
+      },
+      "button-hover": {
+        "role": "neutral",
+        "displayName": "Hover surface",
+        "canonical": "#2c372f",
+        "tonalRamp": [
+          "oklch(15.00% 0.02039 153.58)",
+          "oklch(26.43% 0.02039 153.58)",
+          "oklch(37.86% 0.02039 153.58)",
+          "oklch(49.29% 0.02039 153.58)",
+          "oklch(60.71% 0.02039 153.58)",
+          "oklch(72.14% 0.02039 153.58)",
+          "oklch(83.57% 0.02039 153.58)",
+          "oklch(95.00% 0.02039 153.58)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Primary hover accent",
+        "canonical": "#d1ffa2",
+        "tonalRamp": [
+          "oklch(15.00% 0.12821 129.96)",
+          "oklch(26.43% 0.12821 129.96)",
+          "oklch(37.86% 0.12821 129.96)",
+          "oklch(49.29% 0.12821 129.96)",
+          "oklch(60.71% 0.12821 129.96)",
+          "oklch(72.14% 0.12821 129.96)",
+          "oklch(83.57% 0.12821 129.96)",
+          "oklch(95.00% 0.12821 129.96)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Score numerals",
+        "purpose": "Operator team score; narrow and spectator sizing are contextual overrides."
+      },
+      "clock": {
+        "displayName": "Count-up clock",
+        "purpose": "Elapsed time; local numeral face with system fallback."
+      },
+      "headline": {
+        "displayName": "Screen heading",
+        "purpose": "Default h1; access, waiting and spectator headings have contextual sizes."
+      },
+      "title": {
+        "displayName": "Section heading",
+        "purpose": "Default h2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Global reading and form text."
+      },
+      "label": {
+        "displayName": "Field label",
+        "purpose": "Sentence-case labels above controls."
+      },
+      "button": {
+        "displayName": "Action label",
+        "purpose": "Default button text."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background .15s ease-out",
+        "purpose": "Button hover background transition."
+      },
+      {
+        "name": "score-commit",
+        "value": "score-commit .4s ease-out; 0% {filter:brightness(1.6)} 100% {filter:brightness(1)}",
+        "purpose": "Brightness pulse when an accepted score changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}",
+        "purpose": "Disable animation and transitions for reduced-motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "760px"
+      },
+      {
+        "name": "compact",
+        "value": "480px"
+      }
+    ],
+    "focus": {
+      "value": "outline:3px solid var(--green);outline-offset:4px",
+      "purpose": "Shared keyboard focus treatment."
+    },
+    "evidence": {
+      "scope": "Code-led extraction from PRODUCT.md, provisional DESIGN.md and modules/api/static CSS, HTML and JavaScript.",
+      "visualAcceptance": "Pending; no rendered browser or screenshot inspection available.",
+      "contrast": "Not measured.",
+      "directionAuthority": "Prototype implementation choice, not user aesthetic selection or approval.",
+      "tonalRamps": "Synthesized OKLCH preview ramps derived from each implemented color; not additional runtime tokens."
+    }
+  },
+  "components": [
+    {
+      "name": "Default button",
+      "kind": "button",
+      "description": "Implemented lifecycle/action variant; no separate pressed treatment.",
+      "html": "<button type=\"button\" class=\"ds-button-default\">Pause clock</button>",
+      "css": ".ds-button-default{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;}.ds-button-default:hover{background:var(--button-hover,#2c372f);}.ds-button-default:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-button-default:disabled{cursor:not-allowed;opacity:.58;}.ds-button-default:disabled:hover{background:var(--surface,#1b211d);}@media(prefers-reduced-motion:reduce){.ds-button-default{transition:none;}}",
+      "refersTo": "button-default"
+    },
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "description": "Implemented lifecycle/action variant; no separate pressed treatment.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Start match</button>",
+      "css": ".ds-button-primary{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;color:var(--ground,#101412);background:var(--green,#b9ee79);border-color:var(--green,#b9ee79);}.ds-button-primary:hover{background:var(--primary-hover,#d1ffa2);}.ds-button-primary:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-button-primary:disabled{cursor:not-allowed;opacity:.58;}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none;}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Danger button",
+      "kind": "button",
+      "description": "Implemented lifecycle/action variant; no separate pressed treatment.",
+      "html": "<button type=\"button\" class=\"ds-button-danger\">End match</button>",
+      "css": ".ds-button-danger{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;color:var(--error,#ffb6ab);}.ds-button-danger:hover{background:var(--button-hover,#2c372f);}.ds-button-danger:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-button-danger:disabled{cursor:not-allowed;opacity:.58;}.ds-button-danger:disabled:hover{background:var(--surface,#1b211d);}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition:none;}}",
+      "refersTo": "button-danger"
+    },
+    {
+      "name": "Quiet button",
+      "kind": "button",
+      "description": "Implemented lifecycle/action variant; no separate pressed treatment.",
+      "html": "<button type=\"button\" class=\"ds-button-quiet\">Export match</button>",
+      "css": ".ds-button-quiet{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;background:transparent;}.ds-button-quiet:hover{background:transparent;}.ds-button-quiet:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-button-quiet:disabled{cursor:not-allowed;opacity:.58;}@media(prefers-reduced-motion:reduce){.ds-button-quiet{transition:none;}}",
+      "refersTo": "button-quiet"
+    },
+    {
+      "name": "Team goal controls",
+      "kind": "button",
+      "description": "Team-colored, full-width manual scoring controls; preview shows both implemented variants.",
+      "html": "<div class=\"ds-goal-controls\"><button type=\"button\" class=\"ds-goal ds-goal-orange\">Record Orange goal</button><button type=\"button\" class=\"ds-goal ds-goal-green\">Record Green goal</button></div>",
+      "css": ".ds-goal-controls{display:grid;grid-template-columns:1fr 1fr;gap:32px;}.ds-goal{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;width:100%;min-height:60px;font-size:17px;}.ds-goal-orange{color:var(--orange,#ffae70);}.ds-goal-green{color:var(--green,#b9ee79);}.ds-goal:hover{background:var(--button-hover,#2c372f);}.ds-goal:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-goal:disabled{cursor:not-allowed;opacity:.58;}.ds-goal:disabled:hover{background:var(--surface,#1b211d);}@media(max-width:760px){.ds-goal-controls{gap:20px;}.ds-goal{font-size:15px;padding:10px;}}@media(prefers-reduced-motion:reduce){.ds-goal{transition:none;}}",
+      "refersTo": "goal-button-orange"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "description": "Ground-filled text field with its actual label, placeholder and keyboard focus treatment.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-team-name\">Team name</label><input class=\"ds-field\" id=\"ds-team-name\" placeholder=\"Team name\" maxlength=\"60\">",
+      "css": ".ds-field-label{display:block;margin:0 0 7px;color:var(--ink,#f1f5ef);font:600 14px/1.5 Segoe UI,Arial,sans-serif;}.ds-field{display:block;width:100%;min-height:48px;border:1px solid var(--rule,#3a453e);border-radius:8px;background:var(--ground,#101412);padding:10px 12px;color:var(--ink,#f1f5ef);caret-color:var(--green,#b9ee79);font:16px/1.5 Segoe UI,Arial,sans-serif;}.ds-field::placeholder{color:var(--muted,#b5c2b8);}.ds-field:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}",
+      "refersTo": "input"
+    },
+    {
+      "name": "Console header",
+      "kind": "nav",
+      "description": "Brand, written connection status and scoreboard link; no selected navigation state.",
+      "html": "<header class=\"ds-topbar\"><a class=\"ds-brand\" href=\"/operator\">Neon Score<span>Match console</span></a><div class=\"ds-header-actions\"><span>Connecting</span><a href=\"/scoreboard\" target=\"_blank\" rel=\"noopener\">Open scoreboard</a></div></header>",
+      "css": ".ds-topbar{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:90px;padding:24px 5vw;border-bottom:1px solid var(--rule,#3a453e);background:var(--ground,#101412);color:var(--ink,#f1f5ef);font:16px/1.5 Segoe UI,Arial,sans-serif;}.ds-topbar a{color:var(--ink,#f1f5ef);text-underline-offset:4px;}.ds-topbar a:hover{color:var(--green,#b9ee79);}.ds-topbar a:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-brand{display:flex;align-items:center;gap:18px;font-size:22px;font-weight:700;letter-spacing:-.03em;text-decoration:none;}.ds-brand span{color:var(--muted,#b5c2b8);font-size:13px;letter-spacing:0;font-weight:400;}.ds-header-actions{display:flex;gap:24px;align-items:center;font-size:14px;}.ds-header-actions span{color:var(--muted,#b5c2b8);}@media(max-width:760px){.ds-topbar{padding:20px 24px;align-items:flex-start;}.ds-brand{display:block;}.ds-brand span{display:block;margin-top:4px;}.ds-header-actions{flex-direction:column;align-items:flex-end;gap:8px;}}@media(max-width:480px){.ds-topbar{gap:16px;}.ds-brand{font-size:20px;}.ds-header-actions{font-size:12px;}}"
+    },
+    {
+      "name": "Retry notice",
+      "kind": "card",
+      "description": "Raised-surface uncertainty notice with its stable retry action.",
+      "html": "<div class=\"ds-notice\"><span>The result of your last action is unknown. Retry it before recording another change.</span><button type=\"button\" class=\"ds-retry\">Retry last action</button></div>",
+      "css": ".ds-notice{background:var(--surface,#1b211d);padding:24px;border-radius:12px;margin-bottom:32px;color:var(--error,#ffb6ab);font:16px/1.5 Segoe UI,Arial,sans-serif;}.ds-retry{min-height:46px;border:1px solid var(--rule,#3a453e);border-radius:8px;padding:10px 18px;background:var(--surface,#1b211d);color:var(--ink,#f1f5ef);font:600 16px/1.5 Segoe UI,Arial,sans-serif;cursor:pointer;transition:background .15s ease-out;margin-left:16px;}.ds-retry:hover{background:var(--button-hover,#2c372f);}.ds-retry:focus-visible{outline:3px solid var(--green,#b9ee79);outline-offset:4px;}.ds-retry:disabled{cursor:not-allowed;opacity:.58;}.ds-retry:disabled:hover{background:var(--surface,#1b211d);}@media(max-width:760px){.ds-retry{display:block;margin:16px 0 0;}}@media(prefers-reduced-motion:reduce){.ds-retry{transition:none;}}",
+      "refersTo": "notice"
+    },
+    {
+      "name": "Undone goal record",
+      "kind": "custom",
+      "description": "Static example of the implemented preserved correction state; it is not a live match.",
+      "html": "<article class=\"ds-goal-row ds-undone\"><time>05:30</time><div><h3>Orange goal ? undone</h3><p>Scorer unknown</p></div></article>",
+      "css": ".ds-goal-row{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:24px;align-items:center;padding:20px 0;border-top:1px solid var(--rule,#3a453e);background:var(--ground,#101412);color:var(--ink,#f1f5ef);font:16px/1.5 Segoe UI,Arial,sans-serif;}.ds-goal-row time{font-variant-numeric:tabular-nums;color:var(--muted,#b5c2b8);}.ds-goal-row h3{margin:0;font-size:18px;overflow-wrap:anywhere;}.ds-goal-row p{font-size:14px;color:var(--muted,#b5c2b8);margin:4px 0 0;}.ds-undone h3{text-decoration:line-through;color:var(--muted,#b5c2b8);}@media(max-width:760px){.ds-goal-row{grid-template-columns:48px minmax(0,1fr);gap:12px;}}"
+    },
+    {
+      "name": "Operator score and clock",
+      "kind": "custom",
+      "description": "Static score/clock specimen with the implemented responsive arrangement. Host supplies the locally served numeral font.",
+      "html": "<div class=\"ds-score-strip\"><div class=\"ds-team ds-orange\"><h2>Orange</h2><strong class=\"ds-score\">0</strong></div><div class=\"ds-clock-block\"><span class=\"ds-clock\">00:00</span><p>20-minute match</p></div><div class=\"ds-team ds-green\"><h2>Green</h2><strong class=\"ds-score\">0</strong></div></div>",
+      "css": ".ds-score-strip{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.6fr) minmax(0,1fr);align-items:center;gap:32px;padding:36px 0;background:var(--ground,#101412);color:var(--ink,#f1f5ef);font:16px/1.5 Segoe UI,Arial,sans-serif;}.ds-team{text-align:center;min-width:0;}.ds-orange{--team:var(--orange,#ffae70);}.ds-green{--team:var(--green,#b9ee79);}.ds-team h2{color:var(--team);overflow-wrap:anywhere;max-width:24ch;margin:auto;font-size:23px;line-height:1.25;}.ds-score{display:block;font-family:Neon Numerals,Segoe UI,sans-serif;font-size:96px;line-height:1.05;font-weight:600;font-variant-numeric:tabular-nums;color:var(--team);margin:8px 0 22px;letter-spacing:-.02em;}.ds-clock-block{text-align:center;align-self:center;}.ds-clock{display:block;font-family:Neon Numerals,Segoe UI,sans-serif;font-size:48px;line-height:1.1;letter-spacing:-.01em;font-variant-numeric:tabular-nums;white-space:nowrap;}.ds-clock-block p{color:var(--muted,#b5c2b8);font-size:14px;margin:8px 0 0;}@media(max-width:760px){.ds-score-strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;padding:28px 0;}.ds-clock-block{grid-row:2;grid-column:1/-1;}.ds-green{grid-column:2;grid-row:1;}.ds-orange{grid-column:1;grid-row:1;}.ds-score{font-size:80px;margin-bottom:16px;}}",
+      "refersTo": "score-orange"
+    }
+  ],
+  "narrative": {
+    "northStar": "Courtside match console",
+    "overview": "The prototype uses a dark, quiet reading surface with orange and lime team identity. Strong alignment, prominent scores and an adjacent count-up clock support the operator's next action. History uses ruled records rather than a grid of metric cards. The separate spectator surface gives the score and clock more room.\n\nThis document merges the prototype's own provisional direction with the implemented system in `modules/api/static/style.css`, `operator.html`, `scoreboard.html` and their JavaScript modules. The direction and descriptive language are implementation choices, not a user-selected aesthetic or standing preference. Evidence is code-led: no rendered browser or screenshot inspection is available, visual acceptance is pending, and contrast has not been measured. The scope is the authorized Part 01 manual scoreboard; this document makes no camera, model or automatic-scoring capability claim.\n\nThe original seed considered referee sheets, stadium displays, broadcast desks, fixture boards, club noticeboards and substitution boards. Its retained disciplines are explicit conflicts, consistent team colors, distinct state vocabulary, restraint and readable measurement. Those explorations explain the prototype direction; they do not establish user-approved visual rejections.",
+    "keyCharacteristics": [
+      "Dark reading surface with restrained tonal layering.",
+      "Team-colored scores, clearly named actions and written lifecycle states.",
+      "Locally served assets and a dedicated numeral face.",
+      "Ruled match history that preserves corrections.",
+      "Responsive operator controls and a read-only spectator display."
+    ],
+    "rules": [
+      {
+        "name": "The Written State Rule",
+        "body": "Pair lifecycle, connectivity and correction color with explicit words; color alone must not carry match state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Steady Numeral Rule",
+        "body": "Use tabular numerals for score, clock and event timestamps. Preserve the local numeral font and keep clock text on one line.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Depth Rule",
+        "body": "Continue the existing flat and tonal surface language when extending this prototype; use boundaries and spacing to clarify groups.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep team identity consistent across names, numerals and goal actions.",
+      "**Do** pair colors with written match, connection and correction states.",
+      "**Do** preserve the committed-score update and visible correction history.",
+      "**Do** keep fonts and runtime assets locally served so the interface can operate without internet.",
+      "**Do** preserve the visible focus outline and reduced-motion behavior.",
+      "**Do** inspect empty, connecting, disconnected, ready, live, paused, ended, interrupted, invalid-input, unknown-scorer and undone-goal states before visual acceptance."
+    ],
+    "donts": [
+      "**Don't** display an uncertain action as a locally confirmed goal.",
+      "**Don't** conceal undone records or require known player attribution to show a team goal.",
+      "**Don't** add operator write controls to the spectator display.",
+      "**Don't** treat this implementation direction as a user-approved aesthetic, verified contrast or completed visual review.",
+      "**Don't** imply camera or automatic-scoring capability through decorative live indicators or fabricated match content."
+    ]
+  }
+}

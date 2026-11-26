@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "evidence": "synthetic",
+  "identical_replay_bytes": true,
+  "replay_sha256": "ed7d21ba25fca5a81fae868c9c8183e4c5aefea19b9daed08e0fe61f7f78d06a",
+  "input_fingerprint": "12daf3150113ea1c4a64f9377559a139055388addfe93c8ae2e39f0adf55901f",
+  "manifest_sha256": "916585b8d7919d5271f2fd28aec2603c411fb3d32bbedff50fe016f85228ba20",
+  "events": 9,
+  "decisions": 9,
+  "final_virtual_seconds": 60.0,
+  "evaluator_configuration": {
+    "annotation_policy": "annotation-policy-v1",
+    "evaluator": "event-evaluator-v1",
+    "implementation_sha256": "c5984c655bcc6d2edd3aa99f132f64ac308653f2bb61bba4a0a1b92458a0081c",
+    "matching": "maximum-cardinality-minimum-time",
+    "matching_tolerance_seconds": 0.5
+  }
+}

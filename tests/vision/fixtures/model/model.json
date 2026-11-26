@@ -1,0 +1,24 @@
+{
+  "class_count": 2,
+  "classes": {
+    "0": "player",
+    "1": "ball"
+  },
+  "input_height": 32,
+  "input_width": 32,
+  "licence": "Project-generated synthetic test fixture",
+  "licence_decision": "synthetic_fixture",
+  "max_detections": 100,
+  "min_score": 0.25,
+  "nms_iou": 0.45,
+  "output_layout": "raw_channels_first",
+  "path": "constant.onnx",
+  "pre_nms_limit": 1000,
+  "precision": "float32",
+  "provider": "CPUExecutionProvider",
+  "purpose": "synthetic_adapter_test",
+  "schema_version": 1,
+  "sha256": "8c0e14952e1044ced80d42f54d2816bc960c50bc1169905e485a086b77f1bb49",
+  "source": "Hand-authored Constant graph; input pixels are ignored",
+  "version": "constant-adapter-test-v1"
+}
